@@ -1,0 +1,105 @@
+ProductEditor As screen:
+    OnVisible: |-
+        =Set(_eProdNameEditDef, name);
+        Set(_eProdDepEditDef, departement);
+
+    ProductEditorTitle As label:
+        Align: =Align.Center
+        Color: =RGBA(151, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =75
+        Size: =25
+        Text: |-
+            ="Product Editor
+            "
+        Width: =1366
+        ZIndex: =1
+
+    Label8_2 As label:
+        Height: =60
+        Text: |-
+            ="Name:
+            "
+        X: =20
+        Y: =96
+        ZIndex: =2
+
+    Label9_3 As label:
+        Height: =60
+        Text: ="Department"
+        X: =20
+        Y: =156
+        ZIndex: =3
+
+    eProdToHome_3 As icon.BackArrow:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.BackArrow
+        OnSelect: =Back();
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1291
+        ZIndex: =4
+
+    eProdEditorNameInput As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eProdNameEditDef
+        Height: =36
+        HintText: ="Name"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Width: =241
+        X: =170
+        Y: =108
+        ZIndex: =5
+
+    eProdEditorDepInput As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eProdDepEditDef
+        Height: =36
+        HintText: ="Department"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Width: =241
+        X: =170
+        Y: =168
+        ZIndex: =6
+
+    submitEditedProduct As icon.Send:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =80
+        Icon: =Icon.Send
+        OnSelect: |-
+            =Set(_send, false);
+            If(
+                Or(
+                    IsBlank(eProdEditorNameInput.Text),
+                    IsBlank(eProdEditorDepInput.Text)
+                ),
+                Notify("Expected values to be non-empty!", NotificationType.Error);
+                false,
+                Set(_send, true);
+                PutProductById.Run(uuid, eProdEditorDepInput.Text, eProdEditorNameInput.Text);
+                Set(_updateProducts, true);
+                Navigate(ProductPortal);
+                Set(_send, false);
+                Notify("Successfully replaced a product with name" & Char(34) & eProdEditorNameInput.Text & Char(34) & "!", NotificationType.Success),
+                true
+            );
+        PaddingBottom: =20
+        PaddingTop: =20
+        Tooltip: ="Replace"
+        Width: =80
+        X: =1266
+        Y: =668
+        ZIndex: =7
+
+    Label10_1 As label:
+        Align: =Align.Right
+        Text: ="Sending..."
+        Visible: =_send
+        X: =1036
+        Y: =688
+        ZIndex: =8
+
