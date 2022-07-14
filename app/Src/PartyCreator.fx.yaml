@@ -79,7 +79,6 @@ PartyCreator As screen:
                 false,
                 Set(_send, true);
                 PostParty.Run(ePartyCreatorIdentInput.Text, ePartyCreatorNameInput.Text);
-                Set(_updateProducts, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
                 Notify("Successfully submitted a party with name" & Char(34) & ePartyCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
