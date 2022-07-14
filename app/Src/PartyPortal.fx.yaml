@@ -114,7 +114,7 @@ PartyPortal As screen:
 
     eProdNameInput_1 As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =""
+        Default: =_ePartyNameSearch
         Height: =35
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -134,7 +134,7 @@ PartyPortal As screen:
 
     eProdDepInput_1 As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eParty
+        Default: =_ePartyIDSearch
         Height: =35
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
