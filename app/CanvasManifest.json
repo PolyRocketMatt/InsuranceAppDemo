@@ -104,6 +104,7 @@
   "ScreenOrder": [
     "EntitySelector",
     "ProductCreator",
+    "PartyCreator",
     "ProductEditor",
     "PartyEditor",
     "ProductSpecification",
