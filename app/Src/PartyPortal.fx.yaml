@@ -183,7 +183,7 @@ PartyPortal As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Add
-        OnSelect: =Navigate(ProductCreator);
+        OnSelect: =Navigate(PartyCreator);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
