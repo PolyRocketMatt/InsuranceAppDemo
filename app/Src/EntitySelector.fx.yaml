@@ -60,7 +60,7 @@ EntitySelector As screen:
             =Clear(ContractCollection);
             Clear(ContractCollectCollection);
             Collect(ContractCollectCollection, FindAllParties.Run());
-            Navigate(PartyPortal);
+            Navigate(ContractPortal);
         Text: ="Contract"
         X: =510
         Y: =444
