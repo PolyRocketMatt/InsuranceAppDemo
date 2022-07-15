@@ -190,8 +190,23 @@ ContractPortal As screen:
         Icon: =Icon.Sync
         OnSelect: |-
             =Set(_sync, true);
-            Clear(ContractCollection);
-            Collect(ContractCollection, FindAllContracts.Run());
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, FindAllContracts.Run());
+            
+            ForAll(
+                ContractCollectCollection,
+                Collect(ContractCollection, { 
+                    uuid: UrlParser.Run(ThisRecord.uuid).uuid,
+                    number: ThisRecord.number,
+                    id: ThisRecord.contentID,
+                    length: ThisRecord.contentLength,
+                    mimetype: ThisRecord.contentMimetype,
+                    filename: ThisRecord.contentFilename,
+                    holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
+                });
+            );
             Set(_sync, false)
         PaddingBottom: =20
         PaddingTop: =20
