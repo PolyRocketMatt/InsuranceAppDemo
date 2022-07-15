@@ -59,7 +59,7 @@ EntitySelector As screen:
         OnSelect: |-
             =Clear(ContractCollection);
             Clear(ContractCollectCollection);
-            Collect(ContractCollectCollection, FindAllParties.Run());
+            Collect(ContractCollectCollection, FindAllContracts.Run());
             Navigate(ContractPortal);
         Text: ="Contract"
         X: =510
