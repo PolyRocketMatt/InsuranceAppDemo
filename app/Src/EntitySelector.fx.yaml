@@ -56,6 +56,11 @@ EntitySelector As screen:
     SelectContractEntityBtn As button:
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
+        OnSelect: |-
+            =Clear(ContractCollection);
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, FindAllParties.Run());
+            Navigate(PartyPortal);
         Text: ="Contract"
         X: =510
         Y: =444

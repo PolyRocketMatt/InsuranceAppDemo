@@ -58,7 +58,7 @@ ContractPortal As screen:
         eProdDepartmentLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Holder: " & 
+                ="Holder: " & ThisItem.holder
             Width: =702
             X: =8
             Y: =55
