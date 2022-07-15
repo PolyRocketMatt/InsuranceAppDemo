@@ -324,6 +324,43 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 79,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid})"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ProductSpecification",
+                "type": "ProductSpecification.EditProductSpecItem"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect"
                 }
               ],
@@ -567,10 +604,9 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 30,
                   "charOffset": 13,
                   "snippet": {
-                    "text": "UrlParser.Run(ThisItem.holder)"
+                    "text": ""
                   }
                 }
               },
@@ -587,8 +623,47 @@
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBehaviorPropertyExpected",
+          "ruleId": "app-ErrOperandExpected",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ContractPortal.Products_2.eProdDepartmentLabel_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractPortal.Products_2.eProdDepartmentLabel_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "ContractPortal",
+                "type": "ContractPortal.Products_2.eProdDepartmentLabel_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text, Number, Date, Time, DateTimeNoTimeZone, DateTime, Boolean, OptionSetValue, ViewValue"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedTypesCSV",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3055,17 +3130,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App._eContractTypeSearch"
+                  "fullyQualifiedName": "App._eContractHolderSearch"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App._eContractTypeSearch",
+                  "fullyQualifiedName": "App._eContractHolderSearch",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_eContractTypeSearch",
+                "member": "_eContractHolderSearch",
                 "module": "App",
                 "type": "App"
               }
@@ -3085,17 +3160,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App._eContractHolderSearch"
+                  "fullyQualifiedName": "App._eContractTypeSearch"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App._eContractHolderSearch",
+                  "fullyQualifiedName": "App._eContractTypeSearch",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_eContractHolderSearch",
+                "member": "_eContractTypeSearch",
                 "module": "App",
                 "type": "App"
               }
@@ -3242,16 +3317,16 @@
               }
             },
             {
-              "id": "app-ErrBehaviorPropertyExpected",
+              "id": "app-ErrOperandExpected",
               "messageStrings": {
                 "issue": {
-                  "text": "Behavior function in a non-behavior property. You can't use this property to change values elsewhere in the app."
+                  "text": "Expected an operand. The formula or expression expects a valid operand. For example, you can add the operand '2' to the expression ' 1 +_' so that the result is '3'. Or, you can add the operand \"there\" to the expression '\"Hi \"& _ ' so that the result is 'Hi there'."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Move the behavior function to a behavior-based property."
+                  "Supply an operand value that will complete the expression. Ensure that the operand's type (text, number, date, or true/false) fits the expression. Match numbers with numbers, text with text, and so on. For example, '1 + \"Hi\"' isn't valid, but '1 + 2' is valid."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",

@@ -2,6 +2,16 @@ ContractPortal As screen:
     OnVisible: |-
         =Clear(ContractCollection);
         Collect(ContractCollection, FindAllContracts.Run());
+        
+        ForAll(
+            ContractCollection,
+            Collect(UuidCollection, { 
+                holder: UrlParser.Run(ThisRecord.holder),
+                beneficiary: UrlParser.Run(ThisRecord.beneficiary),
+                type: UrlParser.Run(ThisRecord.type)
+            });
+        );
+        
         Set(_eContractNumberSearch, "");
         Set(_eContractHolderSearch, "");
         Set(_eContractBeneficiarySearch, "");
@@ -43,7 +53,7 @@ ContractPortal As screen:
         eProdDepartmentLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Holder: " & UrlParser.Run(ThisItem.holder).uuid
+                ="Holder: " & 
             Width: =702
             X: =8
             Y: =55
