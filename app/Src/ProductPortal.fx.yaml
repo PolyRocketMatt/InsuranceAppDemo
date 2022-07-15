@@ -77,7 +77,7 @@ ProductPortal As screen:
             Height: =80
             Icon: =Icon.Edit
             OnSelect: |-
-                =Navigate(ProductEditor, None, {name: ThisItem.name});
+                =Navigate(ProductEditor, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid});
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
