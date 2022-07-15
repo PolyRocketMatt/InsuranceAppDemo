@@ -2084,17 +2084,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.identifier"
+                  "fullyQualifiedName": "PartyEditor.id"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.identifier",
+                  "fullyQualifiedName": "PartyEditor.id",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "identifier",
+                "member": "id",
                 "module": "PartyEditor",
                 "type": "PartyEditor"
               }
