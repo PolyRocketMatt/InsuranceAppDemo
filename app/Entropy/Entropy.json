@@ -156,7 +156,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/15/2022 11:35:14",
+  "HeaderLastSavedDateTimeUTC": "07/15/2022 11:39:13",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0c0c88c2-51e8-4dab-ac8d-c29045ec1908": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc7adb93694941368afac7f090826328-911675c9c888f55d\"",
@@ -187,6 +187,7 @@
     "Collection2": 18,
     "ContractCollectCollection": 21,
     "ContractCollection": 20,
+    "CountCollection": 22,
     "CustomGallerySample": 16,
     "DeletePartyByID": 7,
     "DeleteProductByID": 1,

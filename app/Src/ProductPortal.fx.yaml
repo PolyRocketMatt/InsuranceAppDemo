@@ -10,12 +10,18 @@ ProductPortal As screen:
                 ProductCollection,
                 If(
                     ThisRecord.name = _lookupName,
-                    Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error),
-                    Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                    Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                    Collect(CountCollection, ThisRecord)
                 )
             )
         );
         
+        If(
+            CountRows(CountCollection) = 0,
+            Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+        );
+        
+        Clear(CountCollection);
         Set(_sync, false);
         Set(_doLookup, false);
         Set(_eProdNameSearch, "");
@@ -81,15 +87,22 @@ ProductPortal As screen:
                 DeleteProductByID.Run(UrlParser.Run(ThisItem.uuid).uuid);
                 Clear(ProductCollection);
                 Collect(ProductCollection, FindAllProducts.Run());
-                Set(_sync, false);
-                
                 ForAll(
                     ProductCollection,
                     If(
                         ThisRecord.name = _lookupName,
-                        Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error)
+                        Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                        Collect(CountCollection, ThisRecord)
                     )
                 );
+                
+                If(
+                    CountRows(CountCollection) = 0,
+                    Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                );
+                
+                Clear(CountCollection);
+                Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
