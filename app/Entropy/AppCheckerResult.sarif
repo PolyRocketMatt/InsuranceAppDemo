@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 127,
+                  "charLength": 52,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Navigate(ProductEditor, None, {name: ThisItem.name, departement: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid})"
+                    "text": "Navigate(ProductEditor, None, {name: ThisItem.name})"
                   }
                 }
               },
@@ -1178,66 +1178,6 @@
                 "member": "TabIndex",
                 "module": "ProductPortal",
                 "type": "ProductPortal.Products.RemoveProductIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ProductPortal",
-                "type": "ProductPortal.Products.EditProductIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ProductPortal",
-                "type": "ProductPortal.Products.EditProductIcon"
               }
             }
           ],
