@@ -15,7 +15,7 @@ ProductSpecification As screen:
     ProductNameSpec As label:
         Height: =60
         Text: |-
-            ="Name: " & name
+            ="Name: " & spec_name
         Width: =1326
         X: =20
         Y: =96
@@ -24,7 +24,7 @@ ProductSpecification As screen:
     ProductDepartmentSpec As label:
         Height: =60
         Text: |-
-            ="Department: " & department
+            ="Department: " & spec_dep
         Width: =1326
         X: =20
         Y: =156
@@ -44,7 +44,7 @@ ProductSpecification As screen:
     Label9_2 As label:
         Height: =60
         Text: |-
-            ="UUID: " & uuid
+            ="UUID: " & spec_uuid
         Width: =1326
         X: =20
         Y: =216
@@ -73,7 +73,13 @@ ProductSpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid});
+            =Navigate(ProductEditor, None, 
+                {
+                    edit_name: name, 
+                    edit_dep: department, 
+                    edit_uuid: uuid
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

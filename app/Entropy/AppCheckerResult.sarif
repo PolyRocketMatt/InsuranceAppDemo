@@ -248,39 +248,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductSpecification.ProductNameSpec.Text"
+                  "fullyQualifiedName": "ProductEditor.eProdEditorNameInput.Default"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductSpecification.ProductNameSpec.Text",
+                  "fullyQualifiedName": "ProductEditor.eProdEditorNameInput.Default",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 4,
-                  "charOffset": 11,
+                  "charLength": 17,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": "name"
+                    "text": "_eProdNameEditDef"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification.ProductNameSpec"
+                "member": "Default",
+                "module": "ProductEditor",
+                "type": "ProductEditor.eProdEditorNameInput"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Text, Number, Date, Time, DateTimeNoTimeZone, DateTime, Boolean, OptionSetValue, ViewValue"
+              "Text",
+              "Error"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadType-ExpectedTypesCSV",
+          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
           "ruleIndex": 2
         },
         {
@@ -288,39 +289,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductSpecification.ProductDepartmentSpec.Text"
+                  "fullyQualifiedName": "ProductEditor.eProdEditorDepInput.Default"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductSpecification.ProductDepartmentSpec.Text",
+                  "fullyQualifiedName": "ProductEditor.eProdEditorDepInput.Default",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 10,
-                  "charOffset": 17,
+                  "charLength": 16,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": "department"
+                    "text": "_eProdDepEditDef"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification.ProductDepartmentSpec"
+                "member": "Default",
+                "module": "ProductEditor",
+                "type": "ProductEditor.eProdEditorDepInput"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Text, Number, Date, Time, DateTimeNoTimeZone, DateTime, Boolean, OptionSetValue, ViewValue"
+              "Text",
+              "Error"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadType-ExpectedTypesCSV",
+          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
           "ruleIndex": 2
         },
         {
@@ -337,10 +339,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 79,
+                  "charLength": 131,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid})"
+                    "text": "Navigate(ProductEditor, None, \r\n    {\r\n        edit_name: name, \r\n        edit_dep: department, \r\n        edit_uuid: uuid\r\n    }\r\n)"
                   }
                 }
               },
@@ -3065,36 +3067,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductEditor.department"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductEditor.department",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "department",
-                "module": "ProductEditor",
-                "type": "ProductEditor"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ProductEditor.edit_uuid"
                 }
               ],
@@ -3149,96 +3121,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductSpecification.spec_dep"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductSpecification.spec_dep",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "spec_dep",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductSpecification.spec_name"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductSpecification.spec_name",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "spec_name",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductSpecification.spec_uuid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductSpecification.spec_uuid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "spec_uuid",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
         }
       ],
       "tool": {
@@ -3281,14 +3163,17 @@
               }
             },
             {
-              "id": "app-ErrBadType-ExpectedTypesCSV",
+              "id": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid argument type. Expecting one of the following: {0}."
+                  "text": "Expected {0} value."
                 }
               },
               "properties": {
                 "componentType": "app",
+                "howToFix": [
+                  "Change the rule to produce a {0} value."
+                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
