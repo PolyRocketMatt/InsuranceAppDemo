@@ -35,6 +35,46 @@
     "dependents": [],
     "id": "0c0c88c2-51e8-4dab-ac8d-c29045ec1908"
   },
+  "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-113.westeurope.logic.azure.com:443/workflows/5118a7c6523e4df3884a41d8d98ead8b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B8wn1UghrK4C42sMi6EW61gvikKfRn66J-lEZIbwHVI",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/da5697b1-d6cc-4dd9-aec8-9ca4fa72950d",
+      "workflowName": "da5697b1-d6cc-4dd9-aec8-9ca4fa72950d",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/da5697b1-d6cc-4dd9-aec8-9ca4fa72950d"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
+          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "da5697b1-d6cc-4dd9-aec8-9ca4fa72950d"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
+          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "da5697b1-d6cc-4dd9-aec8-9ca4fa72950d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "DeleteContractByID"
+    ],
+    "dependencies": {
+      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+    },
+    "dependents": [],
+    "id": "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d"
+  },
   "22fefce4-849e-490d-987d-6360dec908e7": {
     "connectionParameters": {},
     "connectionRef": {
@@ -159,12 +199,18 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
+          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "5c361b00-6d30-4a8b-8e9f-31cb5f210074"
         }
       },
       "parameterHintsV2": {
+        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
+          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "5c361b00-6d30-4a8b-8e9f-31cb5f210074"
@@ -588,7 +634,8 @@
       "6bcd83ad-8f36-4000-be90-0f922d4959bd",
       "2eed47b3-e946-4ebd-9c4c-43b89f9a55af",
       "a31a3e1c-bba0-4a4f-ba65-4149ca8a31e5",
-      "3a6ec2f8-e138-48c8-b850-88eeb5a67d7b"
+      "3a6ec2f8-e138-48c8-b850-88eeb5a67d7b",
+      "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d"
     ],
     "id": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
   },
