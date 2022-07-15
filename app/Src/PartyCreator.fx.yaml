@@ -1,4 +1,7 @@
 PartyCreator As screen:
+    OnVisible: |-
+        =Set(_ePartyNameDef, "");
+        Set(_ePartyIDDef, "");
 
     ProductCreatorTitle_1 As label:
         Align: =Align.Center
@@ -42,7 +45,7 @@ PartyCreator As screen:
 
     ePartyCreatorNameInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eProdNameDef
+        Default: =_ePartyNameDef
         Height: =36
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -54,7 +57,7 @@ PartyCreator As screen:
 
     ePartyCreatorIdentInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eProdDepDef
+        Default: =_ePartyIDDef
         Height: =36
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
