@@ -191,6 +191,7 @@ ContractPortal As screen:
         Icon: =Icon.Sync
         OnSelect: |-
             =Set(_sync, true);
+            Clear(ContractCollection);
             Clear(ContractCollectCollection);
             Collect(ContractCollectCollection, FindAllContracts.Run());
             
