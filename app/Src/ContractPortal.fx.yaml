@@ -1,24 +1,44 @@
 ContractPortal As screen:
     OnVisible: |-
-        =Clear(ContractCollection);
+        =//  Sync    
+        Set(_sync, true);
+        Clear(ContractCollection);
         Clear(ContractCollectCollection);
         Collect(ContractCollectCollection, FindAllContracts.Run());
-        
         ForAll(
             ContractCollectCollection,
             Collect(ContractCollection, { 
                 uuid: UrlParser.Run(ThisRecord.uuid).uuid,
                 number: ThisRecord.number,
-                id: ThisRecord.contentID,
-                length: ThisRecord.contentLength,
-                mimetype: ThisRecord.contentMimetype,
-                filename: ThisRecord.contentFilename,
                 holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
                 beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
                 type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
             });
         );
         
+        //  Check occurence if needed
+        If(
+            _doLookup,
+            ForAll(
+                ContractCollection,
+                If(
+                    ThisRecord.number = _lookupName,
+                    Notify("Could not delete contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                    Collect(CountCollection, ThisRecord)
+                )
+            )
+        );
+        
+        If(
+            And(_doLookup, CountRows(CountCollection) = 0),
+            Notify("Successfully deleted contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+        );
+        
+        //  Clear variables/collections
+        Clear(CountCollection);
+        Set(_sync, false);
+        Set(_doLookup, false);
+        Set(_lookupName, "");
         Set(_eContractNumberSearch, "");
         Set(_eContractHolderSearch, "");
         Set(_eContractBeneficiarySearch, "");
@@ -115,7 +135,7 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Navigate(ProductSpecification, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid});
+                =//Navigate(ProductSpecification, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid});
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
@@ -206,10 +226,6 @@ ContractPortal As screen:
                 Collect(ContractCollection, { 
                     uuid: UrlParser.Run(ThisRecord.uuid).uuid,
                     number: ThisRecord.number,
-                    id: ThisRecord.contentID,
-                    length: ThisRecord.contentLength,
-                    mimetype: ThisRecord.contentMimetype,
-                    filename: ThisRecord.contentFilename,
                     holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
                     beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
                     type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
