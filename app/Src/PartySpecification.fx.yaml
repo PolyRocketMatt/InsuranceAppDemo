@@ -24,7 +24,7 @@ PartySpecification As screen:
     ProductDepartmentSpec_1 As label:
         Height: =60
         Text: |-
-            ="Identifier: " & identifier
+            ="Identifier: " & id
         Width: =1326
         X: =20
         Y: =156
