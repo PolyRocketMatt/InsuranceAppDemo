@@ -80,7 +80,7 @@ ProductEditor As screen:
                 Notify("Expected values to be non-empty!", NotificationType.Error);
                 false,
                 Set(_send, true);
-                PutProductById.Run(uuid, eProdEditorDepInput.Text, eProdEditorNameInput.Text);
+                PutProductById.Run(edit_uuid, eProdEditorDepInput.Text, eProdEditorNameInput.Text);
                 Navigate(ProductPortal);
                 Set(_send, false);
                 Notify("Successfully replaced a product with name" & Char(34) & eProdEditorNameInput.Text & Char(34) & "!", NotificationType.Success),

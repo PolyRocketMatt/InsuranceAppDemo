@@ -3008,17 +3008,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductEditor.edit_uuid"
+                  "fullyQualifiedName": "ProductEditor.name"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductEditor.edit_uuid",
+                  "fullyQualifiedName": "ProductEditor.name",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "edit_uuid",
+                "member": "name",
                 "module": "ProductEditor",
                 "type": "ProductEditor"
               }
@@ -3038,17 +3038,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductEditor.name"
+                  "fullyQualifiedName": "ProductEditor.uuid"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductEditor.name",
+                  "fullyQualifiedName": "ProductEditor.uuid",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "name",
+                "member": "uuid",
                 "module": "ProductEditor",
                 "type": "ProductEditor"
               }
@@ -3109,6 +3109,36 @@
               },
               "properties": {
                 "member": "name",
+                "module": "ProductSpecification",
+                "type": "ProductSpecification"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProductSpecification.uuid"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductSpecification.uuid",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "uuid",
                 "module": "ProductSpecification",
                 "type": "ProductSpecification"
               }

@@ -57,7 +57,7 @@ ProductSpecification As screen:
         OnSelect: |-
             =Navigate(ProductPortal);
             Set(_sync, true);
-            DeleteProductByID.Run(uuid);
+            DeleteProductByID.Run(spec_uuid);
             Clear(ProductCollection);
             Collect(ProductCollection, FindAllProducts.Run());
             Set(_sync, false);
