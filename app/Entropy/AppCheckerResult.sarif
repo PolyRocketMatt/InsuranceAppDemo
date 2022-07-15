@@ -94,6 +94,43 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 127,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Navigate(ProductEditor, None, {name: ThisItem.name, departement: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid})"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ContractPortal",
+                "type": "ContractPortal.Products_2.EditProductIcon_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ContractPortal.Products_2.SpecProductIcon_2.OnSelect"
                 }
               ],
@@ -447,63 +484,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.OnSelect"
+                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.OnSelect",
+                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 126,
-                  "charOffset": 131,
-                  "snippet": {
-                    "text": "Navigate(ProductEditor, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid})"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ProductPortal",
-                "type": "ProductPortal.Products.EditProductIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductPortal.Products.SpecProductIcon.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductPortal.Products.SpecProductIcon.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 133,
+                  "charLength": 79,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Navigate(ProductSpecification, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid})"
+                    "text": "Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid})"
                   }
                 }
               },
               "properties": {
                 "member": "OnSelect",
-                "module": "ProductPortal",
-                "type": "ProductPortal.Products.SpecProductIcon"
+                "module": "ProductSpecification",
+                "type": "ProductSpecification.EditProductSpecItem"
               }
             }
           ],
@@ -2921,6 +2921,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ProductPortal",
+                "type": "ProductPortal.Products.EditProductIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductPortal.Products.EditProductIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ProductPortal",
+                "type": "ProductPortal.Products.EditProductIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ProductPortal.eProdNameInput.AccessibleLabel"
                 }
               ],
@@ -3082,6 +3142,96 @@
               },
               "properties": {
                 "member": "departement",
+                "module": "ProductEditor",
+                "type": "ProductEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProductEditor.edit_dep"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductEditor.edit_dep",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "edit_dep",
+                "module": "ProductEditor",
+                "type": "ProductEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProductEditor.edit_name"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductEditor.edit_name",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "edit_name",
+                "module": "ProductEditor",
+                "type": "ProductEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ProductEditor.edit_uuid"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ProductEditor.edit_uuid",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "edit_uuid",
                 "module": "ProductEditor",
                 "type": "ProductEditor"
               }
