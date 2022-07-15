@@ -1,7 +1,7 @@
 ProductEditor As screen:
     OnVisible: |-
-        =Set(_eProdNameEditDef, name);
-        Set(_eProdDepEditDef, department);
+        =Set(_eProdNameEditDef, edit_name);
+        Set(_eProdDepEditDef, edit_dep);
 
     ProductEditorTitle As label:
         Align: =Align.Center
