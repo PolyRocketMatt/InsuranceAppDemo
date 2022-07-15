@@ -43,8 +43,8 @@ ContractPortal As screen:
         eProdDepartmentLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Holder: " & ThisItem.holder
-            Width: =400
+                ="Holder: " & UrlParser.Run(ThisItem.holder).uuid
+            Width: =702
             X: =8
             Y: =55
             ZIndex: =2
@@ -99,24 +99,6 @@ ContractPortal As screen:
             X: =870
             Y: =15
             ZIndex: =6
-
-        eProdNameLabel_3 As label:
-            OnSelect: =Select(Parent)
-            Text: |-
-                ="Beneficiary: " & ThisItem.beneficiary
-            Width: =271
-            X: =439
-            Y: =15
-            ZIndex: =7
-
-        eProdNameLabel_4 As label:
-            OnSelect: =Select(Parent)
-            Text: |-
-                ="Type: " & ThisItem.type
-            Width: =271
-            X: =439
-            Y: =55
-            ZIndex: =8
 
     eProdOptFilter_2 As label:
         Height: =50
