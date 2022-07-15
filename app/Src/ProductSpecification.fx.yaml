@@ -56,17 +56,9 @@ ProductSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_lookupName, spec_name);
-            Clear(ProductCollection);
+            Set(_doLookup, true);
             DeleteProductByID.Run(spec_uuid);
             Navigate(ProductPortal);
-            
-            ForAll(
-                ProductCollection,
-                If(
-                    ThisRecord.name = _lookupName,
-                    Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error)
-                )
-            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

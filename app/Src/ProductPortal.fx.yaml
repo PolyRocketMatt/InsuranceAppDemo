@@ -3,7 +3,21 @@ ProductPortal As screen:
         =Set(_sync, true);
         Clear(ProductCollection);
         Collect(ProductCollection, FindAllProducts.Run());
+        
+        If(
+            _doLookup,
+            ForAll(
+                ProductCollection,
+                If(
+                    ThisRecord.name = _lookupName,
+                    Notify("Could not delete product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error),
+                    Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                )
+            )
+        );
+        
         Set(_sync, false);
+        Set(_doLookup, false);
         Set(_eProdNameSearch, "");
         Set(_eProdDepSearch, "");
 
