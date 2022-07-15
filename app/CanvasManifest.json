@@ -110,6 +110,7 @@
     "ProductSpecification",
     "PartySpecification",
     "ProductPortal",
-    "PartyPortal"
+    "PartyPortal",
+    "ContractPortal"
   ]
 }
