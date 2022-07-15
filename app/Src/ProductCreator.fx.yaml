@@ -82,7 +82,6 @@ ProductCreator As screen:
                 false,
                 Set(_send, true);
                 PostProduct.Run(eProdCreatorNameInput.Text, eProdCreatorDepInput.Text);
-                Set(_updateProducts, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
                 Notify("Successfully submitted a product with name" & Char(34) & eProdCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
