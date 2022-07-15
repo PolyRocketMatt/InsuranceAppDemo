@@ -60,7 +60,7 @@ PartySpecification As screen:
             Clear(PartyCollection);
             Collect(PartyCollection, FindAllParties.Run());
             Set(_sync, false);
-            Navigate(ProductPortal);
+            Navigate(PartyPortal);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
