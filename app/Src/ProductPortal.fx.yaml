@@ -1,7 +1,9 @@
 ProductPortal As screen:
     OnVisible: |-
-        =Clear(ProductCollection);
+        =Set(_sync, true);
+        Clear(ProductCollection);
         Collect(ProductCollection, FindAllProducts.Run());
+        Set(_sync, false);
         Set(_eProdNameSearch, "");
         Set(_eProdDepSearch, "");
 
