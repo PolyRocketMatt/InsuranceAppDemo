@@ -6,10 +6,14 @@ ContractPortal As screen:
         ForAll(
             ContractCollectCollection,
             Collect(ContractCollection, { 
-                number: 
-                holder: UrlParser.Run(ThisRecord.holder),
-                beneficiary: UrlParser.Run(ThisRecord.beneficiary),
-                type: UrlParser.Run(ThisRecord.type)
+                number: ThisRecord.number,
+                id: ThisRecord.contentID,
+                length: ThisRecord.contentLength,
+                mimetype: ThisRecord.contentMimetype,
+                filename: ThisRecord.contentFilename,
+                holder: UrlParser.Run(ThisRecord.holder).uuid,
+                beneficiary: UrlParser.Run(ThisRecord.beneficiary).uuid,
+                type: UrlParser.Run(ThisRecord.type).uuid
             });
         );
         
