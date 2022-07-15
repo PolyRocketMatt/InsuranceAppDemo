@@ -1,7 +1,7 @@
 PartyPortal As screen:
     OnVisible: |-
-        =Clear(ProductCollection);
-        Collect(ProductCollection, FindAllParties.Run());
+        =Clear(PartyCollection);
+        Collect(PartyCollection, FindAllParties.Run());
         Set(_ePartyNameSearch, "");
         Set(_ePartyIDSearch, "");
 
