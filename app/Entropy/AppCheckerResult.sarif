@@ -97,10 +97,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 28,
-                  "charOffset": 0,
+                  "charLength": 34,
+                  "charOffset": 31,
                   "snippet": {
-                    "text": "Set(_eProdNameEditDef, name)"
+                    "text": "Set(_eProdDepEditDef, departement)"
                   }
                 }
               },
@@ -134,10 +134,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 34,
-                  "charOffset": 31,
+                  "charLength": 28,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": "Set(_eProdDepEditDef, departement)"
+                    "text": "Set(_eProdNameEditDef, name)"
                   }
                 }
               },
@@ -318,83 +318,6 @@
           },
           "ruleId": "app-ErrBadType-ExpectedTypesCSV",
           "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductSpecification.EditProductSpecItem.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 79,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid})"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ProductSpecification",
-                "type": "ProductSpecification.EditProductSpecItem"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractPortal.Products_2.eProdNameLabel_2.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Products_2.eProdNameLabel_2.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 21,
-                  "snippet": {
-                    "text": ".name"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Products_2.eProdNameLabel_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "name"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 3
         },
         {
           "locations": [
@@ -629,46 +552,6 @@
           },
           "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractPortal.Products_2.eProdDepartmentLabel_2.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Products_2.eProdDepartmentLabel_2.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 25,
-                  "snippet": {
-                    "text": ".department"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Products_2.eProdDepartmentLabel_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "department"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 3
         },
         {
           "locations": [

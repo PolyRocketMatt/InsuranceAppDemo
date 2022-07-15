@@ -34,7 +34,7 @@ ContractPortal As screen:
         eProdNameLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Number: " & ThisItem.name
+                ="Number: " & ThisItem.number
             Width: =400
             X: =8
             Y: =15
@@ -43,7 +43,7 @@ ContractPortal As screen:
         eProdDepartmentLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Department: " & ThisItem.department
+                ="Holder: " & ThisItem.holder
             Width: =400
             X: =8
             Y: =55
@@ -100,6 +100,24 @@ ContractPortal As screen:
             Y: =15
             ZIndex: =6
 
+        eProdNameLabel_3 As label:
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Beneficiary: " & ThisItem.beneficiary
+            Width: =271
+            X: =439
+            Y: =15
+            ZIndex: =7
+
+        eProdNameLabel_4 As label:
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Type: " & ThisItem.type
+            Width: =271
+            X: =439
+            Y: =55
+            ZIndex: =8
+
     eProdOptFilter_2 As label:
         Height: =50
         Text: ="Optional Filters"
@@ -154,8 +172,8 @@ ContractPortal As screen:
         Icon: =Icon.Sync
         OnSelect: |-
             =Set(_sync, true);
-            Clear(ProductCollection);
-            Collect(ProductCollection, FindAllProducts.Run());
+            Clear(ContractCollection);
+            Collect(ContractCollection, FindAllContracts.Run());
             Set(_sync, false)
         PaddingBottom: =20
         PaddingTop: =20
