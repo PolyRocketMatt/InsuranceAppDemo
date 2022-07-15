@@ -1,9 +1,11 @@
 ProductPortal As screen:
     OnVisible: |-
-        =Set(_sync, true);
+        =//  Sync    
+        Set(_sync, true);
         Clear(ProductCollection);
         Collect(ProductCollection, FindAllProducts.Run());
         
+        //  Check occurence if needed
         If(
             _doLookup,
             ForAll(
@@ -21,9 +23,11 @@ ProductPortal As screen:
             Notify("Successfully deleted product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
         );
         
+        //  Clear variables/collections
         Clear(CountCollection);
         Set(_sync, false);
         Set(_doLookup, false);
+        Set(_lookupName, "");
         Set(_eProdNameSearch, "");
         Set(_eProdDepSearch, "");
 
