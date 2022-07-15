@@ -73,7 +73,7 @@ PartySpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Navigate(PartyEditor, Transition.Push, {name: name, identifier: id, uuid: uuid});
+            =Navigate(PartyEditor, None, {name: name, identifier: id, uuid: uuid});
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

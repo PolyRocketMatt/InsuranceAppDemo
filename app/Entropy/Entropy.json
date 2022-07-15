@@ -118,7 +118,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/15/2022 06:24:49",
+  "HeaderLastSavedDateTimeUTC": "07/15/2022 06:25:02",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0c0c88c2-51e8-4dab-ac8d-c29045ec1908": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc7adb93694941368afac7f090826328-911675c9c888f55d\"",
@@ -299,7 +299,7 @@
       "text": 12
     },
     "DeserializationLoadTime": 1.4729768,
-    "ErrorCount": 2
+    "ErrorCount": 4
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
