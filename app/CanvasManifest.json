@@ -105,6 +105,7 @@
     "EntitySelector",
     "ProductCreator",
     "PartyCreator",
+    "ContractCreator",
     "ProductEditor",
     "PartyEditor",
     "ProductSpecification",

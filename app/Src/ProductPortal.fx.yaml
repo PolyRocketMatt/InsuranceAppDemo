@@ -12,7 +12,7 @@ ProductPortal As screen:
         Height: =75
         Size: =25
         Text: |-
-            ="Product Portal
+            ="Contract Portal
             "
         Width: =970
         ZIndex: =1

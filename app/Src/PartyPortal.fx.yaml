@@ -21,7 +21,7 @@ PartyPortal As screen:
         Layout: =Layout.Vertical
         OnSelect: =Collect(Collection2, Products_1.AllItems)
         TemplatePadding: =0
-        TemplateSize: =111
+        TemplateSize: =114
         Width: =950
         X: =20
         Y: =75
@@ -33,7 +33,6 @@ PartyPortal As screen:
                 ="Name: " & ThisItem.name
             Width: =400
             X: =8
-            Y: =15
             ZIndex: =1
 
         eProdDepartmentLabel_1 As label:
@@ -42,7 +41,7 @@ PartyPortal As screen:
                 ="Identifier: " & ThisItem.id
             Width: =400
             X: =8
-            Y: =55
+            Y: =40
             ZIndex: =2
 
         ProductSeparator_1 As rectangle:
