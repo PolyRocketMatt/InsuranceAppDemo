@@ -73,9 +73,9 @@ ProductSpecification As screen:
         OnSelect: |-
             =Navigate(ProductEditor, None, 
                 {
-                    edit_name:spec_name,
-                    edit_dep:spec_dep,
-                    edit_uuid:spec_uuid
+                    edit_name: spec_name,
+                    edit_dep: spec_dep,
+                    edit_uuid: spec_uuid
                 }
             );
         PaddingBottom: =20

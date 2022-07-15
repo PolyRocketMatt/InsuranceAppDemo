@@ -82,11 +82,18 @@ ProductPortal As screen:
             Height: =80
             Icon: =Icon.Trash
             OnSelect: |-
-                =Set(_lookupName, ThisItem.name);
+                =//  Set basic variables
+                Set(_lookupName, ThisItem.name);
                 Set(_sync, true);
+                
+                //  Delete product
                 DeleteProductByID.Run(UrlParser.Run(ThisItem.uuid).uuid);
+                
+                //  Sync collection
                 Clear(ProductCollection);
                 Collect(ProductCollection, FindAllProducts.Run());
+                
+                //  Check synced collection for occurrence of the item
                 ForAll(
                     ProductCollection,
                     If(
@@ -101,8 +108,9 @@ ProductPortal As screen:
                     Notify("Successfully deleted product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
                 );
                 
+                //  Clear collections/variables
                 Clear(CountCollection);
-                Set(_doLookup, false);
+                Set(_lookupName, "");
                 Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
