@@ -1,11 +1,12 @@
 ContractPortal As screen:
     OnVisible: |-
-        =Clear(ContractCollection);
-        Collect(ContractCollection, FindAllContracts.Run());
+        =Clear(ContractCollectCollection);
+        Collect(ContractCollectCollection, FindAllContracts.Run());
         
         ForAll(
-            ContractCollection,
-            Collect(UuidCollection, { 
+            ContractCollectCollection,
+            Collect(ContractCollection, { 
+                number: 
                 holder: UrlParser.Run(ThisRecord.holder),
                 beneficiary: UrlParser.Run(ThisRecord.beneficiary),
                 type: UrlParser.Run(ThisRecord.type)

@@ -137,7 +137,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/15/2022 06:47:14",
+  "HeaderLastSavedDateTimeUTC": "07/15/2022 06:48:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0c0c88c2-51e8-4dab-ac8d-c29045ec1908": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc7adb93694941368afac7f090826328-911675c9c888f55d\"",
@@ -160,6 +160,7 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "Collection2": 13,
+    "ContractCollectCollection": 16,
     "ContractCollection": 15,
     "CustomGallerySample": 11,
     "DeletePartyByID": 7,
@@ -174,8 +175,7 @@
     "ProductCollection": 12,
     "PutPartyById": 8,
     "PutProductById": 4,
-    "UrlParser": 2,
-    "UuidCollection": 16
+    "UrlParser": 2
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -341,7 +341,7 @@
       "text": 14
     },
     "DeserializationLoadTime": 1.2157148,
-    "ErrorCount": 17
+    "ErrorCount": 21
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
