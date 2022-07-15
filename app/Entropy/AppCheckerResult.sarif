@@ -14,123 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 45,
-                  "snippet": {
-                    "text": ".name"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Products_2.EditProductIcon_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "name"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 73,
-                  "snippet": {
-                    "text": ".department"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Products_2.EditProductIcon_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "department"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 127,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Navigate(ProductEditor, None, {name: ThisItem.name, departement: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid})"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Products_2.EditProductIcon_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ContractPortal.Products_2.SpecProductIcon_2.OnSelect"
                 }
               ],
@@ -248,19 +131,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductCreator.eProdToHome_1.AccessibleLabel"
+                  "fullyQualifiedName": "ProductCreator.eProdCreatorToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductCreator.eProdToHome_1.AccessibleLabel",
+                  "fullyQualifiedName": "ProductCreator.eProdCreatorToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProductCreator",
-                "type": "ProductCreator.eProdToHome_1"
+                "type": "ProductCreator.eProdCreatorToHome"
               }
             }
           ],
@@ -278,19 +161,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductCreator.eProdToHome_1.TabIndex"
+                  "fullyQualifiedName": "ProductCreator.eProdCreatorToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductCreator.eProdToHome_1.TabIndex",
+                  "fullyQualifiedName": "ProductCreator.eProdCreatorToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ProductCreator",
-                "type": "ProductCreator.eProdToHome_1"
+                "type": "ProductCreator.eProdCreatorToHome"
               }
             }
           ],
@@ -848,19 +731,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductEditor.eProdToHome_3.AccessibleLabel"
+                  "fullyQualifiedName": "ProductEditor.eProdEditorToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductEditor.eProdToHome_3.AccessibleLabel",
+                  "fullyQualifiedName": "ProductEditor.eProdEditorToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProductEditor",
-                "type": "ProductEditor.eProdToHome_3"
+                "type": "ProductEditor.eProdEditorToHome"
               }
             }
           ],
@@ -878,19 +761,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductEditor.eProdToHome_3.TabIndex"
+                  "fullyQualifiedName": "ProductEditor.eProdEditorToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductEditor.eProdToHome_3.TabIndex",
+                  "fullyQualifiedName": "ProductEditor.eProdEditorToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ProductEditor",
-                "type": "ProductEditor.eProdToHome_3"
+                "type": "ProductEditor.eProdEditorToHome"
               }
             }
           ],
@@ -1028,19 +911,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductSpecification.eProdToHome_2.AccessibleLabel"
+                  "fullyQualifiedName": "ProductSpecification.eProdSpecToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductSpecification.eProdToHome_2.AccessibleLabel",
+                  "fullyQualifiedName": "ProductSpecification.eProdSpecToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProductSpecification",
-                "type": "ProductSpecification.eProdToHome_2"
+                "type": "ProductSpecification.eProdSpecToHome"
               }
             }
           ],
@@ -1058,19 +941,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProductSpecification.eProdToHome_2.TabIndex"
+                  "fullyQualifiedName": "ProductSpecification.eProdSpecToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProductSpecification.eProdToHome_2.TabIndex",
+                  "fullyQualifiedName": "ProductSpecification.eProdSpecToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ProductSpecification",
-                "type": "ProductSpecification.eProdToHome_2"
+                "type": "ProductSpecification.eProdSpecToHome"
               }
             }
           ],
@@ -1628,19 +1511,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.eProdToHome_5.AccessibleLabel"
+                  "fullyQualifiedName": "PartySpecification.ePartySpecToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.eProdToHome_5.AccessibleLabel",
+                  "fullyQualifiedName": "PartySpecification.ePartySpecToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartySpecification",
-                "type": "PartySpecification.eProdToHome_5"
+                "type": "PartySpecification.ePartySpecToHome"
               }
             }
           ],
@@ -1658,19 +1541,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.eProdToHome_5.TabIndex"
+                  "fullyQualifiedName": "PartySpecification.ePartySpecToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.eProdToHome_5.TabIndex",
+                  "fullyQualifiedName": "PartySpecification.ePartySpecToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartySpecification",
-                "type": "PartySpecification.eProdToHome_5"
+                "type": "PartySpecification.ePartySpecToHome"
               }
             }
           ],
@@ -1688,19 +1571,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.EditProductSpecItem_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartySpecification.EditPartySpecItem.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.EditProductSpecItem_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartySpecification.EditPartySpecItem.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartySpecification",
-                "type": "PartySpecification.EditProductSpecItem_1"
+                "type": "PartySpecification.EditPartySpecItem"
               }
             }
           ],
@@ -1718,19 +1601,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.EditProductSpecItem_1.TabIndex"
+                  "fullyQualifiedName": "PartySpecification.EditPartySpecItem.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.EditProductSpecItem_1.TabIndex",
+                  "fullyQualifiedName": "PartySpecification.EditPartySpecItem.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartySpecification",
-                "type": "PartySpecification.EditProductSpecItem_1"
+                "type": "PartySpecification.EditPartySpecItem"
               }
             }
           ],
@@ -1748,19 +1631,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.RemoveProductSpecItem_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartySpecification.RemovePartySpecItem.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.RemoveProductSpecItem_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartySpecification.RemovePartySpecItem.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartySpecification",
-                "type": "PartySpecification.RemoveProductSpecItem_1"
+                "type": "PartySpecification.RemovePartySpecItem"
               }
             }
           ],
@@ -1778,19 +1661,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartySpecification.RemoveProductSpecItem_1.TabIndex"
+                  "fullyQualifiedName": "PartySpecification.RemovePartySpecItem.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartySpecification.RemoveProductSpecItem_1.TabIndex",
+                  "fullyQualifiedName": "PartySpecification.RemovePartySpecItem.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartySpecification",
-                "type": "PartySpecification.RemoveProductSpecItem_1"
+                "type": "PartySpecification.RemovePartySpecItem"
               }
             }
           ],
@@ -1988,19 +1871,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractCreator.submitNewProduct_2.AccessibleLabel"
+                  "fullyQualifiedName": "ContractCreator.submitNewContract.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractCreator.submitNewProduct_2.AccessibleLabel",
+                  "fullyQualifiedName": "ContractCreator.submitNewContract.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractCreator",
-                "type": "ContractCreator.submitNewProduct_2"
+                "type": "ContractCreator.submitNewContract"
               }
             }
           ],
@@ -2018,19 +1901,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractCreator.submitNewProduct_2.TabIndex"
+                  "fullyQualifiedName": "ContractCreator.submitNewContract.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractCreator.submitNewProduct_2.TabIndex",
+                  "fullyQualifiedName": "ContractCreator.submitNewContract.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ContractCreator",
-                "type": "ContractCreator.submitNewProduct_2"
+                "type": "ContractCreator.submitNewContract"
               }
             }
           ],
@@ -2048,19 +1931,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.eProdToHome_6.AccessibleLabel"
+                  "fullyQualifiedName": "PartyEditor.ePartyEditorToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.eProdToHome_6.AccessibleLabel",
+                  "fullyQualifiedName": "PartyEditor.ePartyEditorToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyEditor",
-                "type": "PartyEditor.eProdToHome_6"
+                "type": "PartyEditor.ePartyEditorToHome"
               }
             }
           ],
@@ -2078,19 +1961,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.eProdToHome_6.TabIndex"
+                  "fullyQualifiedName": "PartyEditor.ePartyEditorToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.eProdToHome_6.TabIndex",
+                  "fullyQualifiedName": "PartyEditor.ePartyEditorToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartyEditor",
-                "type": "PartyEditor.eProdToHome_6"
+                "type": "PartyEditor.ePartyEditorToHome"
               }
             }
           ],
@@ -2108,19 +1991,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.eProdEditorNameInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartyEditor.ePartyNameInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.eProdEditorNameInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartyEditor.ePartyNameInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyEditor",
-                "type": "PartyEditor.eProdEditorNameInput_1"
+                "type": "PartyEditor.ePartyNameInput"
               }
             }
           ],
@@ -2138,19 +2021,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.eProdEditorDepInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartyEditor.ePartyIdentifierInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.eProdEditorDepInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartyEditor.ePartyIdentifierInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyEditor",
-                "type": "PartyEditor.eProdEditorDepInput_1"
+                "type": "PartyEditor.ePartyIdentifierInput"
               }
             }
           ],
@@ -2168,19 +2051,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.submitEditedProduct_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartyEditor.submitEditedParty.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.submitEditedProduct_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartyEditor.submitEditedParty.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyEditor",
-                "type": "PartyEditor.submitEditedProduct_1"
+                "type": "PartyEditor.submitEditedParty"
               }
             }
           ],
@@ -2198,19 +2081,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyEditor.submitEditedProduct_1.TabIndex"
+                  "fullyQualifiedName": "PartyEditor.submitEditedParty.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyEditor.submitEditedProduct_1.TabIndex",
+                  "fullyQualifiedName": "PartyEditor.submitEditedParty.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartyEditor",
-                "type": "PartyEditor.submitEditedProduct_1"
+                "type": "PartyEditor.submitEditedParty"
               }
             }
           ],
@@ -2228,19 +2111,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyCreator.eProdToHome_7.AccessibleLabel"
+                  "fullyQualifiedName": "PartyCreator.ePartyCreatorToHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyCreator.eProdToHome_7.AccessibleLabel",
+                  "fullyQualifiedName": "PartyCreator.ePartyCreatorToHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyCreator",
-                "type": "PartyCreator.eProdToHome_7"
+                "type": "PartyCreator.ePartyCreatorToHome"
               }
             }
           ],
@@ -2258,19 +2141,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyCreator.eProdToHome_7.TabIndex"
+                  "fullyQualifiedName": "PartyCreator.ePartyCreatorToHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyCreator.eProdToHome_7.TabIndex",
+                  "fullyQualifiedName": "PartyCreator.ePartyCreatorToHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartyCreator",
-                "type": "PartyCreator.eProdToHome_7"
+                "type": "PartyCreator.ePartyCreatorToHome"
               }
             }
           ],
@@ -2348,19 +2231,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyCreator.submitNewProduct_1.AccessibleLabel"
+                  "fullyQualifiedName": "PartyCreator.submitNewParty.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyCreator.submitNewProduct_1.AccessibleLabel",
+                  "fullyQualifiedName": "PartyCreator.submitNewParty.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "PartyCreator",
-                "type": "PartyCreator.submitNewProduct_1"
+                "type": "PartyCreator.submitNewParty"
               }
             }
           ],
@@ -2378,19 +2261,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PartyCreator.submitNewProduct_1.TabIndex"
+                  "fullyQualifiedName": "PartyCreator.submitNewParty.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PartyCreator.submitNewProduct_1.TabIndex",
+                  "fullyQualifiedName": "PartyCreator.submitNewParty.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "PartyCreator",
-                "type": "PartyCreator.submitNewProduct_1"
+                "type": "PartyCreator.submitNewParty"
               }
             }
           ],
@@ -2948,6 +2831,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ContractPortal",
+                "type": "ContractPortal.Products_2.EditProductIcon_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractPortal.Products_2.EditProductIcon_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ContractPortal",
+                "type": "ContractPortal.Products_2.EditProductIcon_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App._updateProducts"
                 }
               ],
@@ -2961,96 +2904,6 @@
                 "member": "_updateProducts",
                 "module": "App",
                 "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductEditor.departement"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductEditor.departement",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "departement",
-                "module": "ProductEditor",
-                "type": "ProductEditor"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductEditor.name"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductEditor.name",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "name",
-                "module": "ProductEditor",
-                "type": "ProductEditor"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProductEditor.uuid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProductEditor.uuid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "uuid",
-                "module": "ProductEditor",
-                "type": "ProductEditor"
               }
             }
           ],

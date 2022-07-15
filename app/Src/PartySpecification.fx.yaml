@@ -1,6 +1,6 @@
 PartySpecification As screen:
 
-    ProductSpecificationTitle_1 As label:
+    PartySpecificationTitle As label:
         Align: =Align.Center
         Color: =RGBA(151, 0, 0, 1)
         FontWeight: =FontWeight.Bold
@@ -12,7 +12,7 @@ PartySpecification As screen:
         Width: =1366
         ZIndex: =1
 
-    ProductNameSpec_1 As label:
+    PartyNameSpec As label:
         Height: =60
         Text: |-
             ="Name: " & name
@@ -21,7 +21,7 @@ PartySpecification As screen:
         Y: =96
         ZIndex: =2
 
-    ProductDepartmentSpec_1 As label:
+    PartyIdentifierSpec As label:
         Height: =60
         Text: |-
             ="Identifier: " & id
@@ -30,7 +30,7 @@ PartySpecification As screen:
         Y: =156
         ZIndex: =3
 
-    eProdToHome_5 As icon.BackArrow:
+    ePartySpecToHome As icon.BackArrow:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.BackArrow
@@ -41,7 +41,7 @@ PartySpecification As screen:
         X: =1291
         ZIndex: =4
 
-    Label9_4 As label:
+    PartyUuidSpec As label:
         Height: =60
         Text: |-
             ="UUID: " & uuid
@@ -50,7 +50,7 @@ PartySpecification As screen:
         Y: =216
         ZIndex: =5
 
-    RemoveProductSpecItem_1 As icon.Trash:
+    RemovePartySpecItem As icon.Trash:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Trash
@@ -68,7 +68,7 @@ PartySpecification As screen:
         Y: =668
         ZIndex: =6
 
-    EditProductSpecItem_1 As icon.Edit:
+    EditPartySpecItem As icon.Edit:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Edit

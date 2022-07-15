@@ -15,7 +15,7 @@ ProductCreator As screen:
         Width: =1366
         ZIndex: =1
 
-    Label8 As label:
+    eProdCreatorNameLabel As label:
         Height: =60
         Text: |-
             ="Name:
@@ -24,7 +24,7 @@ ProductCreator As screen:
         Y: =96
         ZIndex: =2
 
-    Label9 As label:
+    eProdCreatorDepLabel As label:
         Height: =60
         Text: |-
             ="Department: "
@@ -32,7 +32,7 @@ ProductCreator As screen:
         Y: =156
         ZIndex: =3
 
-    eProdToHome_1 As icon.BackArrow:
+    eProdCreatorToHome As icon.BackArrow:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.BackArrow
@@ -86,7 +86,7 @@ ProductCreator As screen:
                 Set(_send, false);
                 Set(_eProdNameDef, "");
                 Set(_eProdDepDef, "");
-                Notify("Successfully submitted a product with name" & Char(34) & eProdCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
+                Notify("Successfully submitted a product with name " & Char(34) & eProdCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20
@@ -96,7 +96,7 @@ ProductCreator As screen:
         Y: =668
         ZIndex: =7
 
-    Label10 As label:
+    eProdCreateSend As label:
         Align: =Align.Right
         Text: ="Sending..."
         Visible: =_send

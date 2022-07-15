@@ -79,11 +79,11 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.Trash
             OnSelect: |-
-                =Set(_sync, true);
-                DeleteProductByID.Run(UrlParser.Run(ThisItem.uuid).uuid);
-                Clear(ProductCollection);
-                Collect(ProductCollection, FindAllProducts.Run());
-                Set(_sync, false);
+                =//Set(_sync, true);
+                //DeleteProductByID.Run(UrlParser.Run(ThisItem.uuid).uuid);
+                //Clear(ProductCollection);
+                //Collect(ProductCollection, FindAllProducts.Run());
+                //Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
@@ -96,7 +96,13 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.Edit
             OnSelect: |-
-                =Navigate(ProductEditor, None, {name: ThisItem.name, departement: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid});
+                =//Navigate(ContractEditor, None, 
+                //    {
+                //        name: ThisItem.name, 
+                //        departement: ThisItem.department, 
+                //        uuid: UrlParser.Run(ThisItem.uuid).uuid
+                //    }
+                //);
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
@@ -240,7 +246,7 @@ ContractPortal As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Add
-        OnSelect: =Navigate(ProductCreator);
+        OnSelect: =Navigate(ContractCreator);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

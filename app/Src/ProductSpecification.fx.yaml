@@ -30,7 +30,7 @@ ProductSpecification As screen:
         Y: =156
         ZIndex: =3
 
-    eProdToHome_2 As icon.BackArrow:
+    eProdSpecToHome As icon.BackArrow:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.BackArrow
@@ -41,7 +41,7 @@ ProductSpecification As screen:
         X: =1291
         ZIndex: =4
 
-    Label9_2 As label:
+    ProductUuidSpec As label:
         Height: =60
         Text: |-
             ="UUID: " & spec_uuid
