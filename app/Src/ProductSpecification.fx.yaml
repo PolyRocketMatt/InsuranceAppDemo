@@ -73,7 +73,7 @@ ProductSpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Navigate(ProductEditor, {name: name, department: department, uuid: uuid});
+            =Navigate(ProductEditor, None, {name: name, department: department, uuid: uuid});
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
