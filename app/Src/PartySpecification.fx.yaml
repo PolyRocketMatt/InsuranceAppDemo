@@ -55,12 +55,12 @@ PartySpecification As screen:
         Height: =80
         Icon: =Icon.Trash
         OnSelect: |-
-            =Navigate(PartyPortal);
-            Set(_sync, true);
+            =Set(_sync, true);
             DeletePartyByID.Run(uuid);
             Clear(PartyCollection);
             Collect(PartyCollection, FindAllParties.Run());
             Set(_sync, false);
+            Navigate(ProductPortal);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
