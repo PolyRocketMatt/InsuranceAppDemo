@@ -1,6 +1,7 @@
 ContractPortal As screen:
     OnVisible: |-
-        =Clear(ContractCollectCollection);
+        =Clear(ContractCollection);
+        Clear(ContractCollectCollection);
         Collect(ContractCollectCollection, FindAllContracts.Run());
         
         ForAll(
