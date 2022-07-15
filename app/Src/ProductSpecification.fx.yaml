@@ -56,12 +56,9 @@ ProductSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_lookupName, spec_name);
-            Navigate(ProductPortal);
-            Set(_sync, true);
-            DeleteProductByID.Run(spec_uuid);
             Clear(ProductCollection);
-            Collect(ProductCollection, FindAllProducts.Run());
-            Set(_sync, false);
+            Navigate(ProductPortal);
+            DeleteProductByID.Run(spec_uuid);
             
             ForAll(
                 ProductCollection,
