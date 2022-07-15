@@ -1,7 +1,7 @@
 PartyEditor As screen:
     OnVisible: |-
         =Set(_ePartyNameEditDef, name);
-        Set(_ePartyIDEditDef, identifier);
+        Set(_ePartyIDEditDef, id);
 
     ProductEditorTitle_1 As label:
         Align: =Align.Center
