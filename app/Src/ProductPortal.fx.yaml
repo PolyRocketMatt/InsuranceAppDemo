@@ -95,7 +95,14 @@ ProductPortal As screen:
             Color: =RGBA(116, 116, 116, 1)
             Height: =80
             Icon: =Icon.NextArrow
-            OnSelect: =
+            OnSelect: |-
+                =Navigate(ProductSpecification, None, 
+                    {
+                        spec_name: ThisItem.name,
+                        spec_dep: ThisItem.department,
+                        spec_uuid: UrlParser.Run(ThisItem.uuid).uuid
+                    }
+                );
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
