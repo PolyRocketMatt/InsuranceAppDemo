@@ -152,13 +152,14 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.Edit
             OnSelect: |-
-                =//Navigate(ContractEditor, None, 
-                //    {
-                //        name: ThisItem.name, 
-                //        departement: ThisItem.department, 
-                //        uuid: UrlParser.Run(ThisItem.uuid).uuid
-                //    }
-                //);
+                =Navigate(ContractEditor, None, 
+                    {
+                        number: ThisItem.number,
+                        type: ThisItem.type,
+                        holder: ThisItem.holder,
+                        beneficiary: ThisItem.beneficiary
+                    }
+                );
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
