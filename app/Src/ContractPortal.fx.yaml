@@ -6,14 +6,15 @@ ContractPortal As screen:
         ForAll(
             ContractCollectCollection,
             Collect(ContractCollection, { 
+                uuid: UrlParser.Run(ThisRecord.uuid).uuid,
                 number: ThisRecord.number,
                 id: ThisRecord.contentID,
                 length: ThisRecord.contentLength,
                 mimetype: ThisRecord.contentMimetype,
                 filename: ThisRecord.contentFilename,
-                holder: UrlParser.Run(ThisRecord.holder).uuid,
-                beneficiary: UrlParser.Run(ThisRecord.beneficiary).uuid,
-                type: UrlParser.Run(ThisRecord.type).uuid
+                holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
             });
         );
         
@@ -50,7 +51,7 @@ ContractPortal As screen:
             OnSelect: =Select(Parent)
             Text: |-
                 ="Number: " & ThisItem.number
-            Width: =400
+            Width: =351
             X: =8
             Y: =15
             ZIndex: =1
@@ -58,8 +59,8 @@ ContractPortal As screen:
         eProdDepartmentLabel_2 As label:
             OnSelect: =Select(Parent)
             Text: |-
-                ="Holder: " & ThisItem.holder
-            Width: =702
+                ="Type: " & ThisItem.type
+            Width: =351
             X: =8
             Y: =55
             ZIndex: =2
@@ -114,6 +115,24 @@ ContractPortal As screen:
             X: =870
             Y: =15
             ZIndex: =6
+
+        eProdDepartmentLabel_3 As label:
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Beneficiary: " & ThisItem.beneficiary
+            Width: =351
+            X: =359
+            Y: =55
+            ZIndex: =7
+
+        eProdNameLabel_3 As label:
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Holder: " & ThisItem.holder
+            Width: =351
+            X: =359
+            Y: =15
+            ZIndex: =8
 
     eProdOptFilter_2 As label:
         Height: =50
