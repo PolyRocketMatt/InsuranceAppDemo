@@ -17,8 +17,8 @@ ProductPortal As screen:
         );
         
         If(
-            CountRows(CountCollection) = 0,
-            Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+            And(_doLookup, CountRows(CountCollection) = 0),
+            Notify("Successfully deleted product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
         );
         
         Clear(CountCollection);
@@ -98,10 +98,11 @@ ProductPortal As screen:
                 
                 If(
                     CountRows(CountCollection) = 0,
-                    Notify("Successfully deleted product" & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                    Notify("Successfully deleted product " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
                 );
                 
                 Clear(CountCollection);
+                Set(_doLookup, false);
                 Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
