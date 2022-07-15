@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 4,
-                  "charOffset": 260,
+                  "charOffset": 356,
                   "snippet": {
                     "text": "uuid"
                   }
@@ -39,14 +39,15 @@
           ],
           "message": {
             "arguments": [
-              "uuid"
+              "Text",
+              "Record"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
           "ruleIndex": 0
         },
         {
@@ -63,10 +64,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 76,
-                  "charOffset": 243,
+                  "charLength": 77,
+                  "charOffset": 336,
                   "snippet": {
-                    "text": "PutPartyById.Run(uuid, ePartyIdentifierInput_1.Text, ePartyNameInput_1.Text)"
+                    "text": "PutContractById.Run(uuid, eContractTypeInput.Text, eContractNumberInput.Text)"
                   }
                 }
               },
@@ -2914,19 +2915,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.ePartyNameInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "ContractEditor.eContractNumberInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.ePartyNameInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "ContractEditor.eContractNumberInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractEditor",
-                "type": "ContractEditor.ePartyNameInput_1"
+                "type": "ContractEditor.eContractNumberInput"
               }
             }
           ],
@@ -2944,19 +2945,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_1.AccessibleLabel"
+                  "fullyQualifiedName": "ContractEditor.eContractTypeInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_1.AccessibleLabel",
+                  "fullyQualifiedName": "ContractEditor.eContractTypeInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractEditor",
-                "type": "ContractEditor.ePartyIdentifierInput_1"
+                "type": "ContractEditor.eContractTypeInput"
               }
             }
           ],
@@ -2974,19 +2975,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_2.AccessibleLabel"
+                  "fullyQualifiedName": "ContractEditor.eContractHolderInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_2.AccessibleLabel",
+                  "fullyQualifiedName": "ContractEditor.eContractHolderInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractEditor",
-                "type": "ContractEditor.ePartyIdentifierInput_2"
+                "type": "ContractEditor.eContractHolderInput"
               }
             }
           ],
@@ -3004,19 +3005,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_3.AccessibleLabel"
+                  "fullyQualifiedName": "ContractEditor.eContractBeneficiaryInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.ePartyIdentifierInput_3.AccessibleLabel",
+                  "fullyQualifiedName": "ContractEditor.eContractBeneficiaryInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractEditor",
-                "type": "ContractEditor.ePartyIdentifierInput_3"
+                "type": "ContractEditor.eContractBeneficiaryInput"
               }
             }
           ],
@@ -3066,17 +3067,14 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrInvalidName",
+              "id": "app-ErrBadType-ExpectedType-ProvidedType",
               "messageStrings": {
                 "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
+                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""

@@ -7,8 +7,8 @@ EntitySelector As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =120
         Width: =160
-        X: =880
-        Y: =331
+        X: =708
+        Y: =497
         ZIndex: =1
 
     Rectangle2 As rectangle:
@@ -17,8 +17,8 @@ EntitySelector As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =120
         Width: =160
-        X: =695
-        Y: =331
+        X: =708
+        Y: =330
         ZIndex: =2
 
     Rectangle1_1 As rectangle:
@@ -27,8 +27,8 @@ EntitySelector As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =200
         Width: =160
-        X: =510
-        Y: =331
+        X: =498
+        Y: =498
         ZIndex: =3
 
     Rectangle1 As rectangle:
@@ -37,7 +37,7 @@ EntitySelector As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =120
         Width: =160
-        X: =325
+        X: =498
         Y: =331
         ZIndex: =4
 
@@ -58,7 +58,7 @@ EntitySelector As screen:
         Align: =Align.Center
         Text: ="Select an entity to start or select a property of an entity"
         Width: =1366
-        Y: =291
+        Y: =290
         ZIndex: =6
 
     SelectClaimEntityBtn As button:
@@ -70,7 +70,7 @@ EntitySelector As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Claim"
-        X: =325
+        X: =498
         Y: =331
         ZIndex: =7
 
@@ -87,8 +87,8 @@ EntitySelector As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Product"
-        X: =880
-        Y: =331
+        X: =708
+        Y: =497
         ZIndex: =8
 
     SelectPartyEntityBtn As button:
@@ -104,8 +104,8 @@ EntitySelector As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Party"
-        X: =695
-        Y: =331
+        X: =708
+        Y: =330
         ZIndex: =9
 
     SelectContractEntityBtn As button:
@@ -122,15 +122,15 @@ EntitySelector As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Contract"
-        X: =510
-        Y: =331
+        X: =498
+        Y: =498
         ZIndex: =10
 
     Separator As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =325
+        X: =498
         Y: =410
         ZIndex: =11
 
@@ -148,7 +148,7 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Number      "
-        X: =325
+        X: =498
         Y: =371
         ZIndex: =12
 
@@ -168,7 +168,7 @@ EntitySelector As screen:
         Text: |-
             ="Created
             "
-        X: =325
+        X: =498
         Y: =411
         ZIndex: =13
 
@@ -186,16 +186,16 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Number"
-        X: =510
-        Y: =371
+        X: =498
+        Y: =538
         ZIndex: =14
 
     Separator_1 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =510
-        Y: =410
+        X: =498
+        Y: =577
         ZIndex: =15
 
     eConHolProp As button:
@@ -212,16 +212,16 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Holder"
-        X: =510
-        Y: =411
+        X: =498
+        Y: =578
         ZIndex: =16
 
     Separator_2 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =510
-        Y: =450
+        X: =498
+        Y: =617
         ZIndex: =17
 
     eConBenProp As button:
@@ -238,16 +238,16 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Beneficiary"
-        X: =510
-        Y: =451
+        X: =498
+        Y: =618
         ZIndex: =18
 
     Separator_3 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =510
-        Y: =490
+        X: =498
+        Y: =657
         ZIndex: =19
 
     eConTypProp As button:
@@ -266,8 +266,8 @@ EntitySelector As screen:
         Text: |-
             ="Type
             "
-        X: =510
-        Y: =491
+        X: =498
+        Y: =658
         ZIndex: =20
 
     eParNameProp As button:
@@ -284,16 +284,16 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Name"
-        X: =695
-        Y: =371
+        X: =708
+        Y: =370
         ZIndex: =21
 
     Separator_4 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =695
-        Y: =410
+        X: =708
+        Y: =409
         ZIndex: =22
 
     eParIdentProp As button:
@@ -310,8 +310,8 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Identifier"
-        X: =695
-        Y: =411
+        X: =708
+        Y: =410
         ZIndex: =23
 
     eProdNameProp As button:
@@ -328,16 +328,16 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Name"
-        X: =880
-        Y: =371
+        X: =708
+        Y: =537
         ZIndex: =24
 
     Separator_6 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
-        X: =880
-        Y: =410
+        X: =708
+        Y: =576
         ZIndex: =25
 
     eProdDepProp As button:
@@ -354,7 +354,7 @@ EntitySelector As screen:
         RadiusTopRight: =0
         Size: =13
         Text: ="Department"
-        X: =880
-        Y: =411
+        X: =708
+        Y: =577
         ZIndex: =26
 

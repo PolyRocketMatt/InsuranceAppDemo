@@ -635,7 +635,8 @@
       "2eed47b3-e946-4ebd-9c4c-43b89f9a55af",
       "a31a3e1c-bba0-4a4f-ba65-4149ca8a31e5",
       "3a6ec2f8-e138-48c8-b850-88eeb5a67d7b",
-      "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d"
+      "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d",
+      "d20f0ae8-0e65-4b84-958b-5b20be1c4464"
     ],
     "id": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
   },
@@ -655,6 +656,46 @@
       "ac26a15b-12c1-4051-a36a-ea97d1113872"
     ],
     "id": "c58f2625-e078-471d-9e56-08be8523a5dc"
+  },
+  "d20f0ae8-0e65-4b84-958b-5b20be1c4464": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-27.westeurope.logic.azure.com:443/workflows/62517958cd824bb9b046bb669197c35a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=dKAx3ja2-R2J61yGd5LJj-YWlVsErH3cHgWZMx-a7vQ",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/bebcf0d7-f802-47a2-95b2-3215c5a4ad5d",
+      "workflowName": "bebcf0d7-f802-47a2-95b2-3215c5a4ad5d",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/bebcf0d7-f802-47a2-95b2-3215c5a4ad5d"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
+          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bebcf0d7-f802-47a2-95b2-3215c5a4ad5d"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
+          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bebcf0d7-f802-47a2-95b2-3215c5a4ad5d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PutContractById"
+    ],
+    "dependencies": {
+      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+    },
+    "dependents": [],
+    "id": "d20f0ae8-0e65-4b84-958b-5b20be1c4464"
   },
   "e306a503-9644-4d32-85e5-7f6782f68cbb": {
     "connectionParameters": {},

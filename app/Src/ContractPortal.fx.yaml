@@ -157,7 +157,8 @@ ContractPortal As screen:
                         number: ThisItem.number,
                         type: ThisItem.type,
                         holder: ThisItem.holder,
-                        beneficiary: ThisItem.beneficiary
+                        beneficiary: ThisItem.beneficiary,
+                        uuid: UrlParser.Run(ThisItem.uuid)
                     }
                 );
             PaddingBottom: =20

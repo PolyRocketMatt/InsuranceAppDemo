@@ -154,7 +154,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eClaimCreProp",
-      "ParentIndex": 18,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -490,7 +490,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eClaimNumProp",
-      "ParentIndex": 10,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1162,7 +1162,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eConHolProp",
-      "ParentIndex": 19,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1498,7 +1498,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eConNumProp",
-      "ParentIndex": 11,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2251,7 +2251,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eParIdentProp",
-      "ParentIndex": 20,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2587,7 +2587,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eParNameProp",
-      "ParentIndex": 12,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2923,7 +2923,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eProdDepProp",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3259,7 +3259,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "eProdNameProp",
-      "ParentIndex": 13,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3491,7 +3491,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle1",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3623,7 +3623,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle1_1",
-      "ParentIndex": 4,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3755,7 +3755,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2",
-      "ParentIndex": 6,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3887,7 +3887,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_1",
-      "ParentIndex": 8,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4081,7 +4081,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SelectClaimEntityBtn",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4383,7 +4383,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SelectContractEntityBtn",
-      "ParentIndex": 5,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5270,7 +5270,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SelectPartyEntityBtn",
-      "ParentIndex": 7,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5577,7 +5577,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SelectProductEntityBtn",
-      "ParentIndex": 9,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5814,7 +5814,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Separator",
-      "ParentIndex": 14,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5946,7 +5946,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Separator_1",
-      "ParentIndex": 15,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6342,7 +6342,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Separator_4",
-      "ParentIndex": 16,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6474,7 +6474,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Separator_6",
-      "ParentIndex": 17,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
