@@ -1,7 +1,33 @@
 PartyPortal As screen:
     OnVisible: |-
-        =Clear(PartyCollection);
+        =//  Sync    
+        Set(_sync, true);
+        Clear(PartyCollection);
         Collect(PartyCollection, FindAllParties.Run());
+        
+        //  Check occurence if needed
+        If(
+            _doLookup,
+            ForAll(
+                PartyCollection,
+                If(
+                    ThisRecord.name = _lookupName,
+                    Notify("Could not delete party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                    Collect(CountCollection, ThisRecord)
+                )
+            )
+        );
+        
+        If(
+            And(_doLookup, CountRows(CountCollection) = 0),
+            Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+        );
+        
+        //  Clear variables/collections
+        Clear(CountCollection);
+        Set(_sync, false);
+        Set(_doLookup, false);
+        Set(_lookupName, "");
         Set(_ePartyNameSearch, "");
         Set(_ePartyIDSearch, "");
 
@@ -57,10 +83,35 @@ PartyPortal As screen:
             Height: =80
             Icon: =Icon.Trash
             OnSelect: |-
-                =Set(_sync, true);
+                =//  Set basic variables
+                Set(_lookupName, ThisItem.name);
+                Set(_sync, true);
+                
+                //  Delete product
                 DeletePartyByID.Run(UrlParser.Run(ThisItem.uuid).uuid);
+                
+                //  Sync collection
                 Clear(PartyCollection);
                 Collect(PartyCollection, FindAllParties.Run());
+                
+                //  Check synced collection for occurrence of the item
+                ForAll(
+                    PartyCollection,
+                    If(
+                        ThisRecord.name = _lookupName,
+                        Notify("Could not delete party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                        Collect(CountCollection, ThisRecord)
+                    )
+                );
+                
+                If(
+                    CountRows(CountCollection) = 0,
+                    Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                );
+                
+                //  Clear collections/variables
+                Clear(CountCollection);
+                Set(_lookupName, "");
                 Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
@@ -74,7 +125,13 @@ PartyPortal As screen:
             Height: =80
             Icon: =Icon.Edit
             OnSelect: |-
-                =Navigate(PartyEditor, None, {name: ThisItem.name, id: ThisItem.id, uuid: UrlParser.Run(ThisItem.uuid).uuid});
+                =Navigate(PartyEditor, None, 
+                    {
+                        name: ThisItem.name, 
+                        id: ThisItem.id, 
+                        uuid: UrlParser.Run(ThisItem.uuid).uuid
+                    }
+                );
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
