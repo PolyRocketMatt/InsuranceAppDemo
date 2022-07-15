@@ -88,7 +88,7 @@ PartyPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Navigate(PartySpecification, None, {name: ThisItem.name, identifier: ThisItem.id, uuid: UrlParser.Run(ThisItem.uuid).uuid});
+                =Navigate(PartySpecification, None, {name: ThisItem.name, id: ThisItem.id, uuid: UrlParser.Run(ThisItem.uuid).uuid});
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
