@@ -1,6 +1,46 @@
 EntitySelector As screen:
     OnVisible: =Set(_updateProducts, false);
 
+    Rectangle2_1 As rectangle:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        Width: =160
+        X: =880
+        Y: =331
+        ZIndex: =1
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        Width: =160
+        X: =695
+        Y: =331
+        ZIndex: =2
+
+    Rectangle1_1 As rectangle:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =200
+        Width: =160
+        X: =510
+        Y: =331
+        ZIndex: =3
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        Width: =160
+        X: =325
+        Y: =331
+        ZIndex: =4
+
     SelectorTitle As label:
         Align: =Align.Center
         Color: =RGBA(151, 0, 0, 1)
@@ -11,49 +51,65 @@ EntitySelector As screen:
             ="Entity Selector
             "
         Width: =1366
-        Y: =308
-        ZIndex: =1
+        Y: =215
+        ZIndex: =5
 
     SelectorDescriptor As label:
         Align: =Align.Center
         Text: ="Select an entity to start or select a property of an entity"
         Width: =1366
-        Y: =384
-        ZIndex: =2
+        Y: =291
+        ZIndex: =6
 
     SelectClaimEntityBtn As button:
+        BorderThickness: =0
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Claim"
         X: =325
-        Y: =444
-        ZIndex: =3
+        Y: =331
+        ZIndex: =7
 
     SelectProductEntityBtn As button:
+        BorderThickness: =0
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
         OnSelect: |-
             =Clear(ProductCollection);
             Collect(ProductCollection, FindAllProducts.Run());
             Navigate(ProductPortal);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Product"
         X: =880
-        Y: =444
-        ZIndex: =4
+        Y: =331
+        ZIndex: =8
 
     SelectPartyEntityBtn As button:
+        BorderThickness: =0
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
         OnSelect: |-
             =Clear(PartyCollection);
             Collect(PartyCollection, FindAllParties.Run());
             Navigate(PartyPortal);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Party"
         X: =695
-        Y: =444
-        ZIndex: =5
+        Y: =331
+        ZIndex: =9
 
     SelectContractEntityBtn As button:
+        BorderThickness: =0
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
         OnSelect: |-
@@ -61,190 +117,244 @@ EntitySelector As screen:
             Clear(ContractCollectCollection);
             Collect(ContractCollectCollection, FindAllContracts.Run());
             Navigate(ContractPortal);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Text: ="Contract"
         X: =510
-        Y: =444
-        ZIndex: =6
+        Y: =331
+        ZIndex: =10
 
     Separator As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =325
-        Y: =525
-        ZIndex: =9
+        Y: =410
+        ZIndex: =11
 
     eClaimNumProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
-        Text: ="Number"
+        Text: ="Number      "
         X: =325
-        Y: =485
-        ZIndex: =23
+        Y: =371
+        ZIndex: =12
 
     eClaimCreProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: |-
             ="Created
             "
         X: =325
-        Y: =526
-        ZIndex: =24
+        Y: =411
+        ZIndex: =13
 
     eConNumProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Number"
         X: =510
-        Y: =485
-        ZIndex: =25
+        Y: =371
+        ZIndex: =14
 
     Separator_1 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =510
-        Y: =525
-        ZIndex: =26
+        Y: =410
+        ZIndex: =15
 
     eConHolProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Holder"
         X: =510
-        Y: =526
-        ZIndex: =27
+        Y: =411
+        ZIndex: =16
 
     Separator_2 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =510
-        Y: =565
-        ZIndex: =28
+        Y: =450
+        ZIndex: =17
 
     eConBenProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Beneficiary"
         X: =510
-        Y: =566
-        ZIndex: =29
+        Y: =451
+        ZIndex: =18
 
     Separator_3 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =510
-        Y: =606
-        ZIndex: =30
+        Y: =490
+        ZIndex: =19
 
     eConTypProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: |-
             ="Type
             "
         X: =510
-        Y: =607
-        ZIndex: =31
+        Y: =491
+        ZIndex: =20
 
     eParNameProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Name"
         X: =695
-        Y: =485
-        ZIndex: =32
+        Y: =371
+        ZIndex: =21
 
     Separator_4 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =695
-        Y: =525
-        ZIndex: =33
+        Y: =410
+        ZIndex: =22
 
     eParIdentProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Identifier"
         X: =695
-        Y: =526
-        ZIndex: =34
+        Y: =411
+        ZIndex: =23
 
     eProdNameProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Name"
         X: =880
-        Y: =485
-        ZIndex: =36
+        Y: =371
+        ZIndex: =24
 
     Separator_6 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)
         Height: =1
         Width: =160
         X: =880
-        Y: =525
-        ZIndex: =37
+        Y: =410
+        ZIndex: =25
 
     eProdDepProp As button:
+        Align: =Align.Left
         BorderThickness: =0
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(74, 74, 74, 1)
         Fill: =RGBA(0, 0, 0, 0)
         FontWeight: =FontWeight.Normal
         HoverFill: =RGBA(74, 74, 74, 0.5)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =13
         Text: ="Department"
         X: =880
-        Y: =526
-        ZIndex: =38
+        Y: =411
+        ZIndex: =26
 
