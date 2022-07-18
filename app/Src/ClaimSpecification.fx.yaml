@@ -56,7 +56,13 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Trash
-        OnSelect: =
+        OnSelect: |-
+            =Set(_sync, true);
+            DeleteClaimByID.Run(uuid);
+            Clear(ClaimCollection);
+            Collect(ClaimCollection, FindAllClaims.Run());
+            Set(_sync, false);
+            Navigate(ClaimPortal);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
