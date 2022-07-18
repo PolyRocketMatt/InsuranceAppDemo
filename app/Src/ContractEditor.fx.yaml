@@ -85,7 +85,7 @@ ContractEditor As screen:
                 Notify("Expected values to be non-empty!", NotificationType.Error);
                 false,
                 Set(_send, true);
-                PutContractById.Run(uuid, eContractTypeInput.Text, eContractNumberInput.Text);
+                PutContractById.Run(uuid, "", eContractNumberInput.Text);
                 Set(_updateProducts, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
