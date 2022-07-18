@@ -39,7 +39,7 @@ ClaimCreator As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1291
+        X: =1216
         ZIndex: =4
 
     eClaimCreatorNumberInput As text:
@@ -105,4 +105,15 @@ ClaimCreator As screen:
         X: =170
         Y: =168
         ZIndex: =9
+
+    Icon5_12 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1291
+        ZIndex: =10
 

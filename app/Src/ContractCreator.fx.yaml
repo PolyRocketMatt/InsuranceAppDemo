@@ -43,7 +43,7 @@ ContractCreator As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1291
+        X: =1216
         ZIndex: =4
 
     eContractCreatorNumInput As text:
@@ -151,4 +151,15 @@ ContractCreator As screen:
         X: =170
         Y: =288
         ZIndex: =12
+
+    Icon5_13 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1291
+        ZIndex: =13
 

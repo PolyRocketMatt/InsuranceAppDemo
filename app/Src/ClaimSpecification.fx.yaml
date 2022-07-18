@@ -61,7 +61,7 @@ ClaimSpecification As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1291
+        X: =1216
         ZIndex: =6
 
     PartyUuidSpec_2 As label:
@@ -270,4 +270,15 @@ ClaimSpecification As screen:
         X: =1266
         Y: =668
         ZIndex: =19
+
+    Icon5_4 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1291
+        ZIndex: =20
 

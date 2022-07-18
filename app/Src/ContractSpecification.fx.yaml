@@ -42,7 +42,7 @@ ContractSpecification As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1291
+        X: =1216
         ZIndex: =4
 
     PartyUuidSpec_1 As label:
@@ -183,4 +183,15 @@ ContractSpecification As screen:
         X: =1298
         Y: =276
         ZIndex: =12
+
+    Icon5_5 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1291
+        ZIndex: =13
 

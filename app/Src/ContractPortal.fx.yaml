@@ -322,7 +322,7 @@ ContractPortal As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1290
+        X: =1215
         ZIndex: =10
 
     Icon12_2 As icon.Add:
@@ -375,4 +375,15 @@ ContractPortal As screen:
         X: =1105
         Y: =283
         ZIndex: =15
+
+    Icon5_2 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1290
+        ZIndex: =16
 

@@ -244,7 +244,7 @@ PartyPortal As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1290
+        X: =1215
         ZIndex: =10
 
     Icon12_1 As icon.Add:
@@ -257,4 +257,15 @@ PartyPortal As screen:
         Width: =80
         X: =890
         ZIndex: =11
+
+    Icon5_3 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1290
+        ZIndex: =12
 

@@ -246,7 +246,7 @@ ProductPortal As screen:
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
-        X: =1290
+        X: =1215
         ZIndex: =10
 
     Icon12 As icon.Add:
@@ -259,4 +259,30 @@ ProductPortal As screen:
         Width: =80
         X: =890
         ZIndex: =11
+
+    Icon5 As icon.Home:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =75
+        Icon: =Icon.Home
+        PaddingBottom: =16
+        PaddingTop: =16
+        Width: =75
+        X: =1290
+        ZIndex: =12
+
+    Icon6 As icon.Search:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =80
+        Icon: =Icon.Search
+        OnSelect: |-
+            =Set(_sync, true);
+            Clear(ProductCollection);
+            Collect(ProductCollection, SearchProduct.Run(eProdNameInput.Text, eProdDepInput.Text));
+            Set(_sync, false);
+        PaddingBottom: =20
+        PaddingTop: =20
+        Width: =80
+        X: =1266
+        Y: =226
+        ZIndex: =13
 
