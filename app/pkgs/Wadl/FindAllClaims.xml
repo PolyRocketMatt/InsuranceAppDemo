@@ -9,10 +9,12 @@
       <object name="ResponseActionOutput_items_def_contracts_def">
         <property name="href" type="string" />
       </object>
+      <string name="ResponseActionOutput_items_def_uuid_def" />
       <object name="ResponseActionOutput_items_def">
         <property name="created" type="string" />
         <property name="number" type="string" />
         <property name="contracts" typeRef="ResponseActionOutput_items_def_contracts_def" />
+        <property name="uuid" type="string" />
       </object>
       <array typeRef="ResponseActionOutput_items_def" name="ResponseActionOutput" />
       <object name="Run_responses_default_def" />

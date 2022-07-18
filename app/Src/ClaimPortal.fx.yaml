@@ -1,4 +1,40 @@
 ClaimPortal As screen:
+    OnVisible: |-
+        =If(
+            _refresh,
+            //  Sync    
+            Set(_sync, true);
+            Clear(ClaimCollection);
+            Collect(ClaimCollection, FindAllClaims.Run());
+        
+            //  Check occurence if needed
+            If(
+                _doLookup,
+                ForAll(
+                    ClaimCollection,
+                    If(
+                        ThisRecord.number = _lookupName,
+                        Notify("Could not delete party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                        Collect(CountCollection, ThisRecord)
+                    )
+                )
+            );
+        
+            If(
+                And(_doLookup, CountRows(CountCollection) = 0),
+                Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+            );
+        
+            //  Clear variables/collections
+            Clear(CountCollection);
+            Set(_sync, false);
+            Set(_doLookup, false);
+            Set(_lookupName, "");
+            Set(_eClaimNumberSearch, "");
+            Set(_eClaimDateSearch, Today());
+            true,
+            true
+        );
 
     ProductPortalTitle_3 As label:
         Align: =Align.Center
@@ -145,7 +181,7 @@ ClaimPortal As screen:
 
     eProdNameInput_3 As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyNameSearch
+        Default: =_eClaimNumberSearch
         Height: =35
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -157,23 +193,11 @@ ClaimPortal As screen:
 
     eProdDepFilter_5 As label:
         Height: =50
-        Text: ="Identifier"
+        Text: ="Created"
         Width: =115
         X: =990
         Y: =176
         ZIndex: =6
-
-    eProdDepInput_5 As text:
-        BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyIDSearch
-        Height: =35
-        HintText: ="Identifier"
-        HoverBorderColor: =RGBA(151, 0, 0, 1)
-        HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
-        X: =1105
-        Y: =183
-        ZIndex: =7
 
     eProdSyncIcon_3 As icon.Sync:
         Color: =RGBA(116, 116, 116, 1)
@@ -220,4 +244,13 @@ ClaimPortal As screen:
         Width: =80
         X: =890
         ZIndex: =11
+
+    DatePicker1 As datepicker:
+        BorderColor: =RGBA(118, 0, 0, 1)
+        DefaultDate: =_eClaimDateSearch
+        IconBackground: =RGBA(118, 0, 0, 1)
+        Width: =241
+        X: =1105
+        Y: =181
+        ZIndex: =12
 
