@@ -5,6 +5,7 @@ ContractPortal As screen:
         Clear(ContractCollection);
         Clear(ContractCollectCollection);
         Collect(ContractCollectCollection, FindAllContracts.Run());
+        
         ForAll(
             ContractCollectCollection,
             Collect(ContractCollection, { 
@@ -164,8 +165,8 @@ ContractPortal As screen:
                         beneficiary: ThisItem.beneficiary,
                         uuid: _current_contract_uuid,
                         type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
-                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
-                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid
+                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "holder").uuid,
+                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "beneficiary").uuid
                     }
                 );
             PaddingBottom: =20

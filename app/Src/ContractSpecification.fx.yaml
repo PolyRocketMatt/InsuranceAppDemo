@@ -36,7 +36,9 @@ ContractSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.BackArrow
-        OnSelect: =Back();
+        OnSelect: |-
+            =Set(_doLookup, false);
+            Back();
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
@@ -131,7 +133,7 @@ ContractSpecification As screen:
             Navigate(ProductSpecification, None,
                 {
                     spec_name: _contract_type.name,
-                    spec_department: _contract_type.department,
+                    spec_dep: _contract_type.department,
                     spec_uuid: type_uuid
                 }
             );
@@ -151,7 +153,8 @@ ContractSpecification As screen:
             Navigate(PartySpecification, None,
                 {
                     name: _contract_holder.name,
-                    id: _contract_holder.id
+                    id: _contract_holder.id,
+                    uuid: holder_uuid
                 }
             );
         PaddingBottom: =20
@@ -170,7 +173,8 @@ ContractSpecification As screen:
             Navigate(PartySpecification, None,
                 {
                     name: _contract_holder.name,
-                    id: _contract_holder.id
+                    id: _contract_holder.id,
+                    uuid: beneficiary_uuid
                 }
             );
         PaddingBottom: =20
