@@ -7,7 +7,7 @@ ClaimSpecification As screen:
         Height: =75
         Size: =25
         Text: |-
-            ="Contract Specification
+            ="Claim Specification
             "
         Width: =1366
         ZIndex: =1
@@ -24,7 +24,7 @@ ClaimSpecification As screen:
     PartyIdentifierSpec_3 As label:
         Height: =60
         Text: |-
-            ="Type: " & type_uuid
+            ="Created: " & created
         Width: =1326
         X: =20
         Y: =156
@@ -49,7 +49,7 @@ ClaimSpecification As screen:
             ="UUID: " & uuid
         Width: =1326
         X: =20
-        Y: =336
+        Y: =216
         ZIndex: =5
 
     RemovePartySpecItem_2 As icon.Trash:
@@ -58,22 +58,11 @@ ClaimSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_sync, true);
-            DeleteContractByID.Run(uuid);
-            Clear(ContractCollection);
-            Clear(ContractCollectCollection);
-            Collect(ContractCollectCollection, FindAllContracts.Run());
-            ForAll(
-                ContractCollectCollection,
-                Collect(ContractCollection, { 
-                    uuid: UrlParser.Run(ThisRecord.uuid).uuid,
-                    number: ThisRecord.number,
-                    holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                    beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                    type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
-                });
-            );
+            DeleteClaimByID.Run(uuid);
+            Clear(ClaimCollection);
+            Collect(ClaimCollection, FindAllClaims.Run());
             Set(_sync, false);
-            Navigate(ContractPortal);
+            Navigate(ClaimPortal);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
@@ -85,100 +74,11 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Edit
-        OnSelect: |-
-            =Navigate(ContractEditor, None, 
-                {
-                    number: number, 
-                    type: type, 
-                    holder: holder, 
-                    beneficiary: beneficiary,
-                    type_uuid: type_uuid,
-                    holder_uuid: holder_uuid,
-                    beneficiary_uuid: beneficiary_uuid
-                }
-            );
+        OnSelect: =
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
         X: =1186
         Y: =668
         ZIndex: =7
-
-    PartyNameSpec_4 As label:
-        Height: =60
-        Text: |-
-            ="Holder: " & holder_uuid
-        Width: =1326
-        X: =20
-        Y: =216
-        ZIndex: =8
-
-    PartyIdentifierSpec_4 As label:
-        Height: =60
-        Text: |-
-            ="Beneficiary: " & beneficiary_uuid
-        Width: =1326
-        X: =20
-        Y: =276
-        ZIndex: =9
-
-    Icon1_3 As icon.ArrowRight:
-        Color: =RGBA(116, 116, 116, 1)
-        Height: =60
-        Icon: =Icon.ArrowRight
-        OnSelect: |-
-            =Set(_contract_type, FindProductById.Run(type_uuid));
-            Navigate(ProductSpecification, None,
-                {
-                    spec_name: _contract_type.name,
-                    spec_dep: _contract_type.department,
-                    spec_uuid: type_uuid
-                }
-            );
-        PaddingBottom: =20
-        PaddingTop: =20
-        Width: =60
-        X: =1298
-        Y: =156
-        ZIndex: =10
-
-    Icon1_4 As icon.ArrowRight:
-        Color: =RGBA(116, 116, 116, 1)
-        Height: =60
-        Icon: =Icon.ArrowRight
-        OnSelect: |-
-            =Set(_contract_holder, FindPartyById.Run(holder_uuid));
-            Navigate(PartySpecification, None,
-                {
-                    name: _contract_holder.name,
-                    id: _contract_holder.id,
-                    uuid: holder_uuid
-                }
-            );
-        PaddingBottom: =20
-        PaddingTop: =20
-        Width: =60
-        X: =1298
-        Y: =216
-        ZIndex: =11
-
-    Icon1_5 As icon.ArrowRight:
-        Color: =RGBA(116, 116, 116, 1)
-        Height: =60
-        Icon: =Icon.ArrowRight
-        OnSelect: |-
-            =Set(_contract_beneficiary, FindPartyById.Run(beneficiary_uuid));
-            Navigate(PartySpecification, None,
-                {
-                    name: _contract_holder.name,
-                    id: _contract_holder.id,
-                    uuid: beneficiary_uuid
-                }
-            );
-        PaddingBottom: =20
-        PaddingTop: =20
-        Width: =60
-        X: =1298
-        Y: =276
-        ZIndex: =12
 
