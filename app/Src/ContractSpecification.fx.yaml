@@ -72,7 +72,7 @@ ContractSpecification As screen:
                 });
             );
             Set(_sync, false);
-            Navigate(PartyPortal);
+            Navigate(ContractPortal);
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
