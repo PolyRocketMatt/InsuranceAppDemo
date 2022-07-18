@@ -129,7 +129,14 @@ ClaimPortal As screen:
             Color: =RGBA(116, 116, 116, 1)
             Height: =80
             Icon: =Icon.Edit
-            OnSelect: =
+            OnSelect: |-
+                =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Navigate(ClaimEditor, None, 
+                    {
+                        number: ThisItem.number,
+                        uuid: _current_contract_uuid
+                    }
+                );
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
