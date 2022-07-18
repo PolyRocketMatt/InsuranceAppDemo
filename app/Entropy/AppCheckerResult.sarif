@@ -3314,6 +3314,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ContractEditor.beneficiary_url"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractEditor.beneficiary_url",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "beneficiary_url",
+                "module": "ContractEditor",
+                "type": "ContractEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ContractEditor.holder"
                 }
               ],
@@ -3344,6 +3374,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ContractEditor.holder_url"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractEditor.holder_url",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "holder_url",
+                "module": "ContractEditor",
+                "type": "ContractEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ContractEditor.type"
                 }
               ],
@@ -3355,6 +3415,36 @@
               },
               "properties": {
                 "member": "type",
+                "module": "ContractEditor",
+                "type": "ContractEditor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ContractEditor.type_url"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractEditor.type_url",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "type_url",
                 "module": "ContractEditor",
                 "type": "ContractEditor"
               }

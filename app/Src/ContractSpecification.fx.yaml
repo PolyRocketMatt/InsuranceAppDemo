@@ -25,7 +25,7 @@ ContractSpecification As screen:
     PartyIdentifierSpec_1 As label:
         Height: =60
         Text: |-
-            ="Type: " & type
+            ="Type: " & type_uuid
         Width: =1326
         X: =20
         Y: =156
@@ -91,9 +91,9 @@ ContractSpecification As screen:
                     type: type, 
                     holder: holder, 
                     beneficiary: beneficiary,
-                    type_uuid: type_uuid,
-                    holder_uuid: holder_uuid,
-                    beneficiary_uuid: beneficiary_uuid
+                    type_url: type_uuid,
+                    holder_url: holder_uuid,
+                    beneficiary_url: beneficiary_uuid
                 }
             );
         PaddingBottom: =20
@@ -106,7 +106,7 @@ ContractSpecification As screen:
     PartyNameSpec_2 As label:
         Height: =60
         Text: |-
-            ="Holder: " & holder
+            ="Holder: " & holder_uuid
         Width: =1326
         X: =20
         Y: =216
@@ -115,7 +115,7 @@ ContractSpecification As screen:
     PartyIdentifierSpec_2 As label:
         Height: =60
         Text: |-
-            ="Beneficiary: " & beneficiary
+            ="Beneficiary: " & beneficiary_uuid
         Width: =1326
         X: =20
         Y: =276
