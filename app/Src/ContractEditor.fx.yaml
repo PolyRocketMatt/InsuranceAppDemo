@@ -59,7 +59,7 @@ ContractEditor As screen:
 
     eContractTypeInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyIDEditDef
+        Default: =_eContractTypeDef
         Height: =36
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -129,7 +129,7 @@ ContractEditor As screen:
 
     eContractHolderInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyIDEditDef
+        Default: =_eContractHolderDef
         Height: =36
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -141,7 +141,7 @@ ContractEditor As screen:
 
     eContractBeneficiaryInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyIDEditDef
+        Default: =_eContractBeneficiaryDef
         Height: =36
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)

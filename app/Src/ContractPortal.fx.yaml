@@ -155,9 +155,9 @@ ContractPortal As screen:
                 =Navigate(ContractEditor, None, 
                     {
                         number: ThisItem.number,
-                        type: ThisItem.type,
-                        holder: ThisItem.holder,
-                        beneficiary: ThisItem.beneficiary,
+                        type: UrlParser.Run(ThisItem.type).uuid,
+                        holder: UrlParser.Run(ThisItem.holder).uuid,
+                        beneficiary: UrlParser.Run(ThisItem.beneficiary).uuid,
                         uuid: UrlParser.Run(ThisItem.uuid).uuid
                     }
                 );
