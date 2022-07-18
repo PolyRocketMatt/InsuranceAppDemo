@@ -66,14 +66,10 @@ ClaimCreator As screen:
                 Notify("Expected values to be non-empty!", NotificationType.Error);
                 false,
                 Set(_send, true);
-                PostClaimWithDate.Run(eClaimCreatorNumberInput.Text, 
-                Year(_date) & "-" & Month(_date) & "-" & Day(_date) & "T" & Hour(_date) & ":" & Minute(_date) & ":" & Second(_date) & "Z"
-                );
+                PostClaimWithDate.Run(eClaimCreatorNumberInput.Text, Year(_date) & "-" & Month(_date) & "-" & Day(_date) & "T" & Hour(_date) & ":" & Minute(_date) & ":" & Second(_date) & "Z");
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);
-                Set(_ePartyNameDef, "");
-                Set(_ePartyIDDef, "");
                 Notify("Successfully submitted a claim with name " & Char(34) & eClaimCreatorNumberInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
