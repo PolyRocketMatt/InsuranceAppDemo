@@ -35,7 +35,7 @@ ProductSpecification As screen:
         Height: =75
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Set(_doLookup, false);
+            =Set(_refresh, false);
             Back();
         PaddingBottom: =16
         PaddingTop: =16

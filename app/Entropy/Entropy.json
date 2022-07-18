@@ -2,6 +2,7 @@
   "ComponentIndexes": {},
   "ControlUniqueIds": {
     "App": 1,
+    "ClaimPortal": 187,
     "ContractCreator": 91,
     "ContractCreatorTitle": 92,
     "ContractEditor": 16,
@@ -186,7 +187,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/18/2022 08:56:36",
+  "HeaderLastSavedDateTimeUTC": "07/18/2022 09:16:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "082f6cd3-a66f-444d-a1fd-29d35372324c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/8b625363469b4bcb93f5c79452601a77-911675c9c888f55d\"",
@@ -265,6 +266,7 @@
   },
   "PublishOrderIndices": {
     "App": 0,
+    "ClaimPortal": 0,
     "ContractCreator": 0,
     "ContractCreatorTitle": 42,
     "ContractEditor": 0,

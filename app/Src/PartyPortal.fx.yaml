@@ -1,35 +1,40 @@
 PartyPortal As screen:
     OnVisible: |-
-        =//  Sync    
-        Set(_sync, true);
-        Clear(PartyCollection);
-        Collect(PartyCollection, FindAllParties.Run());
+        =If(
+            _refresh,
+            //  Sync    
+            Set(_sync, true);
+            Clear(PartyCollection);
+            Collect(PartyCollection, FindAllParties.Run());
         
-        //  Check occurence if needed
-        If(
-            _doLookup,
-            ForAll(
-                PartyCollection,
-                If(
-                    ThisRecord.name = _lookupName,
-                    Notify("Could not delete party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
-                    Collect(CountCollection, ThisRecord)
+            //  Check occurence if needed
+            If(
+                _doLookup,
+                ForAll(
+                    PartyCollection,
+                    If(
+                        ThisRecord.name = _lookupName,
+                        Notify("Could not delete party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                        Collect(CountCollection, ThisRecord)
+                    )
                 )
-            )
-        );
+            );
         
-        If(
-            And(_doLookup, CountRows(CountCollection) = 0),
-            Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
-        );
+            If(
+                And(_doLookup, CountRows(CountCollection) = 0),
+                Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+            );
         
-        //  Clear variables/collections
-        Clear(CountCollection);
-        Set(_sync, false);
-        Set(_doLookup, false);
-        Set(_lookupName, "");
-        Set(_ePartyNameSearch, "");
-        Set(_ePartyIDSearch, "");
+            //  Clear variables/collections
+            Clear(CountCollection);
+            Set(_sync, false);
+            Set(_doLookup, false);
+            Set(_lookupName, "");
+            Set(_ePartyNameSearch, "");
+            Set(_ePartyIDSearch, "");
+            true,
+            true
+        );
 
     ProductPortalTitle_1 As label:
         Align: =Align.Center

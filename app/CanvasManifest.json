@@ -114,6 +114,7 @@
     "ContractSpecification",
     "ProductPortal",
     "PartyPortal",
-    "ContractPortal"
+    "ContractPortal",
+    "ClaimPortal"
   ]
 }
