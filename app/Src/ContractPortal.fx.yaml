@@ -192,8 +192,8 @@ ContractPortal As screen:
                         holder_url: ThisItem.holder_url,
                         beneficiary_url: ThisItem.beneficiary_url,
                         type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
-                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
-                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid
+                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "holder").uuid,
+                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "beneficiary").uuid
                     }
                 );
             PaddingBottom: =20

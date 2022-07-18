@@ -130,8 +130,9 @@ ContractSpecification As screen:
             =Set(_contract_type, FindProductById.Run(type_uuid));
             Navigate(ProductSpecification, None,
                 {
-                    name: _contract_type.name,
-                    department: _contract_type.department
+                    spec_name: _contract_type.name,
+                    spec_department: _contract_type.department,
+                    spec_uuid: type_uuid
                 }
             );
         PaddingBottom: =20
@@ -150,7 +151,7 @@ ContractSpecification As screen:
             Navigate(PartySpecification, None,
                 {
                     name: _contract_holder.name,
-                    identifier: _contract_holder.id
+                    id: _contract_holder.id
                 }
             );
         PaddingBottom: =20
@@ -169,7 +170,7 @@ ContractSpecification As screen:
             Navigate(PartySpecification, None,
                 {
                     name: _contract_holder.name,
-                    identifier: _contract_holder.id
+                    id: _contract_holder.id
                 }
             );
         PaddingBottom: =20
