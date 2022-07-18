@@ -68,7 +68,15 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Edit
-        OnSelect: =
+        OnSelect: |-
+            =Navigate(ClaimEditor, None, 
+                {
+                    number: number,
+                    created: created,
+                    contracts: contracts,
+                    uuid: _current_claim_uuid
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
