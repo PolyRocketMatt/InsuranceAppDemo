@@ -46,7 +46,7 @@ ClaimSpecification As screen:
     PartyUuidSpec_2 As label:
         Height: =60
         Text: |-
-            ="UUID: " & uuid
+            ="UUID: " & _current_claim_uuid
         Width: =1326
         X: =20
         Y: =216

@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 4,
+                  "charLength": 19,
                   "charOffset": 11,
                   "snippet": {
-                    "text": "uuid"
+                    "text": "_current_claim_uuid"
                   }
                 }
               },
