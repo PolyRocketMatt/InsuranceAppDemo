@@ -45,6 +45,10 @@ EntitySelector As screen:
         BorderThickness: =0
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
+        OnSelect: |-
+            =Clear(ClaimCollection);
+            Collect(ClaimCollection, FindAllClaims.Run());
+            Navigate(ClaimPortal);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -205,9 +209,9 @@ EntitySelector As screen:
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
         OnSelect: |-
-            =Clear(PartyCollection);
-            Collect(PartyCollection, FindAllParties.Run());
-            Navigate(PartyPortal);
+            =Clear(ProductCollection);
+            Collect(ProductCollection, FindAllProducts.Run());
+            Navigate(ProductPortal);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
