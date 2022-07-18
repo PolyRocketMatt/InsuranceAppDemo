@@ -92,7 +92,6 @@ ContractEditor As screen:
                 PutHolderOfContractById.Run(uuid, eContractHolderInput.Text);
                 PutBeneficiaryOfContractById.Run(uuid, eContractBeneficiaryInput.Text);
                 Set(_refresh, true);
-                Set(_updateProducts, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
                 Notify("Successfully replaced a party with name " & Char(34) & eContractNumberInput.Text & Char(34) & "!", NotificationType.Success),
