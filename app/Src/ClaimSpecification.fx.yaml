@@ -56,10 +56,7 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Trash
-        OnSelect: |-
-            =DeleteClaimByID.Run(uuid);
-            Set(_refresh, true);
-            Navigate(ClaimPortal);
+        OnSelect: =
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
@@ -71,14 +68,7 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Edit
-        OnSelect: |-
-            =Set(_current_claim_uuid, uuid);
-            Navigate(ClaimEditor, None, 
-                {
-                    number: number,
-                    uuid: _current_contract_uuid
-                }
-            );
+        OnSelect: =
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

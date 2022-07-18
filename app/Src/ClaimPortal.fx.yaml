@@ -135,7 +135,9 @@ ClaimPortal As screen:
                 Navigate(ClaimEditor, None, 
                     {
                         number: ThisItem.number,
-                        uuid: _current_contract_uuid
+                        created: ThisItem.created,
+                        contracts: ThisItem.contracts,
+                        uuid: _current_claim_uuid
                     }
                 );
             PaddingBottom: =20
@@ -149,16 +151,7 @@ ClaimPortal As screen:
             Color: =RGBA(116, 116, 116, 1)
             Height: =80
             Icon: =Icon.NextArrow
-            OnSelect: |-
-                =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
-                Navigate(ClaimSpecification, None,
-                    {
-                        number: ThisItem.number,
-                        created: ThisItem.created,
-                        contracts: ThisItem.contracts,
-                        uuid: _current_claim_uuid
-                    }
-                );
+            OnSelect: =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
