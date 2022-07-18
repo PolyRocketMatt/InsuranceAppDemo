@@ -1,9 +1,9 @@
 ContractEditor As screen:
     OnVisible: |-
         =Set(_eContractNumberDef, number);
-        Set(_eContractTypeDef, type);
-        Set(_eContractHolderDef, holder);
-        Set(_eContractBeneficiaryDef, beneficiary);
+        Set(_eContractTypeDef, type_uuid);
+        Set(_eContractHolderDef, holder_uuid);
+        Set(_eContractBeneficiaryDef, beneficiary_uuid);
 
     PartyEditorTitle_1 As label:
         Align: =Align.Center

@@ -85,7 +85,17 @@ ContractSpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Navigate(ContractEditor, None, {number: number, type: type, holder: holder, beneficiary: beneficiary});
+            =Navigate(ContractEditor, None, 
+                {
+                    number: number, 
+                    type: type, 
+                    holder: holder, 
+                    beneficiary: beneficiary,
+                    type_uuid: type_uuid,
+                    holder_uuid: holder_uuid,
+                    beneficiary_uuid: beneficiary_uuid
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

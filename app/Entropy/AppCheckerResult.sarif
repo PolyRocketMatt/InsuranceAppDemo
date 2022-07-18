@@ -3284,107 +3284,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractSpecification.beneficiary_uuid"
+                  "fullyQualifiedName": "ContractEditor.beneficiary"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractSpecification.beneficiary_uuid",
+                  "fullyQualifiedName": "ContractEditor.beneficiary",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "beneficiary_uuid",
-                "module": "ContractSpecification",
-                "type": "ContractSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractSpecification.holder_uuid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractSpecification.holder_uuid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "holder_uuid",
-                "module": "ContractSpecification",
-                "type": "ContractSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractSpecification.type_uuid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractSpecification.type_uuid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "type_uuid",
-                "module": "ContractSpecification",
-                "type": "ContractSpecification"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ContractEditor.beneficiary_uuid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractEditor.beneficiary_uuid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "beneficiary_uuid",
+                "member": "beneficiary",
                 "module": "ContractEditor",
                 "type": "ContractEditor"
               }
@@ -3404,17 +3314,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.holder_uuid"
+                  "fullyQualifiedName": "ContractEditor.holder"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.holder_uuid",
+                  "fullyQualifiedName": "ContractEditor.holder",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "holder_uuid",
+                "member": "holder",
                 "module": "ContractEditor",
                 "type": "ContractEditor"
               }
@@ -3434,17 +3344,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractEditor.type_uuid"
+                  "fullyQualifiedName": "ContractEditor.type"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractEditor.type_uuid",
+                  "fullyQualifiedName": "ContractEditor.type",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "type_uuid",
+                "member": "type",
                 "module": "ContractEditor",
                 "type": "ContractEditor"
               }
