@@ -72,10 +72,10 @@ ClaimSpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+            =Set(_current_claim_uuid, uuid);
             Navigate(ClaimEditor, None, 
                 {
-                    number: ThisItem.number,
+                    number: number,
                     uuid: _current_contract_uuid
                 }
             );
