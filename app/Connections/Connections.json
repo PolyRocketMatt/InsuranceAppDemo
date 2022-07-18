@@ -1176,38 +1176,6 @@
     "dependents": [],
     "id": "e94b1393-19cb-4af1-a799-d51d0baa491a"
   },
-  "f20b8425-c6f9-48ff-886e-3c4daf3c4751": {
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-75.westeurope.logic.azure.com:443/workflows/a09200cc16c14649aea3ba4aa4dcb8bb/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=juSH4u5aYF5jxUE8gJUxvSltvVn9FDiEq2yIB6G6Rg4",
-      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/4c002766-d0b7-4c39-be8e-d34bed432e07",
-      "workflowName": "4c002766-d0b7-4c39-be8e-d34bed432e07",
-      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/4c002766-d0b7-4c39-be8e-d34bed432e07"
-    },
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "4c002766-d0b7-4c39-be8e-d34bed432e07"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "4c002766-d0b7-4c39-be8e-d34bed432e07"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "SearchProduct"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "f20b8425-c6f9-48ff-886e-3c4daf3c4751"
-  },
   "ffe9f2af-d7af-4042-8db2-1d20c869924b": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-62.westeurope.logic.azure.com:443/workflows/99535a2313b6428a8e8589de5cf697d0/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2cEhO64hnMQXvvNjXYygyqV3uy72sZFLMCsTDP3E5Kc",
