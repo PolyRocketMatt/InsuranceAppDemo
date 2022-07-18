@@ -169,6 +169,7 @@ ClaimSpecification As screen:
                 DeleteOneContractFromClaim.Run(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
                 Clear(ClaimSpecCollection);
                 Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
+                Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
             Width: =60
