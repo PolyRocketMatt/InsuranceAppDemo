@@ -185,9 +185,6 @@ ContractPortal As screen:
                         type: ThisItem.type, 
                         holder: ThisItem.holder, 
                         beneficiary: ThisItem.beneficiary, 
-                        type_uuid: UrlParser.Run(ThisItem.type_url).uuid,
-                        holder_uuid: UrlParser.Run(ThisItem.holder_url).uuid,
-                        beneficiary_uuid: UrlParser.Run(ThisItem.beneficiary_url).uuid,
                         uuid: UrlParser.Run(ThisItem.uuid).uuid
                     }
                 );
