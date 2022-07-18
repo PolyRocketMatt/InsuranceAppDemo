@@ -173,7 +173,7 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =//Navigate(ProductSpecification, None, {name: ThisItem.name, department: ThisItem.department, uuid: UrlParser.Run(ThisItem.uuid).uuid});
+                =Navigate(ContractSpecification, None, {number: ThisItem.number, type: ThisItem.type, holder: ThisItem.holder, beneficiary: ThisItem.beneficiary, uuid: UrlParser.Run(ThisItem.uuid).uuid});
             PaddingBottom: =20
             PaddingTop: =20
             Width: =80
