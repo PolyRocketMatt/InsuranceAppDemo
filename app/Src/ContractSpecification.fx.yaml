@@ -1,4 +1,5 @@
 ContractSpecification As screen:
+    Fill: =
 
     PartySpecificationTitle_1 As label:
         Align: =Align.Center
@@ -56,9 +57,20 @@ ContractSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_sync, true);
-            DeletePartyByID.Run(uuid);
-            Clear(PartyCollection);
-            Collect(PartyCollection, FindAllParties.Run());
+            DeleteContractByID.Run(uuid);
+            Clear(ContractCollection);
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, FindAllContracts.Run());
+            ForAll(
+                ContractCollectCollection,
+                Collect(ContractCollection, { 
+                    uuid: UrlParser.Run(ThisRecord.uuid).uuid,
+                    number: ThisRecord.number,
+                    holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
+                });
+            );
             Set(_sync, false);
             Navigate(PartyPortal);
         PaddingBottom: =20
