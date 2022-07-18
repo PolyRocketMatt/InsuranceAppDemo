@@ -112,6 +112,7 @@
     "ProductSpecification",
     "PartySpecification",
     "ContractSpecification",
+    "ClaimSpecification",
     "ProductPortal",
     "PartyPortal",
     "ContractPortal",
