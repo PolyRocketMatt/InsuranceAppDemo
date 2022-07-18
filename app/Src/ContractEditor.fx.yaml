@@ -39,7 +39,7 @@ ContractEditor As screen:
         Height: =75
         Icon: =Icon.BackArrow
         OnSelect: |-
-            =Set(_doLookup, false);
+            =Set(_refresh, false);
             Back();
         PaddingBottom: =16
         PaddingTop: =16
@@ -54,7 +54,7 @@ ContractEditor As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =108
         ZIndex: =5
@@ -66,7 +66,7 @@ ContractEditor As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =168
         ZIndex: =6
@@ -136,7 +136,7 @@ ContractEditor As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =228
         ZIndex: =11
@@ -148,32 +148,8 @@ ContractEditor As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =288
         ZIndex: =12
-
-    ePartyEditorIdentifierLabel_4 As label:
-        Height: =60
-        Text: |-
-            ="  Represents: " & type
-        X: =411
-        Y: =156
-        ZIndex: =13
-
-    ePartyEditorIdentifierLabel_5 As label:
-        Height: =60
-        Text: |-
-            ="  Represents: " & holder
-        X: =411
-        Y: =216
-        ZIndex: =14
-
-    ePartyEditorIdentifierLabel_6 As label:
-        Height: =60
-        Text: |-
-            ="  Represents: " & beneficiary
-        X: =411
-        Y: =276
-        ZIndex: =15
 

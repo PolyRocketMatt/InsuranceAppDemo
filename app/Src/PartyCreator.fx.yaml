@@ -36,7 +36,9 @@ PartyCreator As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.BackArrow
-        OnSelect: =Back();
+        OnSelect: |-
+            =Set(_refresh, false);
+            Back();
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
@@ -50,7 +52,7 @@ PartyCreator As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =108
         ZIndex: =5
@@ -62,7 +64,7 @@ PartyCreator As screen:
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Width: =1026
         X: =170
         Y: =168
         ZIndex: =6
