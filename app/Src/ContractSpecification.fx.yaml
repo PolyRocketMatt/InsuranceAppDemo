@@ -126,6 +126,14 @@ ContractSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =60
         Icon: =Icon.ArrowRight
+        OnSelect: |-
+            =Set(_contract_type, FindProductById.Run(_type_uuid));
+            Navigate(ProductSpecification, None,
+                {
+                    name: _contract_type.name,
+                    department: _contract_type.department
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =60
@@ -137,6 +145,14 @@ ContractSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =60
         Icon: =Icon.ArrowRight
+        OnSelect: |-
+            =Set(_contract_holder, FindPartyById.Run(_holder_uuid));
+            Navigate(PartySpecification, None,
+                {
+                    name: _contract_holder.name,
+                    identifier: _contract_holder.identifier
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =60

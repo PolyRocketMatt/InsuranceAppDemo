@@ -751,9 +751,50 @@
       "d20f0ae8-0e65-4b84-958b-5b20be1c4464",
       "a3a99041-fe96-4f14-9ae0-602aa112720f",
       "ffe9f2af-d7af-4042-8db2-1d20c869924b",
-      "14c684f7-9ffd-4cad-9c94-3538b47fad47"
+      "14c684f7-9ffd-4cad-9c94-3538b47fad47",
+      "bcfb50a9-7b60-4874-b7e0-41dea931df9b"
     ],
     "id": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+  },
+  "bcfb50a9-7b60-4874-b7e0-41dea931df9b": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-174.westeurope.logic.azure.com:443/workflows/650a204ea4e743578b27db40d33f7b0a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=haErqHqm675zSiab3plg8na6x9quOLz-RSEPQPQoBv4",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/3fe41127-737b-49c2-b8a2-8bacf02fa9b5",
+      "workflowName": "3fe41127-737b-49c2-b8a2-8bacf02fa9b5",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/3fe41127-737b-49c2-b8a2-8bacf02fa9b5"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
+          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "3fe41127-737b-49c2-b8a2-8bacf02fa9b5"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
+          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "3fe41127-737b-49c2-b8a2-8bacf02fa9b5"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "FindProductById"
+    ],
+    "dependencies": {
+      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+    },
+    "dependents": [],
+    "id": "bcfb50a9-7b60-4874-b7e0-41dea931df9b"
   },
   "c58f2625-e078-471d-9e56-08be8523a5dc": {
     "connectionParameters": {
