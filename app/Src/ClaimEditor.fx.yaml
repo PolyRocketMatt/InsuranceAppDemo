@@ -59,7 +59,7 @@ ClaimEditor As screen:
                 Set(_send, true);
                 PutClaimById.Run(uuid, eContractNumberInput_1.Text);
                 Set(_refresh, true);
-                Navigate(PartyPortal);
+                Navigate(ClaimPortal);
                 Set(_send, false);
                 Notify("Successfully replaced a party with name " & Char(34) & eContractNumberInput_1.Text & Char(34) & "!", NotificationType.Success),
                 true
