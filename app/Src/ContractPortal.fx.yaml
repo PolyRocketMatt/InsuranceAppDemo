@@ -49,6 +49,7 @@ ContractPortal As screen:
             Set(_eContractHolderSearch, "");
             Set(_eContractBeneficiarySearch, "");
             Set(_eContractTypeSearch, "");
+            Set(_refresh, false);
             true,
             true
         );

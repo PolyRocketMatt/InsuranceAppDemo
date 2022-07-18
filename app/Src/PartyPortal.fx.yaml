@@ -32,6 +32,7 @@ PartyPortal As screen:
             Set(_lookupName, "");
             Set(_ePartyNameSearch, "");
             Set(_ePartyIDSearch, "");
+            Set(_refresh, false);
             true,
             true
         );

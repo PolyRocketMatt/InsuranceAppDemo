@@ -57,11 +57,8 @@ ClaimSpecification As screen:
         Height: =80
         Icon: =Icon.Trash
         OnSelect: |-
-            =Set(_sync, true);
-            DeleteClaimByID.Run(uuid);
-            Clear(ClaimCollection);
-            Collect(ClaimCollection, FindAllClaims.Run());
-            Set(_sync, false);
+            =DeleteClaimByID.Run(uuid);
+            Set(_refresh, true);
             Navigate(ClaimPortal);
         PaddingBottom: =20
         PaddingTop: =20
@@ -74,7 +71,14 @@ ClaimSpecification As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =80
         Icon: =Icon.Edit
-        OnSelect: =
+        OnSelect: |-
+            =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+            Navigate(ClaimEditor, None, 
+                {
+                    number: ThisItem.number,
+                    uuid: _current_contract_uuid
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80

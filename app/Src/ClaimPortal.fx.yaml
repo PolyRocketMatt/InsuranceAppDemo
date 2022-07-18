@@ -32,6 +32,7 @@ ClaimPortal As screen:
             Set(_lookupName, "");
             Set(_eClaimNumberSearch, "");
             Set(_eClaimDateSearch, Today());
+            Set(_refresh, false);
             true,
             true
         );

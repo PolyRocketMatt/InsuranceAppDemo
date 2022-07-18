@@ -31,6 +31,7 @@ ProductPortal As screen:
             Set(_lookupName, "");
             Set( _eProdNameSearch, "");
             Set(_eProdDepSearch, "");
+            Set(_refresh, false);
             true,
             true
         );
