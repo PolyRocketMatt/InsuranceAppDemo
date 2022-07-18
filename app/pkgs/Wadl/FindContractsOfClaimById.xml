@@ -8,9 +8,17 @@
       </object>
       <string name="ResponseActionOutput_items_def_contract_link_def" />
       <string name="ResponseActionOutput_items_def_number_def" />
+      <string name="ResponseActionOutput_items_def_type_def" />
+      <string name="ResponseActionOutput_items_def_holder_def" />
+      <string name="ResponseActionOutput_items_def_beneficiary_def" />
+      <string name="ResponseActionOutput_items_def_uuid_def" />
       <object name="ResponseActionOutput_items_def">
         <property name="contract_link" type="string" />
         <property name="number" type="string" />
+        <property name="type" type="string" />
+        <property name="holder" type="string" />
+        <property name="beneficiary" type="string" />
+        <property name="uuid" type="string" />
       </object>
       <array typeRef="ResponseActionOutput_items_def" name="ResponseActionOutput" />
       <object name="Run_responses_default_def" />
