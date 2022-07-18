@@ -1,5 +1,9 @@
 ContractSpecification As screen:
     Fill: =
+    OnVisible: |-
+        =Set(_type_uuid, ReferenceUuidParser.Run(uuid, "type").uuid);
+        Set(_holder_uuid, ReferenceUuidParser.Run(uuid, "holder").uuid);
+        Set(_beneficiary_uuid, ReferenceUuidParser.Run(uuid, "beneficiary").uuid);
 
     PartySpecificationTitle_1 As label:
         Align: =Align.Center
@@ -25,7 +29,7 @@ ContractSpecification As screen:
     PartyIdentifierSpec_1 As label:
         Height: =60
         Text: |-
-            ="Type: " & ReferenceUuidParser.Run(uuid, "type").uuid
+            ="Type: " & _type_uuid
         Width: =1326
         X: =20
         Y: =156
@@ -91,9 +95,9 @@ ContractSpecification As screen:
                     type: type, 
                     holder: holder, 
                     beneficiary: beneficiary,
-                    type_url: type_uuid,
-                    holder_url: holder_uuid,
-                    beneficiary_url: beneficiary_uuid
+                    type_url: type_url,
+                    holder_url: holder_url,
+                    beneficiary_url: beneficiary_url
                 }
             );
         PaddingBottom: =20
@@ -106,7 +110,7 @@ ContractSpecification As screen:
     PartyNameSpec_2 As label:
         Height: =60
         Text: |-
-            ="Holder: " & holder_uuid
+            ="Holder: " & _holder_uuid
         Width: =1326
         X: =20
         Y: =216
@@ -115,7 +119,7 @@ ContractSpecification As screen:
     PartyIdentifierSpec_2 As label:
         Height: =60
         Text: |-
-            ="Beneficiary: " & beneficiary_uuid
+            ="Beneficiary: " & _beneficiary_uuid
         Width: =1326
         X: =20
         Y: =276
