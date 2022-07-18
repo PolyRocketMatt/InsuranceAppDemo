@@ -105,7 +105,7 @@ ClaimSpecification As screen:
             Height: =60
             OnSelect: =Select(Parent)
             Text: |-
-                ="Contract Number: " & ThisItem.number
+                ="Contract Number: " & ThisItem.
             Width: =838
             X: =32
             Y: =26
