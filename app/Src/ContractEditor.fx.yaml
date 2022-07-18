@@ -1,9 +1,9 @@
 ContractEditor As screen:
     OnVisible: |-
         =Set(_eContractNumberDef, number);
-        Set(_eContractTypeDef, ReferenceUuidParser.Run(uuid, "type"));
-        Set(_eContractHolderDef, ReferenceUuidParser.Run(uuid, "holder"));
-        Set(_eContractBeneficiaryDef, ReferenceUuidParser.Run(uuid, "beneficiary"));
+        Set(_eContractTypeDef, type_uuid);
+        Set(_eContractHolderDef, holder_uuid);
+        Set(_eContractBeneficiaryDef, beneficiary_uuid);
 
     PartyEditorTitle_1 As label:
         Align: =Align.Center
@@ -150,4 +150,28 @@ ContractEditor As screen:
         X: =170
         Y: =288
         ZIndex: =12
+
+    ePartyEditorIdentifierLabel_4 As label:
+        Height: =60
+        Text: |-
+            ="  Represents: " & type
+        X: =411
+        Y: =156
+        ZIndex: =13
+
+    ePartyEditorIdentifierLabel_5 As label:
+        Height: =60
+        Text: |-
+            ="  Represents: " & holder
+        X: =411
+        Y: =216
+        ZIndex: =14
+
+    ePartyEditorIdentifierLabel_6 As label:
+        Height: =60
+        Text: |-
+            ="  Represents: " & beneficiary
+        X: =411
+        Y: =276
+        ZIndex: =15
 

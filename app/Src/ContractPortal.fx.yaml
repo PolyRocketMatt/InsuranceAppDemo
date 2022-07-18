@@ -155,13 +155,17 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.Edit
             OnSelect: |-
-                =Navigate(ContractEditor, None, 
+                =Set(_current_contract_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Navigate(ContractEditor, None, 
                     {
                         number: ThisItem.number,
                         type: ThisItem.type,
                         holder: ThisItem.holder,
                         beneficiary: ThisItem.beneficiary,
-                        uuid: UrlParser.Run(ThisItem.uuid).uuid
+                        uuid: _current_contract_uuid,
+                        type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
+                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
+                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid
                     }
                 );
             PaddingBottom: =20
@@ -176,16 +180,20 @@ ContractPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Navigate(ContractSpecification, None, 
+                =Set(_current_contract_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Navigate(ContractSpecification, None, 
                     {
                         number: ThisItem.number, 
                         type: ThisItem.type, 
                         holder: ThisItem.holder, 
                         beneficiary: ThisItem.beneficiary, 
-                        uuid: UrlParser.Run(ThisItem.uuid).uuid,
+                        uuid: _current_contract_uuid,
                         type_url: ThisItem.type_url,
                         holder_url: ThisItem.holder_url,
-                        beneficiary_url: ThisItem.beneficiary_url
+                        beneficiary_url: ThisItem.beneficiary_url,
+                        type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
+                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
+                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid
                     }
                 );
             PaddingBottom: =20
