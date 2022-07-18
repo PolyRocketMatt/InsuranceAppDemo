@@ -12,7 +12,10 @@ ContractPortal As screen:
                 number: ThisRecord.number,
                 holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
                 beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name
+                type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                holder_url: ThisRecord.holder,
+                beneficiary_url: ThisRecord.beneficiary,
+                type_url: ThisRecord.type
             });
         );
         
@@ -182,9 +185,9 @@ ContractPortal As screen:
                         type: ThisItem.type, 
                         holder: ThisItem.holder, 
                         beneficiary: ThisItem.beneficiary, 
-                        type_uuid: UrlParser.Run(ThisItem.type).uuid,
-                        holder_uuid: UrlParser.Run(ThisItem.holder).uuid,
-                        beneficiary_uuid: UrlParser.Run(ThisItem.beneficiary).uuid,
+                        type_uuid: UrlParser.Run(ThisItem.type_url).uuid,
+                        holder_uuid: UrlParser.Run(ThisItem.holder_url).uuid,
+                        beneficiary_uuid: UrlParser.Run(ThisItem.beneficiary_url).uuid,
                         uuid: UrlParser.Run(ThisItem.uuid).uuid
                     }
                 );
