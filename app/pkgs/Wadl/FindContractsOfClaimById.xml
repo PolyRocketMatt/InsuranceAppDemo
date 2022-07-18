@@ -6,6 +6,14 @@
       <object name="ManualTriggerInput">
         <property name="GetallthecontractsrelatedtoaclaimgivenanID_id" type="string" />
       </object>
+      <string name="ResponseActionOutput_items_def_contract_link_def" />
+      <string name="ResponseActionOutput_items_def_number_def" />
+      <object name="ResponseActionOutput_items_def">
+        <property name="contract_link" type="string" />
+        <property name="number" type="string" />
+      </object>
+      <array typeRef="ResponseActionOutput_items_def" name="ResponseActionOutput" />
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://europe-002.azure-apim.net/apim/logicflows">
@@ -21,6 +29,9 @@
             <param style="plain" name="GetallthecontractsrelatedtoaclaimgivenanID_id" path="/GetallthecontractsrelatedtoaclaimgivenanID_id" type="xs:string" required="true" />
           </representation>
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>
