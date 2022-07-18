@@ -107,6 +107,40 @@
     "dependents": [],
     "id": "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d"
   },
+  "106111a5-995e-4078-b837-1381afa6290d": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-248.westeurope.logic.azure.com:443/workflows/aec119b3372947ccaf42b5d3c0527c31/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Za-4l3AkWVBU_YEh8BKC9cr75fXlein5acenc8kXLH8",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/f4366ecb-7bd0-41c9-a217-fc13502f1e75",
+      "workflowName": "f4366ecb-7bd0-41c9-a217-fc13502f1e75",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/f4366ecb-7bd0-41c9-a217-fc13502f1e75"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f4366ecb-7bd0-41c9-a217-fc13502f1e75"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "f4366ecb-7bd0-41c9-a217-fc13502f1e75"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "DeleteOneContractFromClaim"
+    ],
+    "dependencies": {
+      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+    },
+    "dependents": [],
+    "id": "106111a5-995e-4078-b837-1381afa6290d"
+  },
   "14c684f7-9ffd-4cad-9c94-3538b47fad47": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-221.westeurope.logic.azure.com:443/workflows/baab6b5749164eec89b0da0807f08459/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=FzTJTUzBJFb7jYFEfXFpXJIUOLe0eOTbWj3_yzXMZ08",
@@ -876,7 +910,8 @@
       "60a39ea2-7fbf-4fc3-a051-93f5bca80d85",
       "bc24e750-486a-498d-b739-20861e77a0eb",
       "816e9513-be94-448c-b4fd-1487e6d63129",
-      "3733a3f0-df63-4f9f-b24f-a91ec36ba776"
+      "3733a3f0-df63-4f9f-b24f-a91ec36ba776",
+      "106111a5-995e-4078-b837-1381afa6290d"
     ],
     "id": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
   },

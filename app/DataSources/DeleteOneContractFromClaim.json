@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "f4366ecb-7bd0-41c9-a217-fc13502f1e75",
+    "Name": "DeleteOneContractFromClaim",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

@@ -1,4 +1,25 @@
 ClaimSpecification As screen:
+    OnVisible: =Set(_current_claim_uuid, uuid);
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =472
+        Width: =950
+        X: =20
+        Y: =276
+        ZIndex: =1
+
+    Rectangle4 As rectangle:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =60
+        Width: =475
+        X: =495
+        Y: =276
+        ZIndex: =2
 
     PartySpecificationTitle_2 As label:
         Align: =Align.Center
@@ -10,7 +31,7 @@ ClaimSpecification As screen:
             ="Claim Specification
             "
         Width: =1366
-        ZIndex: =1
+        ZIndex: =3
 
     PartyNameSpec_3 As label:
         Height: =60
@@ -19,7 +40,7 @@ ClaimSpecification As screen:
         Width: =1326
         X: =20
         Y: =96
-        ZIndex: =2
+        ZIndex: =4
 
     PartyIdentifierSpec_3 As label:
         Height: =60
@@ -28,7 +49,7 @@ ClaimSpecification As screen:
         Width: =1326
         X: =20
         Y: =156
-        ZIndex: =3
+        ZIndex: =5
 
     ePartySpecToHome_2 As icon.BackArrow:
         Color: =RGBA(116, 116, 116, 1)
@@ -41,7 +62,7 @@ ClaimSpecification As screen:
         PaddingTop: =16
         Width: =75
         X: =1291
-        ZIndex: =4
+        ZIndex: =6
 
     PartyUuidSpec_2 As label:
         Height: =60
@@ -50,7 +71,7 @@ ClaimSpecification As screen:
         Width: =1326
         X: =20
         Y: =216
-        ZIndex: =5
+        ZIndex: =7
 
     RemovePartySpecItem_2 As icon.Trash:
         Color: =RGBA(116, 116, 116, 1)
@@ -68,7 +89,7 @@ ClaimSpecification As screen:
         Width: =80
         X: =1266
         Y: =668
-        ZIndex: =6
+        ZIndex: =8
 
     EditPartySpecItem_2 As icon.Edit:
         Color: =RGBA(116, 116, 116, 1)
@@ -88,35 +109,18 @@ ClaimSpecification As screen:
         Width: =80
         X: =1186
         Y: =668
-        ZIndex: =7
+        ZIndex: =9
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =412
-        Items: =ClaimContractsCollection
+        Items: =ClaimSpecCollection
         Layout: =Layout.Vertical
-        OnSelect: |-
-            =Set(_current_contract_uuid, UrlParser.Run(ThisItem.uuid).uuid);
-            Navigate(ContractSpecification, None, 
-                {
-                    number: ThisItem.number, 
-                    type: FindTypeOfContractById.Run(_current_contract_uuid).name, 
-                    holder: FindHolderOfContractById.Run(_current_contract_uuid).name, 
-                    beneficiary: FindBeneficiaryOfContractById.Run(_current_contract_uuid).name, 
-                    uuid: _current_contract_uuid,
-                    type_url: ThisItem.type,
-                    holder_url: ThisItem.holder,
-                    beneficiary_url: ThisItem.beneficiary,
-                    type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
-                    holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "holder").uuid,
-                    beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "beneficiary").uuid
-                }
-            );
         TemplatePadding: =0
         TemplateSize: =112
         Width: =950
         X: =20
         Y: =336
-        ZIndex: =8
+        ZIndex: =10
 
         Label3 As label:
             Height: =60
@@ -132,7 +136,23 @@ ClaimSpecification As screen:
             Color: =RGBA(149, 149, 149, 1)
             Height: =60
             Icon: =Icon.ArrowRight
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Set(_current_contract_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Navigate(ContractSpecification, None, 
+                    {
+                        number: ThisItem.number, 
+                        type: FindTypeOfContractById.Run(_current_contract_uuid).name, 
+                        holder: FindHolderOfContractById.Run(_current_contract_uuid).name, 
+                        beneficiary: FindBeneficiaryOfContractById.Run(_current_contract_uuid).name, 
+                        uuid: _current_contract_uuid,
+                        type_url: ThisItem.type,
+                        holder_url: ThisItem.holder,
+                        beneficiary_url: ThisItem.beneficiary,
+                        type_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "type").uuid,
+                        holder_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "holder").uuid,
+                        beneficiary_uuid: ReferenceUuidParser.Run(_current_contract_uuid, "beneficiary").uuid
+                    }
+                );
             PaddingBottom: =20
             PaddingTop: =20
             Width: =60
@@ -140,21 +160,59 @@ ClaimSpecification As screen:
             Y: =26
             ZIndex: =2
 
+        Icon3 As icon.Trash:
+            Color: =RGBA(116, 116, 116, 1)
+            Height: =60
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Set(_sync, true);
+                DeleteOneContractFromClaim.Run(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Clear(ClaimSpecCollection);
+                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
+            PaddingBottom: =20
+            PaddingTop: =20
+            Width: =60
+            X: =810
+            Y: =26
+            ZIndex: =3
+
     PartyUuidSpec_3 As label:
         Height: =60
         Text: |-
-            ="Contracts: " & If(CountRows(ClaimContractsCollection) = 0, "None", CountRows(ClaimContractsCollection))
-        Width: =653
+            ="  Contracts: " & If(CountRows(ClaimSpecCollection) = 0, "None", CountRows(ClaimSpecCollection))
+        Width: =548
         X: =20
         Y: =276
-        ZIndex: =9
+        ZIndex: =11
 
     PartyUuidSpec_4 As label:
         Align: =Align.Right
         Height: =60
-        Text: ="More Information"
+        Text: ="More Information  "
         Width: =257
         X: =713
         Y: =276
-        ZIndex: =10
+        ZIndex: =12
+
+    Rectangle4_1 As rectangle:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =60
+        Width: =475
+        X: =20
+        Y: =276
+        ZIndex: =13
+
+    Icon12_4 As icon.Add:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =60
+        Icon: =Icon.Add
+        OnSelect: =Navigate(PartyCreator);
+        PaddingBottom: =20
+        PaddingTop: =20
+        Width: =60
+        X: =970
+        Y: =276
+        ZIndex: =14
 
