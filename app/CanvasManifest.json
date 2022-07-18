@@ -109,6 +109,7 @@
     "ProductEditor",
     "PartyEditor",
     "ContractEditor",
+    "ClaimEditor",
     "ProductSpecification",
     "PartySpecification",
     "ContractSpecification",
