@@ -261,7 +261,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/18/2022 15:06:24",
+  "HeaderLastSavedDateTimeUTC": "07/18/2022 15:06:28",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "082f6cd3-a66f-444d-a1fd-29d35372324c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/8b625363469b4bcb93f5c79452601a77-911675c9c888f55d\"",
@@ -295,6 +295,7 @@
     "d20f0ae8-0e65-4b84-958b-5b20be1c4464": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/bebcf0d7-f802-47a2-95b2-3215c5a4ad5d\"",
     "e306a503-9644-4d32-85e5-7f6782f68cbb": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/8b06ca450df64f939372030c1ce3cb7e-911675c9c888f55d\"",
     "e94b1393-19cb-4af1-a799-d51d0baa491a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/8b853a6a5a254199a19f7f5710b94963-911675c9c888f55d\"",
+    "f72aa9da-0c7e-4ee6-a46b-7588f9691878": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/4C002766D0B74C39BE8ED34BED432E07-911675C9C888F55D\"",
     "ffe9f2af-d7af-4042-8db2-1d20c869924b": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/57ed5924910c489bb9f961896aba031a-911675c9c888f55d\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
@@ -304,13 +305,13 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "AddOneContractToClaim": 29,
-    "ClaimCollection": 37,
-    "ClaimSpecCollection": 38,
-    "Collection2": 32,
-    "ContractCollectCollection": 35,
-    "ContractCollection": 34,
-    "CountCollection": 36,
-    "CustomGallerySample": 30,
+    "ClaimCollection": 38,
+    "ClaimSpecCollection": 39,
+    "Collection2": 33,
+    "ContractCollectCollection": 36,
+    "ContractCollection": 35,
+    "CountCollection": 37,
+    "CustomGallerySample": 31,
     "DeleteClaimByID": 24,
     "DeleteContractByID": 16,
     "DeleteOneContractFromClaim": 28,
@@ -326,13 +327,13 @@
     "FindPartyById": 11,
     "FindProductById": 22,
     "FindTypeOfContractById": 14,
-    "PartyCollection": 33,
+    "PartyCollection": 34,
     "PatchProductByID": 5,
     "PostClaimWithDate": 26,
     "PostContract": 15,
     "PostParty": 9,
     "PostProduct": 3,
-    "ProductCollection": 31,
+    "ProductCollection": 32,
     "PutBeneficiaryOfContractById": 18,
     "PutClaimById": 25,
     "PutContractById": 17,
@@ -341,6 +342,7 @@
     "PutProductById": 4,
     "PutTypeOfContractById": 19,
     "ReferenceUuidParser": 21,
+    "SearchProduct": 30,
     "UrlParser": 2
   },
   "OrderGroupControls": {},
@@ -633,7 +635,7 @@
       "text": 28
     },
     "DeserializationLoadTime": 2.4935852,
-    "ErrorCount": 23
+    "ErrorCount": 21
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
