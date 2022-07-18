@@ -94,10 +94,7 @@ ContractSpecification As screen:
                     number: number, 
                     type: type, 
                     holder: holder, 
-                    beneficiary: beneficiary,
-                    type_url: type_url,
-                    holder_url: holder_url,
-                    beneficiary_url: beneficiary_url
+                    beneficiary: beneficiary
                 }
             );
         PaddingBottom: =20
