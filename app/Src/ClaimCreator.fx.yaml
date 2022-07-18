@@ -71,9 +71,9 @@ ClaimCreator As screen:
                     Year(_date) & "-" & 
                     If(Len(Month(_date)) = 1, "0" & Month(_date), Month(_date)) & "-" & 
                     If(Len(Day(_date)) = 1, "0" & Day(_date), Day(_date)) & "T" & 
-                    Hour(_date) & ":" & 
-                    Minute(_date) & ":" & 
-                    Second(_date) & "Z", 
+                    If(Len(Hour(_date)) = 1, "0" & Hour(_date), Hour(_date)) & ":" & 
+                    If(Len(Minute(_date)) = 1, "0" & Minute(_date), Minute(_date)) & ":" & 
+                    If(Len(Second(_date)) = 1, "0" & Second(_date), Second(_date)) & "Z", 
                     eClaimCreatorNumberInput.Text);
                 Set(_refresh, true);
                 //Navigate(ClaimPortal);
@@ -105,18 +105,4 @@ ClaimCreator As screen:
         X: =170
         Y: =168
         ZIndex: =9
-
-    Label1 As label:
-        Height: =51
-        Text: |-
-            ="Test: " & Year(_date) & "-" & 
-                    If(Len(Month(_date)) = 1, "0" & Month(_date), Month(_date)) & "-" & 
-                    If(Len(Day(_date)) = 1, "0" & Day(_date), Day(_date)) & "T" & 
-                    If(Len(Hour(_date)) = 1, "0" & Hour(_date), Hour(_date)) & ":" & 
-                    If(Len(Minute(_date)) = 1, "0" & Minute(_date), Minute(_date)) & ":" & 
-                    If(Len(Second(_date)) = 1, "0" & Second(_date), Second(_date)) & "Z"
-        Width: =670
-        X: =244
-        Y: =260
-        ZIndex: =10
 
