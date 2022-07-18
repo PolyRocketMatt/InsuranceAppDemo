@@ -83,6 +83,7 @@ ProductEditor As screen:
                 false,
                 Set(_send, true);
                 PutProductById.Run(edit_uuid, eProdEditorDepInput.Text, eProdEditorNameInput.Text);
+                Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
                 Notify("Successfully edited product " & Char(34) & edit_name & Char(34) & " with name " & Char(34) & eProdEditorNameInput.Text & Char(34) & "!", NotificationType.Success),

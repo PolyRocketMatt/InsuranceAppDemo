@@ -84,6 +84,7 @@ PartyCreator As screen:
                 false,
                 Set(_send, true);
                 PostParty.Run(ePartyCreatorIdentInput.Text, ePartyCreatorNameInput.Text);
+                Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
                 Set(_ePartyNameDef, "");

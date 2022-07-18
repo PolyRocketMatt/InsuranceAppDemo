@@ -84,6 +84,7 @@ ProductCreator As screen:
                 false,
                 Set(_send, true);
                 PostProduct.Run(eProdCreatorNameInput.Text, eProdCreatorDepInput.Text);
+                Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
                 Set(_eProdNameDef, "");

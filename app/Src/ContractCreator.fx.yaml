@@ -87,6 +87,7 @@ ContractCreator As screen:
                 false,
                 Set(_send, true);
                 PostContract.Run(eContractCreatorBeneficiaryInput.Text, eContractCreatorHolderInput.Text, eContractCreatorNumInput.Text, eContractCreatorTypeInput.Text);
+                Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
                 Set(_eContractBeneficiaryDef, "");

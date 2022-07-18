@@ -83,7 +83,7 @@ PartyEditor As screen:
                 false,
                 Set(_send, true);
                 PutPartyById.Run(uuid, ePartyIdentifierInput.Text, ePartyNameInput.Text);
-                Set(_updateProducts, true);
+                Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
                 Notify("Successfully replaced a party with name " & Char(34) & ePartyNameInput.Text & Char(34) & "!", NotificationType.Success),

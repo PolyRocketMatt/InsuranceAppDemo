@@ -1,52 +1,57 @@
 ContractPortal As screen:
     OnVisible: |-
-        =//  Sync    
-        Set(_sync, true);
-        Clear(ContractCollection);
-        Clear(ContractCollectCollection);
-        Collect(ContractCollectCollection, FindAllContracts.Run());
+        =If(
+            _refresh,
+            //  Sync    
+            Set(_sync, true);
+            Clear(ContractCollection);
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, FindAllContracts.Run());
         
-        ForAll(
-            ContractCollectCollection,
-            Collect(ContractCollection, { 
-                uuid: UrlParser.Run(ThisRecord.uuid).uuid,
-                number: ThisRecord.number,
-                holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
-                holder_url: ThisRecord.holder,
-                beneficiary_url: ThisRecord.beneficiary,
-                type_url: ThisRecord.type
-            });
-        );
-        
-        //  Check occurence if needed
-        If(
-            _doLookup,
             ForAll(
-                ContractCollection,
-                If(
-                    ThisRecord.number = _lookupName,
-                    Notify("Could not delete contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
-                    Collect(CountCollection, ThisRecord)
+                ContractCollectCollection,
+                Collect(ContractCollection, { 
+                    uuid: UrlParser.Run(ThisRecord.uuid).uuid,
+                    number: ThisRecord.number,
+                    holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                    holder_url: ThisRecord.holder,
+                    beneficiary_url: ThisRecord.beneficiary,
+                    type_url: ThisRecord.type
+                });
+            );
+        
+            //  Check occurence if needed
+            If(
+                _doLookup,
+                ForAll(
+                    ContractCollection,
+                    If(
+                        ThisRecord.number = _lookupName,
+                        Notify("Could not delete contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Error);
+                        Collect(CountCollection, ThisRecord)
+                    )
                 )
-            )
-        );
+            );
         
-        If(
-            And(_doLookup, CountRows(CountCollection) = 0),
-            Notify("Successfully deleted contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
-        );
+            If(
+                And(_doLookup, CountRows(CountCollection) = 0),
+                Notify("Successfully deleted contract " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+            );
         
-        //  Clear variables/collections
-        Clear(CountCollection);
-        Set(_sync, false);
-        Set(_doLookup, false);
-        Set(_lookupName, "");
-        Set(_eContractNumberSearch, "");
-        Set(_eContractHolderSearch, "");
-        Set(_eContractBeneficiarySearch, "");
-        Set(_eContractTypeSearch, "");
+            //  Clear variables/collections
+            Clear(CountCollection);
+            Set(_sync, false);
+            Set(_doLookup, false);
+            Set(_lookupName, "");
+            Set(_eContractNumberSearch, "");
+            Set(_eContractHolderSearch, "");
+            Set(_eContractBeneficiarySearch, "");
+            Set(_eContractTypeSearch, "");
+            true,
+            true
+        );
 
     ProductPortalTitle_2 As label:
         Align: =Align.Center

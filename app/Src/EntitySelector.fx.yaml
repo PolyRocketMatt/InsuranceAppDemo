@@ -186,7 +186,8 @@ EntitySelector As screen:
         Fill: =RGBA(151, 0, 0, 1)
         HoverFill: =ColorFade(RGBA(151, 0, 0, 1), -20%)
         OnSelect: |-
-            =Clear(ContractCollection);
+            =Set(_refresh, true);
+            Clear(ContractCollection);
             Clear(ContractCollectCollection);
             Collect(ContractCollection, FindAllContracts.Run());
             Navigate(ContractPortal);

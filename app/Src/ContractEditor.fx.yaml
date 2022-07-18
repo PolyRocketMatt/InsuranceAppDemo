@@ -91,6 +91,7 @@ ContractEditor As screen:
                 PutTypeOfContractById.Run(uuid, eContractTypeInput.Text);
                 PutHolderOfContractById.Run(uuid, eContractHolderInput.Text);
                 PutBeneficiaryOfContractById.Run(uuid, eContractBeneficiaryInput.Text);
+                Set(_refresh, true);
                 Set(_updateProducts, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
