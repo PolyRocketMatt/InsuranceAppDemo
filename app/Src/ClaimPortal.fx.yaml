@@ -137,7 +137,7 @@ ClaimPortal As screen:
                         number: ThisItem.number,
                         created: ThisItem.created,
                         contracts: ThisItem.contracts,
-                        uuid: _current_claim_uuid,
+                        uuid: _claim_uuid,
                         specs: ClaimSpecCollection
                     }
                 );
