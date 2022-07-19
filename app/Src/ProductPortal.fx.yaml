@@ -5,7 +5,11 @@ ProductPortal As screen:
             //  Sync    
             Set(_sync, true);
             Clear(ProductCollection);
-            Collect(ProductCollection, FindAllProducts.Run());
+            If(
+                _keepSearch,
+                Collect(ProductCollection, SearchProduct.Run(eProdNameInput.Text, eProdDepInput.Text)),
+                Collect(ProductCollection, FindAllProducts.Run())
+            );
             
             //  Check occurence if needed
             If(
@@ -223,7 +227,11 @@ ProductPortal As screen:
         OnSelect: |-
             =Set(_sync, true);
             Clear(ProductCollection);
-            Collect(ProductCollection, FindAllProducts.Run());
+            If(
+                _keepSearch,
+                Collect(ProductCollection, SearchProduct.Run(eProdNameInput.Text, eProdDepInput.Text)),
+                Collect(ProductCollection, FindAllProducts.Run())
+            );
             Set(_sync, false)
         PaddingBottom: =20
         PaddingTop: =20
@@ -279,6 +287,7 @@ ProductPortal As screen:
         Icon: =Icon.Search
         OnSelect: |-
             =Set(_sync, true);
+            Set(_keepSearch, true);
             Clear(ProductCollection);
             Collect(ProductCollection, SearchProduct.Run(eProdNameInput.Text, eProdDepInput.Text));
             Set(_sync, false);
@@ -325,7 +334,8 @@ ProductPortal As screen:
             =UpdateContext({resetProductName: !resetProductName});
             UpdateContext({resetProductName: !resetProductName});
             UpdateContext({resetProductDepartment: !resetProductDepartment});
-            UpdateContext({resetProductDepartment: !resetProductDepartment})
+            UpdateContext({resetProductDepartment: !resetProductDepartment});
+            Set(_keepSearch, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30

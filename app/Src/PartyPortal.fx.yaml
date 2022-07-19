@@ -5,7 +5,11 @@ PartyPortal As screen:
             //  Sync    
             Set(_sync, true);
             Clear(PartyCollection);
-            Collect(PartyCollection, FindAllParties.Run());
+            If(
+                _keepSearch,
+                Collect(PartyCollection, SearchParty.Run(ePartyIdentifierSearchInp.Text, ePartyNameSearchInp.Text)),
+                Collect(PartyCollection, FindAllParties.Run())
+            );
         
             //  Check occurence if needed
             If(
@@ -221,7 +225,11 @@ PartyPortal As screen:
         OnSelect: |-
             =Set(_sync, true);
             Clear(PartyCollection);
-            Collect(PartyCollection, FindAllParties.Run());
+            If(
+                    _keepSearch,
+                    Collect(PartyCollection, SearchParty.Run(ePartyIdentifierSearchInp.Text, ePartyNameSearchInp.Text));
+                    Collect(PartyCollection, FindAllParties.Run());
+                );
             Set(_sync, false)
         PaddingBottom: =20
         PaddingTop: =20
@@ -277,8 +285,9 @@ PartyPortal As screen:
         Icon: =Icon.Search
         OnSelect: |-
             =Set(_sync, true);
+            Set(_keepSearch, true);
             Clear(PartyCollection);
-            Collect(PartyCollection, SearchParty.Run(ePartyIdentifierInput.Text, ePartyNameSearchInp.Text));
+            Collect(PartyCollection, SearchParty.Run(ePartyIdentifierSearchInp.Text, ePartyNameSearchInp.Text));
             Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
@@ -323,7 +332,8 @@ PartyPortal As screen:
             =UpdateContext({resetPartyName: !resetPartyName});
             UpdateContext({resetPartyName: !resetPartyName});
             UpdateContext({resetPartyIdentifier: !resetPartyIdentifier});
-            UpdateContext({resetPartyIdentifier: !resetPartyIdentifier})
+            UpdateContext({resetPartyIdentifier: !resetPartyIdentifier});
+            Set(_keepSearch, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
