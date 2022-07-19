@@ -181,20 +181,21 @@ ClaimPortal As screen:
 
     eProdNameFilter_3 As label:
         Height: =50
-        Text: ="Name"
+        Text: ="ID"
         Width: =115
         X: =990
         Y: =126
         ZIndex: =4
 
-    eProdNameInput_3 As text:
+    eClaimIDSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eClaimNumberSearch
         Height: =35
-        HintText: ="Name"
+        HintText: ="ID"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetClaimName
+        Width: =211
         X: =1105
         Y: =133
         ZIndex: =5
@@ -253,11 +254,12 @@ ClaimPortal As screen:
         X: =890
         ZIndex: =11
 
-    DatePicker1 As datepicker:
+    eClaimDateSearchInp As datepicker:
         BorderColor: =RGBA(118, 0, 0, 1)
         DefaultDate: =_eClaimDateSearch
         IconBackground: =RGBA(118, 0, 0, 1)
-        Width: =241
+        Reset: =resetClaimDate
+        Width: =211
         X: =1105
         Y: =181
         ZIndex: =12
@@ -272,4 +274,241 @@ ClaimPortal As screen:
         Width: =75
         X: =1290
         ZIndex: =13
+
+    Icon6_3 As icon.Search:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Search
+        OnSelect: |-
+            =Set(_sync, true);
+            Set(_searchDateInput, eClaimDateSearchInp.SelectedDate);
+            Set(_searchDate, Year(_searchDateInput) & "-" & 
+                    If(Len(Month(_searchDateInput)) = 1, "0" & Month(_searchDateInput), Month(_searchDateInput)) & "-" & 
+                    If(Len(Day(_searchDateInput)) = 1, "0" & Day(_searchDateInput), Day(_searchDateInput)) & "T" & 
+                    If(Len(Hour(_searchDateInput)) = 1, "0" & Hour(_searchDateInput), Hour(_searchDateInput)) & ":" & 
+                    If(Len(Minute(_searchDateInput)) = 1, "0" & Minute(_searchDateInput), Minute(_searchDateInput)) & ":" & 
+                    If(Len(Second(_searchDateInput)) = 1, "0" & Second(_searchDateInput), Second(_searchDateInput)) & "Z")
+            Clear(ClaimCollection);
+            Collect(ClaimCollection, SearchClaims.Run(
+                _searchDate, 
+                eClaimIDSearchInp.Text,
+                eClaimNumberSearchInp.Text,
+                eClaimHolderSearchInp.Text,
+                "",
+                eClaimBeneficiarySearchInp.Text,
+                "",
+                eClaim
+            ));
+            Set(_sync, false);
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =532
+        ZIndex: =14
+
+    Icon7_8 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimName: !resetClaimName});
+            UpdateContext({resetClaimName: !resetClaimName})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =136
+        ZIndex: =15
+
+    Icon7_9 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimDate: !resetClaimDate});
+            UpdateContext({resetClaimDate: !resetClaimDate})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =185
+        ZIndex: =16
+
+    eProdNameFilter_4 As label:
+        Height: =50
+        Text: ="Number"
+        Width: =115
+        X: =990
+        Y: =226
+        ZIndex: =17
+
+    eProdNameFilter_5 As label:
+        Height: =50
+        Text: ="Type"
+        Width: =115
+        X: =990
+        Y: =276
+        ZIndex: =18
+
+    eProdNameFilter_6 As label:
+        Height: =50
+        Text: ="Holder"
+        Width: =115
+        X: =990
+        Y: =432
+        ZIndex: =19
+
+    eProdNameFilter_7 As label:
+        Height: =50
+        Text: |-
+            ="Beneficiary
+            "
+        Width: =115
+        X: =990
+        Y: =482
+        ZIndex: =20
+
+    eClaimNumberSearchInp As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eClaimNumberSearch
+        Height: =35
+        HintText: ="Number"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimNumber
+        Width: =211
+        X: =1105
+        Y: =233
+        ZIndex: =21
+
+    eClaimTypeSearchInp As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eClaimNumberSearch
+        Height: =35
+        HintText: ="Type"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimType
+        Width: =211
+        X: =1105
+        Y: =283
+        ZIndex: =22
+
+    eClaimHolderSearchInp As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eClaimNumberSearch
+        Height: =35
+        HintText: ="Holder"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimHolder
+        Width: =211
+        X: =1105
+        Y: =439
+        ZIndex: =23
+
+    eClaimBeneficiarySearchInp As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eClaimNumberSearch
+        Height: =35
+        HintText: ="Beneficiary"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimBeneficiary
+        Width: =211
+        X: =1105
+        Y: =489
+        ZIndex: =24
+
+    Icon7_10 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimNumber: !resetClaimNumber});
+            UpdateContext({resetClaimNumber: !resetClaimNumber})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =237
+        ZIndex: =25
+
+    Icon7_11 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimType: !resetClaimType});
+            UpdateContext({resetClaimType: !resetClaimType})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =289
+        ZIndex: =26
+
+    Icon7_12 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimHolder: !resetClaimHolder});
+            UpdateContext({resetClaimHolder: !resetClaimHolder})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =441
+        ZIndex: =27
+
+    Icon7_13 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary});
+            UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =492
+        ZIndex: =28
+
+    eProdNameFilter_8 As label:
+        Height: =50
+        Text: ="Department"
+        Width: =115
+        X: =990
+        Y: =318
+        ZIndex: =29
+
+    eClaimTypeSearchInp_1 As text:
+        BorderColor: =RGBA(151, 0, 0, 1)
+        Default: =_eClaimNumberSearch
+        Height: =35
+        HintText: ="Type"
+        HoverBorderColor: =RGBA(151, 0, 0, 1)
+        HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimDepartment
+        Width: =211
+        X: =1105
+        Y: =325
+        ZIndex: =30
+
+    Icon7_14 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetClaimDepartment: !resetClaimDepartment});
+            UpdateContext({resetClaimDepartment: !resetClaimDepartment})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =328
+        ZIndex: =31
 
