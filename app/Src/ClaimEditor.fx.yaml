@@ -224,7 +224,9 @@ ClaimEditor As screen:
                 Notify("Expected value to be non-empty!", NotificationType.Error);
                 false,
                 Set(_send, true);
-                AddOneContractToClaim.Run(_current_claim_uuid, ClaimContractAdditionInput_1.Text),
+                AddOneContractToClaim.Run(_claim_uuid, ClaimContractAdditionInput_1.Text);
+                UpdateContext({resetContractEditUUID: !resetContractEditUUID});
+                UpdateContext({resetContractEditUUID: !resetContractEditUUID});
                 Set(_refresh, true);
                 Set(_send, false);
                 Notify("Successfully submitted a contract with UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & "!", NotificationType.Success),
@@ -247,6 +249,7 @@ ClaimEditor As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
+        Reset: =resetContractEditUUID
         Width: =316
         X: =1030
         Y: =306
