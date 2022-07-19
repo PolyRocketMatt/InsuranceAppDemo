@@ -1893,19 +1893,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.eProdNameInput_2.AccessibleLabel"
+                  "fullyQualifiedName": "ContractPortal.eContractNumberSearchInp.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractPortal.eProdNameInput_2.AccessibleLabel",
+                  "fullyQualifiedName": "ContractPortal.eContractNumberSearchInp.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractPortal",
-                "type": "ContractPortal.eProdNameInput_2"
+                "type": "ContractPortal.eContractNumberSearchInp"
               }
             }
           ],
@@ -1923,19 +1923,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_2.AccessibleLabel"
+                  "fullyQualifiedName": "ContractPortal.eContractTypeSearchInp.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_2.AccessibleLabel",
+                  "fullyQualifiedName": "ContractPortal.eContractTypeSearchInp.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractPortal",
-                "type": "ContractPortal.eProdDepInput_2"
+                "type": "ContractPortal.eContractTypeSearchInp"
               }
             }
           ],
@@ -1953,19 +1953,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_3.AccessibleLabel"
+                  "fullyQualifiedName": "ContractPortal.eContractHolderSearchInp.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_3.AccessibleLabel",
+                  "fullyQualifiedName": "ContractPortal.eContractHolderSearchInp.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractPortal",
-                "type": "ContractPortal.eProdDepInput_3"
+                "type": "ContractPortal.eContractHolderSearchInp"
               }
             }
           ],
@@ -1983,19 +1983,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_4.AccessibleLabel"
+                  "fullyQualifiedName": "ContractPortal.eContractBeneficiarySearchInp.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ContractPortal.eProdDepInput_4.AccessibleLabel",
+                  "fullyQualifiedName": "ContractPortal.eContractBeneficiarySearchInp.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ContractPortal",
-                "type": "ContractPortal.eProdDepInput_4"
+                "type": "ContractPortal.eContractBeneficiarySearchInp"
               }
             }
           ],
@@ -6603,36 +6603,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ContractPortal.Icon6_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ContractPortal.Icon6_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ContractPortal",
-                "type": "ContractPortal.Icon6_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ContractPortal.Icon6_2.TabIndex"
                 }
               ],
@@ -6657,6 +6627,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ContractPortal.Icon6_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ContractPortal.Icon6_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ContractPortal",
+                "type": "ContractPortal.Icon6_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [

@@ -246,7 +246,7 @@ ContractPortal As screen:
         Y: =126
         ZIndex: =4
 
-    eProdNameInput_2 As text:
+    eContractNumberSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eContractNumberSearch
         Height: =35
@@ -267,7 +267,7 @@ ContractPortal As screen:
         Y: =176
         ZIndex: =6
 
-    eProdDepInput_2 As text:
+    eContractTypeSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eContractTypeSearch
         Height: =35
@@ -354,7 +354,7 @@ ContractPortal As screen:
         Y: =276
         ZIndex: =13
 
-    eProdDepInput_3 As text:
+    eContractHolderSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eContractHolderSearch
         Height: =35
@@ -367,7 +367,7 @@ ContractPortal As screen:
         Y: =233
         ZIndex: =14
 
-    eProdDepInput_4 As text:
+    eContractBeneficiarySearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eContractBeneficiarySearch
         Height: =35
@@ -453,8 +453,9 @@ ContractPortal As screen:
         Icon: =Icon.Search
         OnSelect: |-
             =Set(_sync, true);
-            Clear(PartyCollection);
-            Collect(PartyCollection, SearchParty.Run(ePartyIdentifierInput.Text, ePartyNameSearchInp.Text));
+            Clear(ContractCollection);
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, {});
             Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
