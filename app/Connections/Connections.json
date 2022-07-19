@@ -31,42 +31,6 @@
     "dependents": [],
     "id": "082f6cd3-a66f-444d-a1fd-29d35372324c"
   },
-  "0c0c88c2-51e8-4dab-ac8d-c29045ec1908": {
-    "connectionParameters": {},
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
-          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "cc7adb93-6949-4136-8afa-c7f090826328"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
-          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "cc7adb93-6949-4136-8afa-c7f090826328"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "FindAllProducts"
-    ],
-    "dependencies": {
-      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
-    },
-    "dependents": [],
-    "id": "0c0c88c2-51e8-4dab-ac8d-c29045ec1908"
-  },
   "0dc10f9e-9bcc-46d9-9c4b-f1b3115dcf1d": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-113.westeurope.logic.azure.com:443/workflows/5118a7c6523e4df3884a41d8d98ead8b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B8wn1UghrK4C42sMi6EW61gvikKfRn66J-lEZIbwHVI",
@@ -551,6 +515,46 @@
     "dependents": [],
     "id": "5a81733b-c795-4f81-92ee-f1b4ee09edc9"
   },
+  "5c99a6e9-6731-4867-8498-58846df80a73": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-17.westeurope.logic.azure.com:443/workflows/88d3e1f692594a37824a74d277ab149f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7AeOZK9tArDn_mz9JFoQXXiU44XFDZtG79_UwDYn6sE",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/cc7adb93-6949-4136-8afa-c7f090826328",
+      "workflowName": "cc7adb93-6949-4136-8afa-c7f090826328",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/b4d763ec8e40498cb2f1daebe44741df-5c70a8c06cc347a4b234c9a03acbf44b/providers/Microsoft.Logic/workflows/cc7adb93-6949-4136-8afa-c7f090826328"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7": {
+          "value": "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cc7adb93-6949-4136-8afa-c7f090826328"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": {
+          "value": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "cc7adb93-6949-4136-8afa-c7f090826328"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "FindAllProducts"
+    ],
+    "dependencies": {
+      "shared_definiteinsuranceapi-5f7b42d5a8a3311321-5f78965c883697e162": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
+    },
+    "dependents": [],
+    "id": "5c99a6e9-6731-4867-8498-58846df80a73"
+  },
   "60a39ea2-7fbf-4fc3-a051-93f5bca80d85": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-07.westeurope.logic.azure.com:443/workflows/10dda9aa7b4447488043750adaa6bd77/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2wT8lOla3VX1e-4oM41Zyh4T5EmVwUEOtlm7yLO_Uu4",
@@ -1030,7 +1034,6 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "0c0c88c2-51e8-4dab-ac8d-c29045ec1908",
       "22fefce4-849e-490d-987d-6360dec908e7",
       "3b99af77-a1ad-45da-89ae-105bfe256fd3",
       "27b326e3-5b0b-480e-a960-ee275c75ffbb",
@@ -1054,7 +1057,8 @@
       "3733a3f0-df63-4f9f-b24f-a91ec36ba776",
       "106111a5-995e-4078-b837-1381afa6290d",
       "e94b1393-19cb-4af1-a799-d51d0baa491a",
-      "4e765433-4ae9-4949-977b-b2ba3e59c0df"
+      "4e765433-4ae9-4949-977b-b2ba3e59c0df",
+      "5c99a6e9-6731-4867-8498-58846df80a73"
     ],
     "id": "acc3ae9e-13c1-4a9d-9f5e-b7547630c0b7"
   },

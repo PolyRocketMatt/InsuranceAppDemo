@@ -215,7 +215,16 @@ EntitySelector As screen:
         OnSelect: |-
             =Clear(ProductCollection);
             Collect(ProductCollection, FindAllProducts.Run());
-            Navigate(ProductPortal);
+            If(
+                Or(
+                    And(
+                        CountRows(ProductCollection) > 0,
+                        First(ProductCollection).
+                    ),
+                    CountRows(ProductCollection) = 0
+                ),
+                Navigate(ProductPortal);
+            );
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

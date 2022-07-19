@@ -304,7 +304,11 @@ ClaimPortal As screen:
                 "",
                 eClaimTypeSearchInp.Text,
                 eClaimDepartmentSearchInp.Text,
-                ""
+                If(
+                    Year(_searchDateInput) = 1900,
+                    "",
+                    _searchDate
+                )
             ));
             Set(_sync, false);
         PaddingBottom: =2
