@@ -1,6 +1,7 @@
 ContractEditor As screen:
     OnVisible: |-
-        =Set(_eContractNumberDef, number);
+        =UpdateContext({resetContractEdit: !resetContractEdit});
+        Set(_eContractNumberDef, number);
         Set(_eContractTypeDef, type_uuid);
         Set(_eContractHolderDef, holder_uuid);
         Set(_eContractBeneficiaryDef, beneficiary_uuid);
@@ -54,6 +55,7 @@ ContractEditor As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractEdit
         Width: =1026
         X: =170
         Y: =108
@@ -66,6 +68,7 @@ ContractEditor As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractEdit
         Width: =1026
         X: =170
         Y: =168
@@ -136,6 +139,7 @@ ContractEditor As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractEdit
         Width: =1026
         X: =170
         Y: =228
@@ -148,6 +152,7 @@ ContractEditor As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractEdit
         Width: =1026
         X: =170
         Y: =288

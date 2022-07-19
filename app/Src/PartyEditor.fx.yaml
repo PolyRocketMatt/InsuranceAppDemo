@@ -1,7 +1,6 @@
 PartyEditor As screen:
     OnVisible: |-
-        =UpdateContext({resetPartyEditName: !resetPartyEditName});
-        UpdateContext({resetPartyEditIdentifier: !resetPartyEditIdentifier});
+        =UpdateContext({resetPartyEdit: !resetPartyEdit});
         Set(_ePartyNameEditDef, name);
         Set(_ePartyIDEditDef, id);
 
@@ -53,7 +52,7 @@ PartyEditor As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Reset: =resetPartyEditName
+        Reset: =resetPartyEdit
         Width: =1026
         X: =170
         Y: =108
@@ -66,7 +65,7 @@ PartyEditor As screen:
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Reset: =resetPartyEditIdentifier
+        Reset: =resetPartyEdit
         Width: =1026
         X: =170
         Y: =168
@@ -87,8 +86,7 @@ PartyEditor As screen:
                 false,
                 Set(_send, true);
                 PutPartyById.Run(uuid, ePartyIdentifierInput.Text, ePartyNameInput.Text);
-                UpdateContext({resetPartyEditName: !resetPartyEditName});
-                UpdateContext({resetPartyEditIdentifier: !resetPartyEditIdentifier});
+                UpdateContext({resetPartyEdit: !resetPartyEdit});
                 Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
