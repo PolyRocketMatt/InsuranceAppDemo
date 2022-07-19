@@ -60,6 +60,8 @@ ContractSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_sync, true);
+            Set(_lookupName, number);
+            Set(_doLookup, true);
             DeleteContractByID.Run(uuid);
             Clear(ContractCollection);
             Clear(ContractCollectCollection);

@@ -79,6 +79,8 @@ ClaimSpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_sync, true);
+            Set(_lookupName, number);
+            Set(_doLookup, true);
             DeleteClaimByID.Run(uuid);
             Clear(ClaimCollection);
             Collect(ClaimCollection, FindAllClaims.Run());

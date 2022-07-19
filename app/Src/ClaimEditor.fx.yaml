@@ -67,6 +67,7 @@ ClaimEditor As screen:
                 Set(_send, true);
                 PutClaimById.Run(uuid, eContractNumberInput_1.Text);
                 UpdateContext({resetClaimEdit: !resetClaimEdit});
+                UpdateContext({resetClaimEdit: !resetClaimEdit});
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);

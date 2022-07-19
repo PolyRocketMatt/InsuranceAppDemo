@@ -57,9 +57,11 @@ ProductSpecification As screen:
         Height: =80
         Icon: =Icon.Trash
         OnSelect: |-
-            =Set(_lookupName, spec_name);
+            =Set(_sync, true);
+            Set(_lookupName, spec_name);
             Set(_doLookup, true);
             DeleteProductByID.Run(spec_uuid);
+            Set(_sync, false);
             Navigate(ProductPortal);
         PaddingBottom: =20
         PaddingTop: =20

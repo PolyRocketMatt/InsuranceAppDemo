@@ -58,6 +58,8 @@ PartySpecification As screen:
         Icon: =Icon.Trash
         OnSelect: |-
             =Set(_sync, true);
+            Set(_lookupName, name);
+            Set(_doLookup, true);
             DeletePartyByID.Run(uuid);
             Clear(PartyCollection);
             Collect(PartyCollection, FindAllParties.Run());
@@ -75,7 +77,13 @@ PartySpecification As screen:
         Height: =80
         Icon: =Icon.Edit
         OnSelect: |-
-            =Navigate(PartyEditor, None, {name: name, id: id, uuid: uuid});
+            =Navigate(PartyEditor, None, 
+                {
+                    name: name, 
+                    id: id, 
+                    uuid: uuid
+                }
+            );
         PaddingBottom: =20
         PaddingTop: =20
         Width: =80
