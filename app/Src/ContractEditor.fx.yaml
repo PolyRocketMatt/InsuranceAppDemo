@@ -55,6 +55,10 @@ ContractEditor As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetContractEdit
         Width: =1026
         X: =170
@@ -68,6 +72,10 @@ ContractEditor As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetContractEdit
         Width: =1026
         X: =170
@@ -139,6 +147,10 @@ ContractEditor As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetContractEdit
         Width: =1026
         X: =170
@@ -152,6 +164,10 @@ ContractEditor As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetContractEdit
         Width: =1026
         X: =170

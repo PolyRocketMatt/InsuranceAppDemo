@@ -195,6 +195,10 @@ ClaimPortal As screen:
         HintText: ="ID"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimName
         Width: =211
         X: =1105
@@ -377,6 +381,10 @@ ClaimPortal As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimNumber
         Width: =211
         X: =1105
@@ -390,6 +398,10 @@ ClaimPortal As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimType
         Width: =211
         X: =1105
@@ -403,6 +415,10 @@ ClaimPortal As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimHolder
         Width: =211
         X: =1105
@@ -416,6 +432,10 @@ ClaimPortal As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimBeneficiary
         Width: =211
         X: =1105
@@ -493,6 +513,10 @@ ClaimPortal As screen:
         HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimDepartment
         Width: =211
         X: =1105

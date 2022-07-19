@@ -1,7 +1,7 @@
 ClaimEditor As screen:
     OnVisible: |-
         =UpdateContext({resetClaimEdit: !resetClaimEdit});
-        Set(_eClaimNumberDef, "")
+        Set(_eClaimNumberDef, number)
 
     PartyEditorTitle_2 As label:
         Align: =Align.Center
@@ -44,6 +44,10 @@ ClaimEditor As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimEdit
         Width: =1026
         X: =170
@@ -171,9 +175,9 @@ ClaimEditor As screen:
             Icon: =Icon.Trash
             OnSelect: |-
                 =Set(_sync, true);
-                DeleteOneContractFromClaim.Run(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                DeleteOneContractFromClaim.Run(_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
                 Clear(ClaimSpecCollection);
-                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
+                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_claim_uuid));
                 Set(_sync, false);
             PaddingBottom: =20
             PaddingTop: =20
@@ -194,7 +198,7 @@ ClaimEditor As screen:
     PartyUuidSpec_6 As label:
         Align: =Align.Right
         Height: =60
-        Text: ="More Information  "
+        Text: ="Options  "
         Width: =257
         X: =713
         Y: =296
@@ -239,6 +243,10 @@ ClaimEditor As screen:
         HintText: ="Contract UUID"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Width: =316
         X: =1030
         Y: =306

@@ -189,6 +189,10 @@ PartyPortal As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetPartyName
         Width: =211
         X: =1105
@@ -210,6 +214,10 @@ PartyPortal As screen:
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetPartyIdentifier
         Width: =211
         X: =1105

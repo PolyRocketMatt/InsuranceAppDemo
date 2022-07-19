@@ -193,6 +193,10 @@ ProductPortal As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetProductName
         Width: =211
         X: =1105
@@ -214,6 +218,10 @@ ProductPortal As screen:
         HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetProductDepartment
         Width: =211
         X: =1105

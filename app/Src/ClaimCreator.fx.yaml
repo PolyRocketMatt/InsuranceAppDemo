@@ -51,6 +51,10 @@ ClaimCreator As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Reset: =resetClaimCreate
         Width: =1026
         X: =170
@@ -101,7 +105,7 @@ ClaimCreator As screen:
         ZIndex: =8
 
     eClaimCreatorDateInput As datepicker:
-        BorderColor: =RGBA(118, 0, 0, 1)
+        BorderColor: =RGBA(151, 0, 0, 1)
         Height: =35
         IconBackground: =RGBA(118, 0, 0, 1)
         Reset: =resetClaimCreate
