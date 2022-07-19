@@ -95,6 +95,7 @@ PartyEditor As screen:
                 Set(_send, true);
                 PutPartyById.Run(uuid, ePartyIdentifierInput.Text, ePartyNameInput.Text);
                 UpdateContext({resetPartyEdit: !resetPartyEdit});
+                UpdateContext({resetPartyEdit: !resetPartyEdit});
                 Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);

@@ -95,6 +95,7 @@ ProductEditor As screen:
                 Set(_send, true);
                 PutProductById.Run(edit_uuid, eProdEditorDepInput.Text, eProdEditorNameInput.Text);
                 UpdateContext({resetProductEdit: !resetProductEdit});
+                UpdateContext({resetProductEdit: !resetProductEdit});
                 Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
