@@ -153,15 +153,15 @@ ClaimPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =
+                =Set(_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
                 Clear(ClaimSpecCollection);
-                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
+                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_claim_uuid));
                 Navigate(ClaimSpecification, None,
                     {
                         number: ThisItem.number,
                         created: ThisItem.created,
                         contracts: ThisItem.contracts,
-                        uuid: _current_claim_uuid,
+                        uuid: _claim_uuid,
                         specs: ClaimSpecCollection
                     }
                 );
