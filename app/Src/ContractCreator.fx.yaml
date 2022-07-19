@@ -99,6 +99,7 @@ ContractCreator As screen:
                 Set(_send, true);
                 PostContract.Run(eContractCreatorBeneficiaryInput.Text, eContractCreatorHolderInput.Text, eContractCreatorNumInput.Text, eContractCreatorTypeInput.Text);
                 UpdateContext({resetContractCreate: !resetContractCreate});
+                UpdateContext({resetContractCreate: !resetContractCreate});
                 Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);

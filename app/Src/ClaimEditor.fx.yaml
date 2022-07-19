@@ -224,12 +224,18 @@ ClaimEditor As screen:
                 Notify("Expected value to be non-empty!", NotificationType.Error);
                 false,
                 Set(_send, true);
+                Set(_current_claim_contract_count, CountRows(ClaimSpecCollection));
                 AddOneContractToClaim.Run(_claim_uuid, ClaimContractAdditionInput_1.Text);
                 UpdateContext({resetContractEditUUID: !resetContractEditUUID});
                 UpdateContext({resetContractEditUUID: !resetContractEditUUID});
-                Set(_refresh, true);
+                Clear(ClaimSpecCollection);
+                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_claim_uuid));
                 Set(_send, false);
-                Notify("Successfully submitted a contract with UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & "!", NotificationType.Success),
+                If(
+                    CountRows(ClaimSpecCollection) = _current_contract_uuid + 1,
+                    Notify("Successfully submitted a contract (UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & ")!", NotificationType.Success),
+                    Notify("There was an error submitting a contract (UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & ")!", NotificationType.Error)
+                );
                 true
             );
         PaddingBottom: =20

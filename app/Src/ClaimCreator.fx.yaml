@@ -83,6 +83,7 @@ ClaimCreator As screen:
                     If(Len(Second(_date)) = 1, "0" & Second(_date), Second(_date)) & "Z", 
                     eClaimCreatorNumberInput.Text);
                 UpdateContext({resetClaimCreate: !resetClaimCreate});
+                UpdateContext({resetClaimCreate: !resetClaimCreate});
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);

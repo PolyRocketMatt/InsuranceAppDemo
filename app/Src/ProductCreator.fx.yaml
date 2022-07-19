@@ -96,6 +96,7 @@ ProductCreator As screen:
                 Set(_send, true);
                 PostProduct.Run(eProdCreatorNameInput.Text, eProdCreatorDepInput.Text);
                 UpdateContext({resetProductCreate: !resetProductCreate});
+                UpdateContext({resetProductCreate: !resetProductCreate});
                 Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);

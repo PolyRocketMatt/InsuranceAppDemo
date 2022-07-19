@@ -96,6 +96,7 @@ PartyCreator As screen:
                 Set(_send, true);
                 PostParty.Run(ePartyCreatorIdentInput.Text, ePartyCreatorNameInput.Text);
                 UpdateContext({resetPartyCreate: !resetPartyCreate});
+                UpdateContext({resetPartyCreate: !resetPartyCreate});
                 Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);

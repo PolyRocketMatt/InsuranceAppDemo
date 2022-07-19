@@ -1,5 +1,5 @@
 ClaimSpecification As screen:
-    OnVisible: =Set(_current_claim_uuid, uuid);
+    OnVisible: =Set(_claim_uuid, uuid);
 
     Rectangle3 As rectangle:
         BorderColor: =RGBA(116, 116, 116, 1)
@@ -67,7 +67,7 @@ ClaimSpecification As screen:
     PartyUuidSpec_2 As label:
         Height: =60
         Text: |-
-            ="UUID: " & _current_claim_uuid
+            ="UUID: " & _claim_uuid
         Width: =1326
         X: =20
         Y: =216
@@ -101,7 +101,7 @@ ClaimSpecification As screen:
                     number: number,
                     created: created,
                     contracts: contracts,
-                    uuid: _current_claim_uuid,
+                    uuid: _claim_uuid,
                     specs: ClaimSpecCollection
                 }
             );
@@ -212,7 +212,7 @@ ClaimSpecification As screen:
         OnSelect: |-
             =Set(_sync, true);
             Clear(ClaimSpecCollection);
-            Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
+            Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_claim_uuid));
             Set(_sync, false);
         PaddingBottom: =20
         PaddingTop: =20
