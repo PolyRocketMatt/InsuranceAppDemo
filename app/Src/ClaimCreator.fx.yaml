@@ -46,7 +46,7 @@ ClaimCreator As screen:
 
     eClaimCreatorNumberInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyNameDef
+        Default: =""
         Height: =36
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -80,7 +80,7 @@ ClaimCreator As screen:
                     eClaimCreatorNumberInput.Text);
                 UpdateContext({resetClaimCreate: !resetClaimCreate});
                 Set(_refresh, true);
-                //Navigate(ClaimPortal);
+                Navigate(ClaimPortal);
                 Set(_send, false);
                 Notify("Successfully submitted a claim with name " & Char(34) & eClaimCreatorNumberInput.Text & Char(34) & "!", NotificationType.Success),
                 true
@@ -102,7 +102,6 @@ ClaimCreator As screen:
 
     eClaimCreatorDateInput As datepicker:
         BorderColor: =RGBA(118, 0, 0, 1)
-        DefaultDate: =_eClaimDateSearch
         Height: =35
         IconBackground: =RGBA(118, 0, 0, 1)
         Reset: =resetClaimCreate

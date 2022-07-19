@@ -130,12 +130,15 @@ ClaimPortal As screen:
             Icon: =Icon.Edit
             OnSelect: |-
                 =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
+                Clear(ClaimSpecCollection);
+                Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
                 Navigate(ClaimEditor, None, 
                     {
                         number: ThisItem.number,
                         created: ThisItem.created,
                         contracts: ThisItem.contracts,
-                        uuid: _current_claim_uuid
+                        uuid: _current_claim_uuid,
+                        specs: ClaimSpecCollection
                     }
                 );
             PaddingBottom: =20
@@ -150,8 +153,7 @@ ClaimPortal As screen:
             Height: =80
             Icon: =Icon.NextArrow
             OnSelect: |-
-                =Set(_current_claim_uuid, UrlParser.Run(ThisItem.uuid).uuid);
-                Clear(ClaimSpecCollection);
+                =Clear(ClaimSpecCollection);
                 Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_current_claim_uuid));
                 Navigate(ClaimSpecification, None,
                     {
@@ -159,7 +161,7 @@ ClaimPortal As screen:
                         created: ThisItem.created,
                         contracts: ThisItem.contracts,
                         uuid: _current_claim_uuid,
-                        true_contracts: ClaimSpecCollection
+                        specs: ClaimSpecCollection
                     }
                 );
             PaddingBottom: =20
