@@ -6,7 +6,18 @@ ContractPortal As screen:
             Set(_sync, true);
             Clear(ContractCollection);
             Clear(ContractCollectCollection);
-            Collect(ContractCollectCollection, FindAllContracts.Run());
+            If(_keepSearch,
+                Collect(ContractCollectCollection, SearchContract.Run(
+                    eContractNumberSearchInp.Text,
+                    eContractHolderSearchInp.Text,
+                    "",
+                    eContractBeneficiarySearchInp.Text,
+                    "",
+                    eContractTypeSearchInp.Text,
+                    ""
+                )),
+                Collect(ContractCollectCollection, FindAllContracts.Run())
+            );
         
             ForAll(
                 ContractCollectCollection,
@@ -45,10 +56,6 @@ ContractPortal As screen:
             Set(_sync, false);
             Set(_doLookup, false);
             Set(_lookupName, "");
-            Set(_eContractNumberSearch, "");
-            Set(_eContractHolderSearch, "");
-            Set(_eContractBeneficiarySearch, "");
-            Set(_eContractTypeSearch, "");
             Set(_refresh, false);
             true,
             true
@@ -246,7 +253,7 @@ ContractPortal As screen:
 
     eContractNumberSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -267,7 +274,7 @@ ContractPortal As screen:
 
     eContractTypeSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractTypeSearch
+        Default: =""
         Height: =35
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -286,7 +293,20 @@ ContractPortal As screen:
             =Set(_sync, true);
             Clear(ContractCollection);
             Clear(ContractCollectCollection);
-            Collect(ContractCollectCollection, FindAllContracts.Run());
+            
+            If(
+                _keepSearch,
+                Collect(ContractCollectCollection, SearchContract.Run(
+                    eContractNumberSearchInp.Text,
+                    eContractHolderSearchInp.Text,
+                    "",
+                    eContractBeneficiarySearchInp.Text,
+                    "",
+                    eContractTypeSearchInp.Text,
+                    ""
+                )),
+                Collect(ContractCollectCollection, FindAllContracts.Run())
+            );
             
             ForAll(
                 ContractCollectCollection,
@@ -354,7 +374,7 @@ ContractPortal As screen:
 
     eContractHolderSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractHolderSearch
+        Default: =""
         Height: =35
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -367,7 +387,7 @@ ContractPortal As screen:
 
     eContractBeneficiarySearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractBeneficiarySearch
+        Default: =""
         Height: =35
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)

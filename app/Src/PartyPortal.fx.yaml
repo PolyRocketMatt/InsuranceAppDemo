@@ -34,8 +34,6 @@ PartyPortal As screen:
             Set(_sync, false);
             Set(_doLookup, false);
             Set(_lookupName, "");
-            Set(_ePartyNameSearch, "");
-            Set(_ePartyIDSearch, "");
             Set(_refresh, false);
             true,
             true
@@ -186,7 +184,7 @@ PartyPortal As screen:
 
     ePartyNameSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyNameSearch
+        Default: =""
         Height: =35
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -207,7 +205,7 @@ PartyPortal As screen:
 
     ePartyIdentifierSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_ePartyIDSearch
+        Default: =""
         Height: =35
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)

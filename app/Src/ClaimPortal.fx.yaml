@@ -30,8 +30,6 @@ ClaimPortal As screen:
             Set(_sync, false);
             Set(_doLookup, false);
             Set(_lookupName, "");
-            Set(_eClaimNumberSearch, "");
-            Set(_eClaimDateSearch, Today());
             Set(_refresh, false);
             true,
             true
@@ -189,7 +187,7 @@ ClaimPortal As screen:
 
     eClaimIDSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="ID"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -256,7 +254,6 @@ ClaimPortal As screen:
 
     eClaimDateSearchInp As datepicker:
         BorderColor: =RGBA(118, 0, 0, 1)
-        DefaultDate: =_eClaimDateSearch
         IconBackground: =RGBA(118, 0, 0, 1)
         Reset: =resetClaimDate
         Width: =211
@@ -372,7 +369,7 @@ ClaimPortal As screen:
 
     eClaimNumberSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -385,7 +382,7 @@ ClaimPortal As screen:
 
     eClaimTypeSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -398,7 +395,7 @@ ClaimPortal As screen:
 
     eClaimHolderSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -411,7 +408,7 @@ ClaimPortal As screen:
 
     eClaimBeneficiarySearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -488,7 +485,7 @@ ClaimPortal As screen:
 
     eClaimDepartmentSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eClaimNumberSearch
+        Default: =""
         Height: =35
         HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
