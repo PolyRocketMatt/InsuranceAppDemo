@@ -287,7 +287,7 @@ ClaimPortal As screen:
                     If(Len(Day(_searchDateInput)) = 1, "0" & Day(_searchDateInput), Day(_searchDateInput)) & "T" & 
                     If(Len(Hour(_searchDateInput)) = 1, "0" & Hour(_searchDateInput), Hour(_searchDateInput)) & ":" & 
                     If(Len(Minute(_searchDateInput)) = 1, "0" & Minute(_searchDateInput), Minute(_searchDateInput)) & ":" & 
-                    If(Len(Second(_searchDateInput)) = 1, "0" & Second(_searchDateInput), Second(_searchDateInput)) & "Z")
+                    If(Len(Second(_searchDateInput)) = 1, "0" & Second(_searchDateInput), Second(_searchDateInput)) & "Z");
             Clear(ClaimCollection);
             Collect(ClaimCollection, SearchClaims.Run(
                 _searchDate, 
@@ -297,14 +297,15 @@ ClaimPortal As screen:
                 "",
                 eClaimBeneficiarySearchInp.Text,
                 "",
-                eClaim
+                eClaimTypeSearchInp.Text,
+                eClaimDepartmentSearchInp.Text
             ));
             Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
         X: =1326
-        Y: =532
+        Y: =476
         ZIndex: =14
 
     Icon7_8 As icon.Cancel:
@@ -356,7 +357,7 @@ ClaimPortal As screen:
         Text: ="Holder"
         Width: =115
         X: =990
-        Y: =432
+        Y: =376
         ZIndex: =19
 
     eProdNameFilter_7 As label:
@@ -366,7 +367,7 @@ ClaimPortal As screen:
             "
         Width: =115
         X: =990
-        Y: =482
+        Y: =426
         ZIndex: =20
 
     eClaimNumberSearchInp As text:
@@ -405,7 +406,7 @@ ClaimPortal As screen:
         Reset: =resetClaimHolder
         Width: =211
         X: =1105
-        Y: =439
+        Y: =383
         ZIndex: =23
 
     eClaimBeneficiarySearchInp As text:
@@ -418,7 +419,7 @@ ClaimPortal As screen:
         Reset: =resetClaimBeneficiary
         Width: =211
         X: =1105
-        Y: =489
+        Y: =433
         ZIndex: =24
 
     Icon7_10 As icon.Cancel:
@@ -460,7 +461,7 @@ ClaimPortal As screen:
         PaddingTop: =2
         Width: =30
         X: =1326
-        Y: =441
+        Y: =385
         ZIndex: =27
 
     Icon7_13 As icon.Cancel:
@@ -474,7 +475,7 @@ ClaimPortal As screen:
         PaddingTop: =2
         Width: =30
         X: =1326
-        Y: =492
+        Y: =436
         ZIndex: =28
 
     eProdNameFilter_8 As label:
@@ -482,20 +483,20 @@ ClaimPortal As screen:
         Text: ="Department"
         Width: =115
         X: =990
-        Y: =318
+        Y: =326
         ZIndex: =29
 
-    eClaimTypeSearchInp_1 As text:
+    eClaimDepartmentSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_eClaimNumberSearch
         Height: =35
-        HintText: ="Type"
+        HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
         Reset: =resetClaimDepartment
         Width: =211
         X: =1105
-        Y: =325
+        Y: =333
         ZIndex: =30
 
     Icon7_14 As icon.Cancel:
@@ -509,6 +510,6 @@ ClaimPortal As screen:
         PaddingTop: =2
         Width: =30
         X: =1326
-        Y: =328
+        Y: =336
         ZIndex: =31
 
