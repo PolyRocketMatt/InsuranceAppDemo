@@ -1,6 +1,7 @@
 ContractEditor As screen:
     OnVisible: |-
         =UpdateContext({resetContractEdit: !resetContractEdit});
+        UpdateContext({resetContractEdit: !resetContractEdit});
         Set(_eContractNumberDef, number);
         Set(_eContractTypeDef, type_uuid);
         Set(_eContractHolderDef, holder_uuid);

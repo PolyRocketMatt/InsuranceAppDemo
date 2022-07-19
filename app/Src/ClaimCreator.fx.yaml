@@ -1,6 +1,7 @@
 ClaimCreator As screen:
     OnVisible: |-
         =UpdateContext({resetClaimCreate: !resetClaimCreate});
+        UpdateContext({resetClaimCreate: !resetClaimCreate});
 
     PartyCreatorTitle_1 As label:
         Align: =Align.Center

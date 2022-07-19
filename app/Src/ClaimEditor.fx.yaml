@@ -1,6 +1,7 @@
 ClaimEditor As screen:
     OnVisible: |-
         =UpdateContext({resetClaimEdit: !resetClaimEdit});
+        UpdateContext({resetClaimEdit: !resetClaimEdit});
         Set(_eClaimNumberDef, number)
 
     PartyEditorTitle_2 As label:

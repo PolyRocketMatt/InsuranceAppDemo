@@ -1,10 +1,7 @@
 ContractCreator As screen:
     OnVisible: |-
         =UpdateContext({resetContractCreate: !resetContractCreate});
-        Set(_eContractNumDef, "");
-        Set(_eContractTypeDef, "");
-        Set(_eContractHolderDef, "");
-        Set(_eContractBeneficiaryDef, "");
+        UpdateContext({resetContractCreate: !resetContractCreate});
 
     ContractCreatorTitle As label:
         Align: =Align.Center
@@ -49,7 +46,7 @@ ContractCreator As screen:
 
     eContractCreatorNumInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractNumDef
+        Default: =""
         Height: =36
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -66,7 +63,7 @@ ContractCreator As screen:
 
     eContractCreatorTypeInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractTypeDef
+        Default: =""
         Height: =36
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -103,10 +100,6 @@ ContractCreator As screen:
                 Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
-                Set(_eContractBeneficiaryDef, "");
-                Set(_eContractHolderDef, "");
-                Set(_eContractNumDef, "");
-                Set(_eContractTypeDef, "");
                 Notify("Successfully submitted a contract with number " & Char(34) & eContractCreatorNumInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
@@ -143,7 +136,7 @@ ContractCreator As screen:
 
     eContractCreatorHolderInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractHolderDef
+        Default: =""
         Height: =36
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -160,7 +153,7 @@ ContractCreator As screen:
 
     eContractCreatorBeneficiaryInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eContractBeneficiaryDef
+        Default: =""
         Height: =36
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)

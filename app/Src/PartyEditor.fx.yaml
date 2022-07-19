@@ -1,6 +1,7 @@
 PartyEditor As screen:
     OnVisible: |-
         =UpdateContext({resetPartyEdit: !resetPartyEdit});
+        UpdateContext({resetPartyEdit: !resetPartyEdit});
         Set(_ePartyNameEditDef, name);
         Set(_ePartyIDEditDef, id);
 

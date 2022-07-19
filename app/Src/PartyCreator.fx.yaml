@@ -1,8 +1,7 @@
 PartyCreator As screen:
     OnVisible: |-
         =UpdateContext({resetPartyCreate: !resetPartyCreate});
-        Set(_ePartyNameDef, "");
-        Set(_ePartyIDDef, "");
+        UpdateContext({resetPartyCreate: !resetPartyCreate});
 
     PartyCreatorTitle As label:
         Align: =Align.Center

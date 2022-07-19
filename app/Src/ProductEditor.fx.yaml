@@ -1,6 +1,7 @@
 ProductEditor As screen:
     OnVisible: |-
         =UpdateContext({resetProductEdit: !resetProductEdit});
+        UpdateContext({resetProductEdit: !resetProductEdit});
         Set(_eProdNameEditDef, edit_name);
         Set(_eProdDepEditDef, edit_dep);
 

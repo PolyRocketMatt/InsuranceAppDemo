@@ -1,8 +1,7 @@
 ProductCreator As screen:
     OnVisible: |-
         =UpdateContext({resetProductCreate: !resetProductCreate});
-        Set(_eProdNameDef, "");
-        Set(_eProdDepDef, "");
+        UpdateContext({resetProductCreate: !resetProductCreate});
 
     ProductCreatorTitle As label:
         Align: =Align.Center
@@ -48,7 +47,7 @@ ProductCreator As screen:
 
     eProdCreatorNameInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eProdNameDef
+        Default: =""
         Height: =36
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -65,7 +64,7 @@ ProductCreator As screen:
 
     eProdCreatorDepInput As text:
         BorderColor: =RGBA(151, 0, 0, 1)
-        Default: =_eProdDepDef
+        Default: =""
         Height: =36
         HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
@@ -100,8 +99,6 @@ ProductCreator As screen:
                 Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
-                Set(_eProdNameDef, "");
-                Set(_eProdDepDef, "");
                 Notify("Successfully submitted a product with name " & Char(34) & eProdCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );

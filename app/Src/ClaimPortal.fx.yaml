@@ -285,6 +285,7 @@ ClaimPortal As screen:
         Icon: =Icon.Search
         OnSelect: |-
             =Set(_sync, true);
+            Set(_keepSearch, true);
             Set(_searchDateInput, eClaimDateSearchInp.SelectedDate);
             Set(_searchDate, Year(_searchDateInput) & "-" & 
                     If(Len(Month(_searchDateInput)) = 1, "0" & Month(_searchDateInput), Month(_searchDateInput)) & "-" & 
@@ -556,6 +557,12 @@ ClaimPortal As screen:
             UpdateContext({resetClaimHolder: !resetClaimHolder});
             UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary});
             UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary});
+            Set(_keepSearch, false);
+            Set(_sync, true);
+            Set(_keepSearch, true);
+            Clear(ClaimCollection);
+            Collect(ClaimCollection, FindAllClaims.Run());
+            Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
