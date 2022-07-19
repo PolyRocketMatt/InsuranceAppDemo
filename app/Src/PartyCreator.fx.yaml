@@ -1,6 +1,7 @@
 PartyCreator As screen:
     OnVisible: |-
-        =Set(_ePartyNameDef, "");
+        =UpdateContext({resetPartyCreate: !resetPartyCreate});
+        Set(_ePartyNameDef, "");
         Set(_ePartyIDDef, "");
 
     PartyCreatorTitle As label:
@@ -52,6 +53,7 @@ PartyCreator As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetPartyCreate
         Width: =1026
         X: =170
         Y: =108
@@ -64,6 +66,7 @@ PartyCreator As screen:
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetPartyCreate
         Width: =1026
         X: =170
         Y: =168
@@ -84,6 +87,7 @@ PartyCreator As screen:
                 false,
                 Set(_send, true);
                 PostParty.Run(ePartyCreatorIdentInput.Text, ePartyCreatorNameInput.Text);
+                UpdateContext({resetPartyCreate: !resetPartyCreate});
                 Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);

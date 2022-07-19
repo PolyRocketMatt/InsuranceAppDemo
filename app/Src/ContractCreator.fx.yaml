@@ -1,6 +1,7 @@
 ContractCreator As screen:
     OnVisible: |-
-        =Set(_eContractNumDef, "");
+        =UpdateContext({resetContractCreate: !resetContractCreate});
+        Set(_eContractNumDef, "");
         Set(_eContractTypeDef, "");
         Set(_eContractHolderDef, "");
         Set(_eContractBeneficiaryDef, "");
@@ -53,6 +54,7 @@ ContractCreator As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractCreate
         Width: =1026
         X: =170
         Y: =108
@@ -65,6 +67,7 @@ ContractCreator As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractCreate
         Width: =1026
         X: =170
         Y: =168
@@ -87,6 +90,7 @@ ContractCreator As screen:
                 false,
                 Set(_send, true);
                 PostContract.Run(eContractCreatorBeneficiaryInput.Text, eContractCreatorHolderInput.Text, eContractCreatorNumInput.Text, eContractCreatorTypeInput.Text);
+                UpdateContext({resetContractCreate: !resetContractCreate});
                 Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
@@ -135,6 +139,7 @@ ContractCreator As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractCreate
         Width: =1026
         X: =170
         Y: =228
@@ -147,6 +152,7 @@ ContractCreator As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetContractCreate
         Width: =1026
         X: =170
         Y: =288

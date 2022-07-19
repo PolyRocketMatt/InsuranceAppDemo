@@ -112,7 +112,7 @@ ClaimPortal As screen:
                 
                 If(
                     CountRows(CountCollection) = 0,
-                    Notify("Successfully deleted party " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
+                    Notify("Successfully deleted claim " & Char(34) & _lookupName & Char(34) & "!", NotificationType.Success)
                 );
                 
                 //  Clear collections/variables

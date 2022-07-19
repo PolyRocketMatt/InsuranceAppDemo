@@ -1,4 +1,6 @@
 ClaimCreator As screen:
+    OnVisible: |-
+        =UpdateContext({resetClaimCreate: !resetClaimCreate});
 
     PartyCreatorTitle_1 As label:
         Align: =Align.Center
@@ -49,6 +51,7 @@ ClaimCreator As screen:
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimCreate
         Width: =1026
         X: =170
         Y: =108
@@ -75,6 +78,7 @@ ClaimCreator As screen:
                     If(Len(Minute(_date)) = 1, "0" & Minute(_date), Minute(_date)) & ":" & 
                     If(Len(Second(_date)) = 1, "0" & Second(_date), Second(_date)) & "Z", 
                     eClaimCreatorNumberInput.Text);
+                UpdateContext({resetClaimCreate: !resetClaimCreate});
                 Set(_refresh, true);
                 //Navigate(ClaimPortal);
                 Set(_send, false);
@@ -101,6 +105,7 @@ ClaimCreator As screen:
         DefaultDate: =_eClaimDateSearch
         Height: =35
         IconBackground: =RGBA(118, 0, 0, 1)
+        Reset: =resetClaimCreate
         Width: =1026
         X: =170
         Y: =168

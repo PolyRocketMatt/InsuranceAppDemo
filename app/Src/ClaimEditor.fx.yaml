@@ -1,5 +1,7 @@
 ClaimEditor As screen:
-    OnVisible: =Set(_eClaimNumberDef, "")
+    OnVisible: |-
+        =UpdateContext({resetClaimEdit: !resetClaimEdit});
+        Set(_eClaimNumberDef, "")
 
     PartyEditorTitle_2 As label:
         Align: =Align.Center
@@ -42,6 +44,7 @@ ClaimEditor As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetClaimEdit
         Width: =1026
         X: =170
         Y: =108
@@ -59,6 +62,7 @@ ClaimEditor As screen:
                 false,
                 Set(_send, true);
                 PutClaimById.Run(uuid, eContractNumberInput_1.Text);
+                UpdateContext({resetClaimEdit: !resetClaimEdit});
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);
