@@ -451,8 +451,8 @@ ContractPortal As screen:
         Icon: =Icon.Search
         OnSelect: |-
             =Set(_sync, true);
-            //Clear(ContractCollection);
-            //Clear(ContractCollectCollection);
+            Clear(ContractCollection);
+            Clear(ContractCollectCollection);
             Collect(ContractCollectCollection, SearchContract.Run(
                 eContractNumberSearchInp.Text,
                 eContractHolderSearchInp.Text,
