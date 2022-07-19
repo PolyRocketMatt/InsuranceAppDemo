@@ -172,8 +172,8 @@ ContractSpecification As screen:
             =Set(_contract_beneficiary, FindPartyById.Run(beneficiary_uuid));
             Navigate(PartySpecification, None,
                 {
-                    name: _contract_holder.name,
-                    id: _contract_holder.id,
+                    name: _contract_beneficiary.name,
+                    id: _contract_beneficiary.id,
                     uuid: beneficiary_uuid
                 }
             );
