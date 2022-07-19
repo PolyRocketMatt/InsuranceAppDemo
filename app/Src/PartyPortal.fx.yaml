@@ -180,14 +180,15 @@ PartyPortal As screen:
         Y: =126
         ZIndex: =4
 
-    eProdNameInput_1 As text:
+    ePartyNameSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_ePartyNameSearch
         Height: =35
         HintText: ="Name"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetPartyName
+        Width: =211
         X: =1105
         Y: =133
         ZIndex: =5
@@ -200,14 +201,15 @@ PartyPortal As screen:
         Y: =176
         ZIndex: =6
 
-    eProdDepInput_1 As text:
+    ePartyIdentifierSearchInp As text:
         BorderColor: =RGBA(151, 0, 0, 1)
         Default: =_ePartyIDSearch
         Height: =35
         HintText: ="Identifier"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetPartyIdentifier
+        Width: =211
         X: =1105
         Y: =183
         ZIndex: =7
@@ -268,4 +270,48 @@ PartyPortal As screen:
         Width: =75
         X: =1290
         ZIndex: =12
+
+    Icon6_1 As icon.Search:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Search
+        OnSelect: |-
+            =Set(_sync, true);
+            Clear(PartyCollection);
+            Collect(PartyCollection, SearchParty.Run(ePartyIdentifierInput.Text, ePartyNameSearchInp.Text));
+            Set(_sync, false);
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =226
+        ZIndex: =13
+
+    Icon7 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetPartyName: !resetPartyName});
+            UpdateContext({resetPartyName: !resetPartyName})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =136
+        ZIndex: =14
+
+    Icon7_1 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetPartyIdentifier: !resetPartyIdentifier});
+            UpdateContext({resetPartyIdentifier: !resetPartyIdentifier})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =185
+        ZIndex: =15
 
