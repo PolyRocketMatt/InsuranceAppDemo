@@ -498,7 +498,37 @@ ContractPortal As screen:
             UpdateContext({resetContractHolder: !resetContractHolder});
             UpdateContext({resetContractHolder: !resetContractHolder});
             UpdateContext({resetContractBeneficiary: !resetContractBeneficiary});
-            UpdateContext({resetContractBeneficiary: !resetContractBeneficiary})
+            UpdateContext({resetContractBeneficiary: !resetContractBeneficiary});
+            Set(_keepSearch, false);
+            Set(_sync, true);
+            Clear(ContractCollection);
+            Clear(ContractCollectCollection);
+            Collect(ContractCollectCollection, SearchContract.Run(
+                eContractNumberSearchInp.Text,
+                eContractHolderSearchInp.Text,
+                "",
+                eContractBeneficiarySearchInp.Text,
+                "",
+                eContractTypeSearchInp.Text,
+                ""
+            ));
+            
+            ForAll(
+                    ContractCollectCollection,
+                    Collect(ContractCollection, { 
+                        uuid: UrlParser.Run(ThisRecord.uuid).uuid,
+                        number: ThisRecord.number,
+                        holder: FindHolderOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                        beneficiary: FindBeneficiaryOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                        type: FindTypeOfContractById.Run(UrlParser.Run(ThisRecord.uuid).uuid).name,
+                        holder_url: ThisRecord.holder,
+                        beneficiary_url: ThisRecord.beneficiary,
+                        type_url: ThisRecord.type
+                    }
+                );
+            );
+            
+            Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
