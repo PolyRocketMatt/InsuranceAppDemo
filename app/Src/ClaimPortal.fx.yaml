@@ -261,6 +261,7 @@ ClaimPortal As screen:
 
     eClaimDateSearchInp As datepicker:
         BorderColor: =RGBA(118, 0, 0, 1)
+        DefaultDate: =
         IconBackground: =RGBA(118, 0, 0, 1)
         Reset: =resetClaimDate
         Width: =211
@@ -303,7 +304,7 @@ ClaimPortal As screen:
                 "",
                 eClaimTypeSearchInp.Text,
                 eClaimDepartmentSearchInp.Text,
-                _searchDate
+                ""
             ));
             Set(_sync, false);
         PaddingBottom: =2
