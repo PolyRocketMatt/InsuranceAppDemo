@@ -336,6 +336,11 @@ ProductPortal As screen:
             UpdateContext({resetProductDepartment: !resetProductDepartment});
             UpdateContext({resetProductDepartment: !resetProductDepartment});
             Set(_keepSearch, false);
+            Set(_sync, true);
+            Set(_keepSearch, true);
+            Clear(PartyCollection);
+            Collect(PartyCollection, FindAllParties.Run());
+            Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
