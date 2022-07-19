@@ -240,6 +240,8 @@ ProductPortal As screen:
                 Collect(ProductCollection, SearchProduct.Run(eProdNameInput.Text, eProdDepInput.Text)),
                 Collect(ProductCollection, FindAllProducts.Run())
             );
+            
+            Collect(ProductCollection, FindAllProducts.Run());
             Set(_sync, false)
         PaddingBottom: =20
         PaddingTop: =20

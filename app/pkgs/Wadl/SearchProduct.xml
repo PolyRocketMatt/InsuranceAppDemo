@@ -11,10 +11,16 @@
       <string name="ResponseActionOutput_items_def_name_def" />
       <string name="ResponseActionOutput_items_def_department_def" />
       <string name="ResponseActionOutput_items_def_uuid_def" />
+      <integer name="ResponseActionOutput_items_def_totalElements_def" />
+      <integer name="ResponseActionOutput_items_def_totalPages_def" />
+      <integer name="ResponseActionOutput_items_def_pageNumber_def" />
       <object name="ResponseActionOutput_items_def">
         <property name="name" type="string" />
         <property name="department" type="string" />
         <property name="uuid" type="string" />
+        <property name="totalElements" type="integer" />
+        <property name="totalPages" type="integer" />
+        <property name="pageNumber" type="integer" />
       </object>
       <array typeRef="ResponseActionOutput_items_def" name="ResponseActionOutput" />
       <object name="Run_responses_default_def" />
