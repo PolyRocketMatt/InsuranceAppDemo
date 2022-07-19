@@ -503,15 +503,7 @@ ContractPortal As screen:
             Set(_sync, true);
             Clear(ContractCollection);
             Clear(ContractCollectCollection);
-            Collect(ContractCollectCollection, SearchContract.Run(
-                eContractNumberSearchInp.Text,
-                eContractHolderSearchInp.Text,
-                "",
-                eContractBeneficiarySearchInp.Text,
-                "",
-                eContractTypeSearchInp.Text,
-                ""
-            ));
+            Collect(ContractCollectCollection, FindAllContracts.Run());
             
             ForAll(
                     ContractCollectCollection,
