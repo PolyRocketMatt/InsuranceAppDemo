@@ -24,12 +24,15 @@
       </object>
       <string name="ResponseActionOutput_items_def_created_def" />
       <string name="ResponseActionOutput_items_def_number_def" />
-      <string name="ResponseActionOutput_items_def_contracts_def" />
+      <string name="ResponseActionOutput_items_def_contracts_def_href_def" />
+      <object name="ResponseActionOutput_items_def_contracts_def">
+        <property name="href" type="string" />
+      </object>
       <string name="ResponseActionOutput_items_def_uuid_def" />
       <object name="ResponseActionOutput_items_def">
         <property name="created" type="string" />
         <property name="number" type="string" />
-        <property name="contracts" type="string" />
+        <property name="contracts" typeRef="ResponseActionOutput_items_def_contracts_def" />
         <property name="uuid" type="string" />
       </object>
       <array typeRef="ResponseActionOutput_items_def" name="ResponseActionOutput" />

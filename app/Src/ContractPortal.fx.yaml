@@ -482,7 +482,27 @@ ContractPortal As screen:
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
-        X: =1326
+        X: =1286
         Y: =326
         ZIndex: =21
+
+    Icon8_2 As icon.CancelBadge:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =UpdateContext({resetContractNumber: !resetContractNumber});
+            UpdateContext({resetContractNumber: !resetContractNumber});
+            UpdateContext({resetContractType: !resetContractType});
+            UpdateContext({resetContractType: !resetContractType});
+            UpdateContext({resetContractHolder: !resetContractHolder});
+            UpdateContext({resetContractHolder: !resetContractHolder});
+            UpdateContext({resetContractBeneficiary: !resetContractBeneficiary});
+            UpdateContext({resetContractBeneficiary: !resetContractBeneficiary})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =326
+        ZIndex: =22
 

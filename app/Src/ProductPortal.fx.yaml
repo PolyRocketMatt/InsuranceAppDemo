@@ -266,6 +266,7 @@ ProductPortal As screen:
         Color: =RGBA(116, 116, 116, 1)
         Height: =75
         Icon: =Icon.Home
+        OnSelect: =Navigate(EntitySelector);
         PaddingBottom: =16
         PaddingTop: =16
         Width: =75
@@ -284,7 +285,7 @@ ProductPortal As screen:
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
-        X: =1326
+        X: =1284
         Y: =226
         ZIndex: =13
 
@@ -315,4 +316,20 @@ ProductPortal As screen:
         X: =1326
         Y: =185
         ZIndex: =15
+
+    Icon8 As icon.CancelBadge:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =UpdateContext({resetProductName: !resetProductName});
+            UpdateContext({resetProductName: !resetProductName});
+            UpdateContext({resetProductDepartment: !resetProductDepartment});
+            UpdateContext({resetProductDepartment: !resetProductDepartment})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =226
+        ZIndex: =16
 

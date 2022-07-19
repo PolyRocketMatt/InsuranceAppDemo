@@ -63,6 +63,7 @@ ProductEditor As screen:
         HintText: ="Department"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
+        Reset: =resetProductEditDepartment
         Width: =1026
         X: =170
         Y: =168

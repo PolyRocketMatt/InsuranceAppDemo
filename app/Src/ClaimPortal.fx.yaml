@@ -289,8 +289,7 @@ ClaimPortal As screen:
                     If(Len(Minute(_searchDateInput)) = 1, "0" & Minute(_searchDateInput), Minute(_searchDateInput)) & ":" & 
                     If(Len(Second(_searchDateInput)) = 1, "0" & Second(_searchDateInput), Second(_searchDateInput)) & "Z");
             Clear(ClaimCollection);
-            Collect(ClaimCollection, SearchClaims.Run(
-                _searchDate, 
+            Collect(ClaimCollection, SearchClaims.Run( 
                 eClaimIDSearchInp.Text,
                 eClaimNumberSearchInp.Text,
                 eClaimHolderSearchInp.Text,
@@ -298,13 +297,14 @@ ClaimPortal As screen:
                 eClaimBeneficiarySearchInp.Text,
                 "",
                 eClaimTypeSearchInp.Text,
-                eClaimDepartmentSearchInp.Text
+                eClaimDepartmentSearchInp.Text,
+                _searchDate
             ));
             Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
         Width: =30
-        X: =1326
+        X: =1286
         Y: =476
         ZIndex: =14
 
@@ -512,4 +512,30 @@ ClaimPortal As screen:
         X: =1326
         Y: =336
         ZIndex: =31
+
+    Icon8_3 As icon.CancelBadge:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.CancelBadge
+        OnSelect: |
+            =UpdateContext({resetClaimName: !resetClaimName});
+            UpdateContext({resetClaimName: !resetClaimName});
+            UpdateContext({resetClaimDate: !resetClaimDate});
+            UpdateContext({resetClaimDate: !resetClaimDate});
+            UpdateContext({resetClaimNumber: !resetClaimNumber});
+            UpdateContext({resetClaimNumber: !resetClaimNumber});
+            UpdateContext({resetClaimType: !resetClaimType});
+            UpdateContext({resetClaimType: !resetClaimType});
+            UpdateContext({resetClaimDepartment: !resetClaimDepartment});
+            UpdateContext({resetClaimDepartment: !resetClaimDepartment});
+            UpdateContext({resetClaimHolder: !resetClaimHolder});
+            UpdateContext({resetClaimHolder: !resetClaimHolder});
+            UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary});
+            UpdateContext({resetClaimBeneficiary: !resetClaimBeneficiary});
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =476
+        ZIndex: =32
 
