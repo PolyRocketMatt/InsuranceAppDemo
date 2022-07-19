@@ -346,8 +346,8 @@ ProductPortal As screen:
             Set(_keepSearch, false);
             Set(_sync, true);
             Set(_keepSearch, true);
-            Clear(PartyCollection);
-            Collect(PartyCollection, FindAllParties.Run());
+            Clear(ProductCollection);
+            Collect(ProductCollection, FindAllProducts.Run());
             Set(_sync, false);
         PaddingBottom: =2
         PaddingTop: =2
