@@ -101,7 +101,6 @@ PartyCreator As screen:
                 Set(_send, false);
                 Set(_ePartyNameDef, "");
                 Set(_ePartyIDDef, "");
-                Notify("Successfully submitted a party with name " & Char(34) & ePartyCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

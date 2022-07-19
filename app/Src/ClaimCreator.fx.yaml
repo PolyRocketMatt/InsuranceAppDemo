@@ -88,7 +88,6 @@ ClaimCreator As screen:
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);
-                Notify("Successfully submitted a claim with name " & Char(34) & eClaimCreatorNumberInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

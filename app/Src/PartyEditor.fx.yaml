@@ -100,7 +100,6 @@ PartyEditor As screen:
                 Set(_refresh, true);
                 Navigate(PartyPortal);
                 Set(_send, false);
-                Notify("Successfully replaced a party with name " & Char(34) & ePartyNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

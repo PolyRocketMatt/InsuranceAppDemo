@@ -100,7 +100,6 @@ ContractCreator As screen:
                 Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
-                Notify("Successfully submitted a contract with number " & Char(34) & eContractCreatorNumInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

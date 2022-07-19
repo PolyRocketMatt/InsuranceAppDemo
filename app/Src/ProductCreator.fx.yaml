@@ -99,7 +99,6 @@ ProductCreator As screen:
                 Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
-                Notify("Successfully submitted a product with name " & Char(34) & eProdCreatorNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

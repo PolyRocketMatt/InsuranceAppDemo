@@ -100,7 +100,6 @@ ProductEditor As screen:
                 Set(_refresh, true);
                 Navigate(ProductPortal);
                 Set(_send, false);
-                Notify("Successfully edited product " & Char(34) & edit_name & Char(34) & " with name " & Char(34) & eProdEditorNameInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20

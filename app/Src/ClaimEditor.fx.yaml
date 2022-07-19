@@ -72,7 +72,6 @@ ClaimEditor As screen:
                 Set(_refresh, true);
                 Navigate(ClaimPortal);
                 Set(_send, false);
-                Notify("Successfully replaced a claim with name " & Char(34) & eContractNumberInput_1.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20
@@ -233,11 +232,6 @@ ClaimEditor As screen:
                 Clear(ClaimSpecCollection);
                 Collect(ClaimSpecCollection, FindContractsOfClaimById.Run(_claim_uuid));
                 Set(_send, false);
-                If(
-                    CountRows(ClaimSpecCollection) = _current_contract_uuid + 1,
-                    Notify("Successfully submitted a contract (UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & ")!", NotificationType.Success),
-                    Notify("There was an error submitting a contract (UUID " & Char(34) & ClaimContractAdditionInput_1.Text & Char(34) & ")!", NotificationType.Error)
-                );
                 true
             );
         PaddingBottom: =20

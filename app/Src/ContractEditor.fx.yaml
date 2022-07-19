@@ -108,7 +108,6 @@ ContractEditor As screen:
                 Set(_refresh, true);
                 Navigate(ContractPortal);
                 Set(_send, false);
-                Notify("Successfully replaced a party with name " & Char(34) & eContractNumberInput.Text & Char(34) & "!", NotificationType.Success),
                 true
             );
         PaddingBottom: =20
