@@ -60,9 +60,7 @@ ContractPortal As screen:
         FontWeight: =FontWeight.Bold
         Height: =75
         Size: =25
-        Text: |-
-            ="Contract Portal
-            "
+        Text: ="Contract Portal"
         Width: =970
         ZIndex: =1
 
