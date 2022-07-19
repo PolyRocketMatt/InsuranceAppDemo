@@ -253,7 +253,8 @@ ContractPortal As screen:
         HintText: ="Number"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetContractNumber
+        Width: =211
         X: =1105
         Y: =133
         ZIndex: =5
@@ -273,7 +274,8 @@ ContractPortal As screen:
         HintText: ="Type"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetContractType
+        Width: =211
         X: =1105
         Y: =183
         ZIndex: =7
@@ -359,7 +361,8 @@ ContractPortal As screen:
         HintText: ="Holder"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetContractHolder
+        Width: =211
         X: =1105
         Y: =233
         ZIndex: =14
@@ -371,7 +374,8 @@ ContractPortal As screen:
         HintText: ="Beneficiary"
         HoverBorderColor: =RGBA(151, 0, 0, 1)
         HoverFill: =RGBA(238, 204, 204, 1)
-        Width: =241
+        Reset: =resetContractBeneficiary
+        Width: =211
         X: =1105
         Y: =283
         ZIndex: =15
@@ -386,4 +390,76 @@ ContractPortal As screen:
         Width: =75
         X: =1290
         ZIndex: =16
+
+    Icon7_4 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetContractNumber: !resetContractNumber});
+            UpdateContext({resetContractNumber: !resetContractNumber})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =136
+        ZIndex: =17
+
+    Icon7_5 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetContractType: !resetContractType});
+            UpdateContext({resetContractType: !resetContractType})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =185
+        ZIndex: =18
+
+    Icon7_6 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetContractHolder: !resetContractHolder});
+            UpdateContext({resetContractHolder: !resetContractHolder})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =235
+        ZIndex: =19
+
+    Icon7_7 As icon.Cancel:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({resetContractBeneficiary: !resetContractBeneficiary});
+            UpdateContext({resetContractBeneficiary: !resetContractBeneficiary})
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =285
+        ZIndex: =20
+
+    Icon6_2 As icon.Search:
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =30
+        Icon: =Icon.Search
+        OnSelect: |-
+            =Set(_sync, true);
+            Clear(PartyCollection);
+            Collect(PartyCollection, SearchParty.Run(ePartyIdentifierInput.Text, ePartyNameSearchInp.Text));
+            Set(_sync, false);
+        PaddingBottom: =2
+        PaddingTop: =2
+        Width: =30
+        X: =1326
+        Y: =326
+        ZIndex: =21
 
